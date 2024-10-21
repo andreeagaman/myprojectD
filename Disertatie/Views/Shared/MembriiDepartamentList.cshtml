@@ -1,0 +1,96 @@
+﻿@using Disertatie.Core.Models
+@model IEnumerable<Utilizator> 
+   
+ <script src="@Url.Content("~/Scripts/jquery-1.4.4.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery-ui.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.js")" type="text/javascript"></script>
+
+
+   <table style="width: 100%;" cellpadding="0" cellspacing="0" border="0">
+    <thead>
+        <tr>
+            <th class="capt" colspan="6">
+                Lista membrii departament
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="left" style="width: 60">
+                    @if (string.IsNullOrEmpty(item.PozaProfil))
+                    {
+                        <img src="@Url.Content("~/Content/Images/NoPhoto.jpeg")" alt="" align="left" width="50" height="50" />
+                    }
+                    else
+                    {
+                        <img align="left" width="50" height="50" src="@item.PozaProfil" alt="" />
+                    }
+                </td>
+                <td class="left">
+                    <ul style="list-style-type: none;">
+                        <li><span class="nameText">
+                          <a href="@Url.Action("DetaliiMembru", "Home",new {id= @item.Id})" style=" color: #5777BB;">  @string.Format("{0} {1}", item.Nume, item.Prenume)</a>
+                        </span></li>
+                        <li><span class="textLinks">Colectiv: @string.Format("({0})", item.Colectiv.Nume)
+                        </span></li>
+                        <li >
+                        <a href="@Url.Action("ProiecteMembru", "Proiecte", new { idUtilizator = item.Id })">
+<img id="arrow" src="@Url.Content("~/Content/Images/arrow_small.gif")" alt="" />
+Proiecte
+</a>
+
+                       @* @Html.ActionLink("Proiecte", "ProiecteMembru", "Proiecte", new { idUtilizator = item.Id })*@
+                       <img id="arrow" src="@Url.Content("~/Content/Images/arrow_small.gif")" alt="" />
+                        @Html.ActionLink("Trimite mesaj", "TrimiteMesaj", "Home", new { idDestinatar = item.Id }, new { @class = "openDialog", data_dialog_id = "emailDialog", data_dialog_title = "Trimite mesaj" })
+                        
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+          
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="6">
+                @Html.Partial("Pagination", Model)
+            </td>
+        </tr>
+    </tfoot>
+</table>
+
+	
+
+<script type="text/javascript">
+
+    $.ajaxSetup({ cache: false });
+
+    $(document).ready(function () {
+        $(".openDialog").live("click", function (e) {
+            e.preventDefault();
+
+            $("<div></div>")
+                .addClass("dialog")
+                .attr("id", $(this).attr("data-dialog-id"))
+                .appendTo("body")
+                .dialog({
+                    title: $(this).attr("data-dialog-title"),
+                    close: function () { $(this).remove() },
+                    modal: true,
+                    width: '430px'
+                })
+                .load(this.href);
+        });
+
+        $(".close").live("click", function (e) {
+            e.preventDefault();
+            $(this).closest(".dialog").dialog("close");
+        });
+    });
+</script>
+
+ 

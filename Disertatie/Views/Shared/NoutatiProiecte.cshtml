@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Disertatie.Core.Models.Proiect>
+@using Disertatie.Helpers
+
+
+@foreach (var item in Model)
+{
+   <div class="profileLine contentPad_5">
+    @if (string.IsNullOrEmpty(item.Initiator.PozaProfil))
+    {
+    <img width="50" alt="" height="50" align="left" src="@Url.Content("~/Content/Images/NoPhoto.jpeg")" />
+    }
+    else
+    {
+     <img width="50" alt="" height="50" align="left" src="@item.Initiator.PozaProfil" />
+    }
+    <span class="nameText" >
+    <a href="@Url.Action("DetaliiMembru", "Home", new { id = @item.Initiator.Id })">@item.Initiator.Nume @item.Initiator.Prenume </a>
+    </span>
+                                                                   @if (item.Status == 1)
+                                                                   {
+    <span>a propus proiectul</span>
+                                                                   }
+                                                                   else
+                                                                       if (item.Status == 4)
+                                                                       {
+            <span>a anulat proiectul</span>
+                                                                       }
+                                                                       else
+                                                                   if (item.Status == 2)
+                                                                   {
+            <span>a trecut in lucru proiectul</span>
+                                                                   }
+                                                                   else
+                                                                       if (item.Status == 3)
+                                                                       {
+            <span>a finalizat proiectul</span>
+                                                                       }
+       
+     <span class="nameText">
+    <a href="@Url.Action("DetaliiProiectAnunturi", "Proiecte", new { id = item.Id })">@item.Titlu </a>
+    </span>
+    <span class="textLinks ">
+    @item.DataModificareStare
+</span>
+</div>
+}

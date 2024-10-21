@@ -1,0 +1,42 @@
+﻿@using Disertatie.Helpers
+@using Disertatie.Core.Models;
+@model Disertatie.Models.MembruHomeModel
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js" type="text/javascript"></script>
+ @if (Model.CreeazaProiectModel.ObiectiveSpecifice.Count > 0)
+ {       
+             
+ <table width="390px" id="tblObiectiveSpecifice">
+        
+                <thead>
+                    <tr>
+                        <th>
+                           
+                        </th>
+                       <th></th>
+                    </tr>
+                </thead>
+                <tbody id="obiectiveSpecifice">
+                  @for (int i = 0; i < Model.CreeazaProiectModel.ObiectiveSpecifice.Count; i++)
+                  {
+                        <tr>
+                               
+                            <td>
+                                @Html.TextAreaFor(m => Model.CreeazaProiectModel.ObiectiveSpecifice[i].Descriere,1,5,null)
+                            </td>
+                            
+                         <td ><a href="#" class="removeOS" data-indexOS="@i">Sterge</a></td>
+                               @* @Html.ActionLink("Sterge obiectiv", "StergeObiectivGeneral", "Proiecte", new { id = Model.CreeazaProiectModel.ObiectiveGenerale[i].Id }, new { @class = "delete" })*@
+                            
+                        </tr>
+                  }
+               </tbody>
+        
+            </table>   
+ }
+ @*<script type="text/javascript">
+     $(document).ready(function () {
+         $("table tr td").each(function () {
+             $('#addButton2').click();
+         });
+     });
+</script>*@

@@ -1,0 +1,106 @@
+﻿@model Disertatie.Models.EvaluareProiect
+@using Disertatie.Helpers
+@*<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js" type="text/javascript"></script>*@
+
+
+
+  <div id="rated">
+  <div style="float:left">
+    <form id="Form1" method="post" action="">
+      <input class="star {split:4}" type="radio" value="1" name="rating"  @Utils.Check(0,0.25,Model.EvaluareMedie)/>
+      <input class="star {split:4}" type="radio" value="2" name="rating"  @Utils.Check(0.25,0.5,Model.EvaluareMedie)/>
+      <input class="star {split:4}" type="radio" value="3" name="rating"  @Utils.Check(0.5,0.75,Model.EvaluareMedie)/>
+      <input class="star {split:4}" type="radio" value="4" name="rating" @Utils.Check(0.75,1,Model.EvaluareMedie) />
+      <input class="star {split:4}" type="radio" value="5" name="rating" @Utils.Check(1,1.25,Model.EvaluareMedie)/>
+      <input class="star {split:4}" type="radio" value="6" name="rating" @Utils.Check(1.25,1.5,Model.EvaluareMedie) />
+      <input class="star {split:4}" type="radio" value="7" name="rating" @Utils.Check(1.5,1.75,Model.EvaluareMedie) />
+      <input class="star {split:4}" type="radio" value="8" name="rating" @Utils.Check(1.75,2,Model.EvaluareMedie) />
+      <input class="star {split:4}" type="radio" value="9" name="rating" @Utils.Check(2,2.25,Model.EvaluareMedie) />
+      <input class="star {split:4}" type="radio" value="10" name="rating" @Utils.Check(2.25,2.5,Model.EvaluareMedie) />
+      <input class="star {split:4}" type="radio" value="11" name="rating" @Utils.Check(2.5,2.75,Model.EvaluareMedie) />
+      <input class="star {split:4}" type="radio" value="12" name="rating" @Utils.Check(2.75,3,Model.EvaluareMedie)/>
+      <input class="star {split:4}" type="radio" value="13" name="rating" @Utils.Check(3,3.25,Model.EvaluareMedie) />
+      <input class="star {split:4}" type="radio" value="14" name="rating" @Utils.Check(3.25,3.5,Model.EvaluareMedie) />
+      <input class="star {split:4}" type="radio" value="15" name="rating" @Utils.Check(3.5,3.75,Model.EvaluareMedie) />
+      <input class="star {split:4}" type="radio" value="16" name="rating" @Utils.Check(3.75,4,Model.EvaluareMedie) />
+      <input class="star {split:4}" type="radio" value="17" name="rating" @Utils.Check(4,4.25,Model.EvaluareMedie) />
+      <input class="star {split:4}" type="radio" value="18" name="rating" @Utils.Check(4.25,4.5,Model.EvaluareMedie) />
+      <input class="star {split:4}" type="radio" value="19" name="rating" @Utils.Check(4.5,4.75,Model.EvaluareMedie) />
+      <input class="star {split:4}" type="radio" value="20" name="rating" @Utils.Check(4.75,5,Model.EvaluareMedie) />
+      </form>
+    </div>
+    <p id="currentlyrated" style="float:left;padding-left:20px;">
+    @if (Model.EvaluareMedie > 0 )
+    {
+   <span>Evaluat la @Model.EvaluareMedie.ToString("f") de @Model.TotalEvaluatori persoane</span>
+    }
+    else
+    {
+        <span style="color:red">Nu a fost inca evaluat.  Fii primul care evalueaza acest proiect!</span>
+    }
+    </p>
+  </div>
+  <div style="clear:both"></div>
+  
+  <div id="rater">
+    <div style="float:left;">
+      <form id="rate" method="post" action="">
+      <input class="auto-submit-star" type="radio" name="score" value="1"/>
+      <input class="auto-submit-star" type="radio" name="score" value="2"/>
+      <input class="auto-submit-star" type="radio" name="score" value="3"/>
+      <input class="auto-submit-star" type="radio" name="score" value="4"/>
+      <input class="auto-submit-star" type="radio" name="score" value="5"/>
+      <input type="hidden" name="IdProiect" value="@Model.IdProiect" />
+      </form>
+    </div>
+    <p style="float:left;padding-left:20px;">
+      Voteaza acum!
+    </p>
+  </div>
+  <div style="clear:both"></div>
+
+  <script type="text/javascript">
+
+      $(function () {
+     $('.star').rating('readOnly', true);
+     $('#rater').hide();
+          $('#rated').mouseover(function () {
+              $('#rated').hide();
+              $('#rater').show();
+          });
+          $('#rated').mouseenter(function () {
+              $('#rated').hide();
+              $('#rater').show();
+          });
+          $('#rater').mouseleave(function () {
+              $('#rater').hide();
+              $('#rated').show();
+          }); 
+
+          $('.auto-submit-star').rating({
+              callback: function (value, link) {
+                  $.ajax({
+                      type: "POST",
+                      url: '@Url.Action("Evaluare", "Proiecte")',
+                      data: $("#rate").serialize(),
+                      dataType: "text/plain",
+                      success: function (response) {
+                          if (response != 'false') {
+                              var data = eval('(' + response + ')');
+                              alert('Nota a fost inregistrata');
+                              $('#currentlyrated').html('Evaluat la ' + data.EvaluareMedie.toFixed(2) +
+                ' de ' + data.TotalRaters + ' persoane');
+                          } else {
+                              alert('Ai mai votat o data acest proiect!');
+                          }
+                          $('#rater').hide();
+                          $('#rated').show();
+                      },
+                      error: function (response) {
+                          alert('A fost o eroare.');
+                      }
+                  });
+              }
+          });
+      });
+</script>

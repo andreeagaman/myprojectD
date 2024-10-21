@@ -1,0 +1,101 @@
+﻿@model Disertatie.Models.MembruHomeModel
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta content="NoIndex" name="Robots" />
+    <title>@ViewBag.Title</title>    
+    <link href="@Url.Content("~/Content/css/site.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/css/common.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/css/menu.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/css/tables.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/css/form.css")" rel="stylesheet" type="text/css" />
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript"></script>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.js" type="text/javascript"></script>
+
+    @RenderSection("Scripts", required: false)
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">@Html.Partial("_UserBox")<div id="logo"></div></div>
+        <div id="menu">@Html.Partial("_Menu")</div>
+        <div style="clear: both;"></div>
+        <div id="middlepart">
+        <div id="singlecolumn">
+            <div id="left_bar">
+                
+                    @Html.Partial("_ProfilePicture", Model)
+                 @if (Model.EstePaginaDeProfil == true)
+                 {
+                <div class="greyWindow topMargin">
+                <div class="windowContent">
+                <img align="left" src="@Url.Content("~/Content/Images/pre_mail.png")" alt="" />
+                <a href="@Url.Action("Mesaje", "Home", null)" >
+                Mesaje</a>
+                </div>
+                </div>
+                 }
+                 else if (Model.EstePaginaCuProiecte==true)
+                 {
+                     <div class="greyWindow topMargin">
+                <div class="windowContent">
+                <img align="left" src="@Url.Content("~/Content/Images/send-icon.png")" alt="" />
+                <a href="@Url.Action("InvitatiiProiect", "Proiecte", null)" >
+                Invitatii trimise</a>
+                </div>
+                
+                </div> 
+                     <div class="greyWindow topMargin">
+                     <div class="windowContent">
+                <img align="left" src="@Url.Content("~/Content/Images/email-send-icon.png")" alt="" />
+                <a href="@Url.Action("InvitatiiPrimiteProiect", "Proiecte", null)" >
+                Invitatii primite</a>
+                </div>
+                     </div>
+                     
+                     <div class="greyWindow topMargin">
+                <div class="windowContent">
+                <img align="left" src="@Url.Content("~/Content/Images/send_2.png")" alt="" />
+                <a href="@Url.Action("CereriProiect", "Proiecte", null)" >
+                Cereri trimise</a>
+                </div>
+                
+                </div> 
+                     <div class="greyWindow topMargin">
+                     <div class="windowContent">
+                <img align="left" src="@Url.Content("~/Content/Images/send.png")" alt="" />
+                <a href="@Url.Action("CereriPrimiteProiect", "Proiecte", null)" >
+                Cereri primite</a>
+                </div>
+                     </div>
+                 }
+            </div>
+           
+            <div id="app_bar">
+            <div class="box_D">
+            <div class="appPad">
+            <div class="contentPad">
+                @RenderBody()
+                </div>
+                </div></div>
+            </div>
+          </div> 
+        </div>
+    </div>
+    <div id="footer">
+        <p class="copyright">
+            &copy; Copyright 2012, DICE
+            <br />Aplicatie pentru Departamentul de Informatica si Cibernetica Economica
+        </p>
+    </div>
+    <script type="text/javascript">
+        var notifier = function () {
+
+            setTimeout('notifier', 30000); // 30 sec
+        };
+        $(function () {
+
+        });
+    </script>
+</body>
+</html>

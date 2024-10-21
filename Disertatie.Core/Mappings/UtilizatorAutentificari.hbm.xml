@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Disertatie.Core" namespace="Disertatie.Core.Models">
+  <class name="UtilizatorAutentificari" table="AutentificariUtilizatori" mutable="false">
+    <id name="Id" column="id_autentificare">
+      <generator class="native" />
+    </id>
+    <property name="DataAutentificarii" column="data_autentificarii" not-null="true" />
+    <property name="UtilizatorAdresaHost" column="utilizator_adresa_host" not-null="true" />
+    <property name="UtilizatorNumeHost" column="utilizator_nume_host" />
+    <property name="AgentUtilizat"  column="agent_utilizat" />
+    <many-to-one name="Utilizator" column="id_utilizator" not-null="true" />
+  </class>
+</hibernate-mapping>

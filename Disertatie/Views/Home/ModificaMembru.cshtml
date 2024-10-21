@@ -1,0 +1,108 @@
+﻿@using Disertatie.Core
+@using Disertatie.Helpers
+@model Disertatie.Models.MembruHomeModel
+@{
+    ViewBag.Title = "ModificaMembru";
+    Layout = "~/Views/Shared/_LayoutAnonymousProfilePicture.cshtml";
+}
+<fieldset>
+    <legend>Editeaza profil</legend>
+     @using (Html.BeginForm("ModificaMembru", "Home", new { id = Model.Utilizator.Id }, FormMethod.Post))
+    {
+        <div class="window">
+            <div class="titleWindow">
+                <div id="titleText">
+                    Informatii personale</div>
+            </div>
+            <div class="windowContent">
+                <div id="form">
+                    <p>
+                        @Html.Label("Nume:")
+                        @Html.TextBox("txtNume", Model.Utilizator.Nume, new { @maxlength = "50", @autocomplete = "off" })
+                    </p>
+                    <p>
+                        @Html.Label("Prenume:")
+                        @Html.TextBox("txtPrenume", Model.Utilizator.Prenume, new { @maxlength = "50", @autocomplete = "off" })
+                    </p>
+                    <p>
+                        @Html.Label("Data Nasterii:")
+                        
+                        @Html.TextBox("txtDataNasterii", Model.Utilizator.DataNasterii.HasValue ? Model.Utilizator.DataNasterii.Value.ToString("dd-MM-yyyy") : string.Empty, new { @maxlength = "50", @autocomplete = "off" })
+                    </p>
+                    <p>
+                        @Html.Label("Telefon:")
+                        @Html.TextBox("txtTelefon", Model.Utilizator.Telefon, new { @maxlength = "50", @autocomplete = "off" })
+                    </p>
+                    <p>
+                        @Html.Label("Email:")
+                        @Html.TextBox("txtEmail", Model.Utilizator.Email, new { @maxlength = "50", @autocomplete = "off" })
+                    </p>
+                  
+                </div>
+            </div>
+        </div>
+                  
+        <div class="window">
+            <div class="titleWindow">
+                <div id="titleText">
+                    Informatii despre locul de munca
+                </div>
+            </div>
+            <div class="windowContent">
+                <div id="form">
+                    <p>
+                        @Html.Label("Colectiv:")
+                        @Html.DropDownList("ddlColectiv", new SelectList(Model.Utilizator.Colectiv.GetColective(), "Id", "Nume",Model.Utilizator.Colectiv.Id))
+                    </p>
+                    <p>
+                        @Html.Label("Titlu:")
+                        @Html.TextBox("txtTitlu", Model.Utilizator.Titlu, new { @maxlength = "100", @autocomplete = "off" })
+                    </p>
+                </div>
+            </div>
+        </div>
+       
+        <div class="window">
+            <div class="windowContent">
+                <div id="form">
+                    <div class="buttons">
+                        <button type="submit" class="positive" style="margin-left: 130px">
+                            <img alt="" src="../../Content/Images/edit.png" />
+                            Actualizeaza profil
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+     @using (Html.BeginForm("UploadPozaProfil", "Home", new { id = Model.Utilizator.Id }, FormMethod.Post, new { enctype = "multipart/form-data" }))
+                   {
+                       @Html.AntiForgeryToken()
+    @Html.HiddenFor(m => m.Utilizator.Id)
+        <div class="window">
+            <div class="titleWindow">
+                <div id="titleText">
+                    Fotografia de profil</div>
+            </div>
+            <div style="line-height: 16px; margin: 10px">
+                Puteti incarca un fisier JPG, GIF sau PNG.
+                <div id="form">
+                    <p>
+                        <input type="file" accept="image/*" name="File" />
+                        <input type="submit" value="Upload" />
+                    </p>
+                </div>
+            </div>
+        </div>
+                   }
+</fieldset>
+<script type="text/javascript">
+    $(function () {
+        $('#txtDataNasterii').datepicker({
+            dateFormat: 'dd-mm-yy',
+            changeMonth: true,
+            changeYear: true
+
+        });
+    });
+</script>

@@ -1,0 +1,177 @@
+﻿<error errorId="38455e2f-8c71-45f6-8f73-e890b6774b5e" host="ANDREEA-PC" type="System.Web.HttpException" message="A public action method 'MesajeTrimise' was not found on controller 'Disertatie.Controllers.MesajeController'." source="System.Web.Mvc" detail="System.Web.HttpException (0x80004005): A public action method 'MesajeTrimise' was not found on controller 'Disertatie.Controllers.MesajeController'.&#xD;&#xA;   at System.Web.Mvc.Controller.HandleUnknownAction(String actionName)&#xD;&#xA;   at System.Web.Mvc.Controller.ExecuteCore()&#xD;&#xA;   at System.Web.Mvc.ControllerBase.Execute(RequestContext requestContext)&#xD;&#xA;   at System.Web.Mvc.ControllerBase.System.Web.Mvc.IController.Execute(RequestContext requestContext)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c__DisplayClass6.&lt;&gt;c__DisplayClassb.&lt;BeginProcessRequest&gt;b__5()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.&lt;&gt;c__DisplayClass1.&lt;MakeVoidDelegate&gt;b__0()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.&lt;&gt;c__DisplayClass8`1.&lt;BeginSynchronous&gt;b__7(IAsyncResult _)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c__DisplayClasse.&lt;EndProcessRequest&gt;b__d()&#xD;&#xA;   at System.Web.Mvc.SecurityUtil.&lt;GetCallInAppTrustThunk&gt;b__0(Action f)&#xD;&#xA;   at System.Web.Mvc.SecurityUtil.ProcessInApplicationTrust(Action action)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="test" time="2012-06-01T06:18:32.5808739Z" statusCode="404">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:text/html, */*&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:ro-ro,ro;q=0.8,en-us;q=0.6,en-gb;q=0.4,en;q=0.2&#xD;&#xA;HTTP_COOKIE:Magazin_IDCart=3945aab0-c96f-440c-91f4-2f501aa337ec; Disertatie.SessionId=2cr51vtghazw2d1j4latrosa; Disertatie.Auth=A4B17DD2B82DEFE3ACCE1196F6BBAE8C4168510BDDF867226630B03FE4BE48469F4191D7A884F14BA0F55A29A5B1CB1C2B9271436C01B1945DEE1AF73F2E18BA718344464076F0D6021108D41F4B51EC8270F02E1505D46C34C6A49CDC419443FA46A35A88AE8C0AD3A13DBAB2E5E8F7DEE37C965313DEE3DCAD1622DE2AEC91; Disertatie.Roles=-wqLyfeIcySyS1IiF57D8j4_K8jQc0hmxYC7EbgL-iImSZI_ZJklRiiY67bJgcKc4_Amiss6tY4aQY3lgWcL-PTH3V5eLqrPuXXk-A21eJ6h8YbFXMOs5ajj19HoWcYyj4TISViT6FIusPq_nhrNCslZqg5Wi3cybXlbJQBYVuzrm4uRXefIIIDNl-TRptFdnH0cWmvN5kKwTJxeoQsfkGtE_RGUJwa_nWi1CBc8zWqp3v-QHT_TCu0t_4DfyCa4cqrKDgJT7DkMVTqcBewPFeeYDlninxJ6eu-Cv3CWIgoIlAp-aI6AlH7uIQOz_ZIFmTpvkXQZD00ZHFNN1dk5zn0-CwintJhjAczL5mv7da4iJBzqg6revEkxQE0QrawSKNuezOq7HFsCh_lH84BulgbcsvIh0zEPI4i1p2Yr1Y--xew445VRl5SW5sfXFI0b5dAjnWpghNpUstT8CoYG5IFt1lrZgMzWTeRa06j60nO8aMXtOPBh6NbvvODwLdkbYSzoJV5odAgars5fKzZhVsDHcQZvXoGnMjRDnvsBiG0BoOpMVHO9kbJuKxjMZDsT0; __RequestVerificationToken_L0Rpc2VydGF0aWU_=B2OOzQtqJfspwC2nZKvRoawtIBj4gmxsqMW5iJoxP0wvjCoB3wnPnub5S7P6eHlkLg8aReRtKxCAlFPbRUkXb7LHrLIjKp/MDlYQ5JPTgUcyRVqk87QqxHgVcIapT3zLreHOzXyVtaZAwYunXW9nqyJblR6TdU1c0X7N3iSOu+U=&#xD;&#xA;HTTP_HOST:localhost&#xD;&#xA;HTTP_REFERER:http://localhost/Disertatie/Home/Mesaje&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.1; rv:12.0) Gecko/20100101 Firefox/12.0&#xD;&#xA;HTTP_X_REQUESTED_WITH:XMLHttpRequest&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Accept: text/html, */*&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: ro-ro,ro;q=0.8,en-us;q=0.6,en-gb;q=0.4,en;q=0.2&#xD;&#xA;Cookie: Magazin_IDCart=3945aab0-c96f-440c-91f4-2f501aa337ec; Disertatie.SessionId=2cr51vtghazw2d1j4latrosa; Disertatie.Auth=A4B17DD2B82DEFE3ACCE1196F6BBAE8C4168510BDDF867226630B03FE4BE48469F4191D7A884F14BA0F55A29A5B1CB1C2B9271436C01B1945DEE1AF73F2E18BA718344464076F0D6021108D41F4B51EC8270F02E1505D46C34C6A49CDC419443FA46A35A88AE8C0AD3A13DBAB2E5E8F7DEE37C965313DEE3DCAD1622DE2AEC91; Disertatie.Roles=-wqLyfeIcySyS1IiF57D8j4_K8jQc0hmxYC7EbgL-iImSZI_ZJklRiiY67bJgcKc4_Amiss6tY4aQY3lgWcL-PTH3V5eLqrPuXXk-A21eJ6h8YbFXMOs5ajj19HoWcYyj4TISViT6FIusPq_nhrNCslZqg5Wi3cybXlbJQBYVuzrm4uRXefIIIDNl-TRptFdnH0cWmvN5kKwTJxeoQsfkGtE_RGUJwa_nWi1CBc8zWqp3v-QHT_TCu0t_4DfyCa4cqrKDgJT7DkMVTqcBewPFeeYDlninxJ6eu-Cv3CWIgoIlAp-aI6AlH7uIQOz_ZIFmTpvkXQZD00ZHFNN1dk5zn0-CwintJhjAczL5mv7da4iJBzqg6revEkxQE0QrawSKNuezOq7HFsCh_lH84BulgbcsvIh0zEPI4i1p2Yr1Y--xew445VRl5SW5sfXFI0b5dAjnWpghNpUstT8CoYG5IFt1lrZgMzWTeRa06j60nO8aMXtOPBh6NbvvODwLdkbYSzoJV5odAgars5fKzZhVsDHcQZvXoGnMjRDnvsBiG0BoOpMVHO9kbJuKxjMZDsT0; __RequestVerificationToken_L0Rpc2VydGF0aWU_=B2OOzQtqJfspwC2nZKvRoawtIBj4gmxsqMW5iJoxP0wvjCoB3wnPnub5S7P6eHlkLg8aReRtKxCAlFPbRUkXb7LHrLIjKp/MDlYQ5JPTgUcyRVqk87QqxHgVcIapT3zLreHOzXyVtaZAwYunXW9nqyJblR6TdU1c0X7N3iSOu+U=&#xD;&#xA;Host: localhost&#xD;&#xA;Referer: http://localhost/Disertatie/Home/Mesaje&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:12.0) Gecko/20100101 Firefox/12.0&#xD;&#xA;X-Requested-With: XMLHttpRequest&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/1/ROOT/Disertatie" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="D:\Fac\disertatie\Disertatie\Disertatie\Disertatie\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="Forms" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="test" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="test" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="test" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="1" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/1" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Disertatie/mesaje/MesajeTrimise" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="D:\Fac\disertatie\Disertatie\Disertatie\Disertatie\mesaje\MesajeTrimise" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="49580" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Disertatie/mesaje/MesajeTrimise" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="80" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/7.5" />
+    </item>
+    <item name="URL">
+      <value string="/Disertatie/mesaje/MesajeTrimise" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html, */*" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="ro-ro,ro;q=0.8,en-us;q=0.6,en-gb;q=0.4,en;q=0.2" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="Magazin_IDCart=3945aab0-c96f-440c-91f4-2f501aa337ec; Disertatie.SessionId=2cr51vtghazw2d1j4latrosa; Disertatie.Auth=A4B17DD2B82DEFE3ACCE1196F6BBAE8C4168510BDDF867226630B03FE4BE48469F4191D7A884F14BA0F55A29A5B1CB1C2B9271436C01B1945DEE1AF73F2E18BA718344464076F0D6021108D41F4B51EC8270F02E1505D46C34C6A49CDC419443FA46A35A88AE8C0AD3A13DBAB2E5E8F7DEE37C965313DEE3DCAD1622DE2AEC91; Disertatie.Roles=-wqLyfeIcySyS1IiF57D8j4_K8jQc0hmxYC7EbgL-iImSZI_ZJklRiiY67bJgcKc4_Amiss6tY4aQY3lgWcL-PTH3V5eLqrPuXXk-A21eJ6h8YbFXMOs5ajj19HoWcYyj4TISViT6FIusPq_nhrNCslZqg5Wi3cybXlbJQBYVuzrm4uRXefIIIDNl-TRptFdnH0cWmvN5kKwTJxeoQsfkGtE_RGUJwa_nWi1CBc8zWqp3v-QHT_TCu0t_4DfyCa4cqrKDgJT7DkMVTqcBewPFeeYDlninxJ6eu-Cv3CWIgoIlAp-aI6AlH7uIQOz_ZIFmTpvkXQZD00ZHFNN1dk5zn0-CwintJhjAczL5mv7da4iJBzqg6revEkxQE0QrawSKNuezOq7HFsCh_lH84BulgbcsvIh0zEPI4i1p2Yr1Y--xew445VRl5SW5sfXFI0b5dAjnWpghNpUstT8CoYG5IFt1lrZgMzWTeRa06j60nO8aMXtOPBh6NbvvODwLdkbYSzoJV5odAgars5fKzZhVsDHcQZvXoGnMjRDnvsBiG0BoOpMVHO9kbJuKxjMZDsT0; __RequestVerificationToken_L0Rpc2VydGF0aWU_=B2OOzQtqJfspwC2nZKvRoawtIBj4gmxsqMW5iJoxP0wvjCoB3wnPnub5S7P6eHlkLg8aReRtKxCAlFPbRUkXb7LHrLIjKp/MDlYQ5JPTgUcyRVqk87QqxHgVcIapT3zLreHOzXyVtaZAwYunXW9nqyJblR6TdU1c0X7N3iSOu+U=" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost/Disertatie/Home/Mesaje" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.1; rv:12.0) Gecko/20100101 Firefox/12.0" />
+    </item>
+    <item name="HTTP_X_REQUESTED_WITH">
+      <value string="XMLHttpRequest" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name="Magazin_IDCart">
+      <value string="3945aab0-c96f-440c-91f4-2f501aa337ec" />
+    </item>
+    <item name="Disertatie.SessionId">
+      <value string="2cr51vtghazw2d1j4latrosa" />
+    </item>
+    <item name="Disertatie.Auth">
+      <value string="A4B17DD2B82DEFE3ACCE1196F6BBAE8C4168510BDDF867226630B03FE4BE48469F4191D7A884F14BA0F55A29A5B1CB1C2B9271436C01B1945DEE1AF73F2E18BA718344464076F0D6021108D41F4B51EC8270F02E1505D46C34C6A49CDC419443FA46A35A88AE8C0AD3A13DBAB2E5E8F7DEE37C965313DEE3DCAD1622DE2AEC91" />
+    </item>
+    <item name="Disertatie.Roles">
+      <value string="-wqLyfeIcySyS1IiF57D8j4_K8jQc0hmxYC7EbgL-iImSZI_ZJklRiiY67bJgcKc4_Amiss6tY4aQY3lgWcL-PTH3V5eLqrPuXXk-A21eJ6h8YbFXMOs5ajj19HoWcYyj4TISViT6FIusPq_nhrNCslZqg5Wi3cybXlbJQBYVuzrm4uRXefIIIDNl-TRptFdnH0cWmvN5kKwTJxeoQsfkGtE_RGUJwa_nWi1CBc8zWqp3v-QHT_TCu0t_4DfyCa4cqrKDgJT7DkMVTqcBewPFeeYDlninxJ6eu-Cv3CWIgoIlAp-aI6AlH7uIQOz_ZIFmTpvkXQZD00ZHFNN1dk5zn0-CwintJhjAczL5mv7da4iJBzqg6revEkxQE0QrawSKNuezOq7HFsCh_lH84BulgbcsvIh0zEPI4i1p2Yr1Y--xew445VRl5SW5sfXFI0b5dAjnWpghNpUstT8CoYG5IFt1lrZgMzWTeRa06j60nO8aMXtOPBh6NbvvODwLdkbYSzoJV5odAgars5fKzZhVsDHcQZvXoGnMjRDnvsBiG0BoOpMVHO9kbJuKxjMZDsT0" />
+    </item>
+    <item name="__RequestVerificationToken_L0Rpc2VydGF0aWU_">
+      <value string="B2OOzQtqJfspwC2nZKvRoawtIBj4gmxsqMW5iJoxP0wvjCoB3wnPnub5S7P6eHlkLg8aReRtKxCAlFPbRUkXb7LHrLIjKp/MDlYQ5JPTgUcyRVqk87QqxHgVcIapT3zLreHOzXyVtaZAwYunXW9nqyJblR6TdU1c0X7N3iSOu+U=" />
+    </item>
+  </cookies>
+</error>

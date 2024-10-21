@@ -1,0 +1,122 @@
+﻿@using Disertatie.Helpers
+@model Disertatie.Models.MembruHomeModel
+@{
+    ViewBag.Title = "MembriiProiect";
+    Layout = "~/Views/Shared/_LayoutAnonymousProfilePicture.cshtml";
+}
+   
+ <script src="@Url.Content("~/Scripts/jquery-1.4.4.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery-ui.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/chosen.jquery.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/chosen.jquery.min.js")" type="text/javascript"></script>
+<style>
+    #form p label {
+    background-color: #F4F6FB;
+    color: #757576;
+    display: inline;
+    float: left;
+    font-weight: bold;
+    margin-right: 10px;
+    padding: 0 10px;
+    text-align: right;
+    width: 150px;
+}thead th {
+    background: none;
+    background-color:#CCCCCC;
+    color: #FFFFFF;
+    font: bold 8pt "Lucida Grande",Arial,Helvetica,sans-serif;
+    text-transform: uppercase;
+}
+table thead 
+ {
+     background-color:#CCCCCC;
+     
+     color:#CCCCCC;
+     height:10px;
+ 
+}
+@*table 
+{
+    margin-left: 50px;
+}*@
+</style>
+<p>
+<a href="@Url.Action("Proiecte", "Proiecte")">Inapoi la proiecte</a></p>
+ <div id="form">
+ <div class="window">
+  <div class="titleWindow">
+                <div id="titleText">
+                    Membrii proiect</div>
+            </div>
+            <div class="windowContent">
+ <p>
+ @Html.Label("Titlu:")
+ @Html.DisplayTextFor(m => m.Proiect.Titlu)
+ </p>
+ <p>
+ @Html.Label("Director:")
+ @Html.DisplayTextFor(m=>m.Proiect.Initiator.Nume) @Html.DisplayTextFor(m=>m.Proiect.Initiator.Prenume) 
+ </p>
+  <p>
+ @Html.Label("Membrii necesari:")
+ @Html.DisplayTextFor(m=>m.Proiect.MembriiNecesari)
+ </p>
+ <br />
+
+ <p>
+ @if (Model.MembriiProiect.Count > 0)
+ {
+     @Html.Partial("MembriiProiectList", Model.MembriiProiect)
+ }
+ else
+ {
+      @Html.WarningBox("Atentie", "Nu aveti nici un membru")
+ }
+ </p>
+ <br />
+ <p >
+ @if (Model.Proiect.MembriiNecesari > 0)
+ {
+ <b style="background-color:#AFD2EA">
+  @Html.ActionLink("Invita", "TrimiteInvitatie", "Proiecte", new { id = Model.Proiect.Id }, new { @class = "openDialog", data_dialog_id = "emailDialog", data_dialog_title = "Trimite invitatie" })
+ </b>
+ }
+ </p>
+ </div>
+ </div>
+      </div>
+      <script type="text/javascript">
+
+          $.ajaxSetup({ cache: false });
+
+          $(document).ready(function () {
+              $(".openDialog").live("click", function (e) {
+                  e.preventDefault();
+
+                  $("<div></div>")
+                .addClass("dialog")
+                .attr("id", $(this).attr("data-dialog-id"))
+                .appendTo("body")
+                .dialog({
+                    title: $(this).attr("data-dialog-title"),
+                    close: function () { $(this).remove() },
+                    modal: true,
+                    width: '350px',
+                   
+                   
+                
+                })
+                .load(this.href);
+              });
+
+              $(".close").live("click", function (e) {
+                  e.preventDefault();
+                  $(this).closest(".dialog").dialog("close");
+              });
+          });
+</script>
+
+ 

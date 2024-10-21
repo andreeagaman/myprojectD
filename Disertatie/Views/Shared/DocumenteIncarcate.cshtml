@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Disertatie.Core.Models.DocumentIncarcat>
+@using Disertatie.Helpers
+
+
+<div id="doc_header">
+<b style="font-size: 12px;margin: 5px;display: inline;">Documente incarcate</b>
+</div>
+<table id="doc_table_header" cellspacing="0" cellpadding="0">
+	<tbody>
+    <tr>
+ <th width="50">&nbsp;</th>
+<th width="300">Nume</th>
+<th width="200">Incarcat</th>
+<th class="last">&nbsp;</th>
+</tr>
+@foreach (var item in Model)
+{
+    <tr>
+    <td class="left">
+    <a href="@item.Cale" class="btn">Descarca</a>
+    </td>
+    <td>
+    @item.Nume
+    </td>
+    <td>
+    de <a href="@Url.Action("DetaliiMembru", "Home", new { id = item.Utilizator.Id })" >@item.Utilizator.Nume @item.Utilizator.Prenume </a> la @item.DataIncarcarii
+    </td>
+    
+    <td>
+    @if (HttpContext.Current.User.Identity.Name  == item.Proiect.Initiator.Username || HttpContext.Current.User.Identity.Name == item.Utilizator.Username)
+    {
+      
+     @Html.ActionLink("Sterge", "StergeDocument", "Proiecte", new { id = item.Id }, new { @class = "delete" })
+    }
+    </td>
+    
+    </tr>
+}
+</tbody>
+</table>
+   

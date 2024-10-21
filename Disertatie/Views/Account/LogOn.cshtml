@@ -1,0 +1,53 @@
+﻿@using Disertatie.Helpers;
+@model Disertatie.Models.LogOnModel
+
+@{
+    ViewBag.Title = "Log On";
+}
+@{
+    Layout = "~/Views/Shared/_LayoutAnonymous.cshtml";
+    ViewBag.Title = "Autentificare DICE";
+    Html.EnableClientValidation(false);
+}
+
+<div id="login">
+    @if (ViewData.ModelState.IsValid == false) { 
+        @Html.ErrorBox("Autentificarea a esuat!", "Numele de utilizator sau parola este incorecta")
+    }
+    @if (TempData["SignOut"] != null) { 
+        @Html.WarningBox("Va multumim pentru utilizare!", "Sesiunea dumneavoastra a fost abandonata") 
+    }
+    <table align="center" width="550">
+        <thead>
+            <tr>
+                <th colspan="2">
+                    Autentificare DICE
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="vmiddle">
+                    <img alt="Autentificare" src="@Url.Content("~/content/images/dice_logo.png")"/>
+                </td>
+                <td>
+                    @using (Html.BeginForm("LogOn", "Account", null, FormMethod.Post, new { @class = "loginform" })) { 
+                        @Html.LabelFor(m => m.UserName, "Username:");
+                        @Html.TextBoxFor(m => m.UserName, new { size = 20, @class = "input login-input" })
+                        @Html.LabelFor(m => m.Password,"Parola:")
+                        @Html.PasswordFor(m => m.Password, new { size = 20, @class = "input login-input" })
+                        <p class="remember"><label>@Html.CheckBoxFor(m => m.RememberMe)Tine-ma minte?</label></p>
+                        <p class="submit"><input type="submit" tabindex="100" value="Autentificare" name="submit" /></p>
+                    }
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">
+                    @*<span class="forgot">@Html.ActionLink("Ai uitat parola?", "ForgotYourPassword", "Account")</span>*@
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>

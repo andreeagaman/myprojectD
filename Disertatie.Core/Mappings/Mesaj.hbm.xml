@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Disertatie.Core" namespace="Disertatie.Core.Models">
+  <class name="Mesaj" table="Mesaje">
+    <id name="Id" column="id_mesaj" unsaved-value="0">
+      <generator class="native" />
+    </id>
+
+    <property name="DataTrimitere" column="data_trimitere" />
+    <property name="Titlu" column="titlu" />
+    <property name="Citit" column="citit" />
+    <property name="Detalii" column="detalii" />
+    <property name="Activ" column="activ" />
+    <many-to-one column="id_utilizator" name="Expeditor" lazy="false" ></many-to-one>
+    <many-to-one column="id_destinatar" name="Destinatar" lazy="false" ></many-to-one>
+  </class>
+</hibernate-mapping>

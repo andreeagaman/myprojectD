@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Disertatie.Core" namespace="Disertatie.Core.Models">
+  <class name="Proiect" table="Proiecte">
+  
+    <id name="Id" column="id_proiect" unsaved-value="0">
+      <generator class="native" />
+    </id>
+    <property name="Titlu" column="titlu"></property>
+    <property name="Durata" column="durata"></property>
+    <property name="Detalii" column="detalii" />
+    <property name="Status" column="status" />
+    <property name="DataCreare" column="data_creare" />
+    <property name="DataModificareStare" column="data_modificare_stare" />
+    <many-to-one column="id_utilizator" name="Initiator" lazy="false" ></many-to-one>
+    <property name="NumarMembriiProiect" column="numar_membrii" />
+    <property name="MembriiNecesari" column="membrii_necesari" />
+    <property name="Evaluare" column="evaluare"></property>
+    <property name="TotalEvaluatori" column="total_evaluatori" />
+
+  </class>
+</hibernate-mapping>

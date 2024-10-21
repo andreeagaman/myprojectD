@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Disertatie.Core.Models.CereriProiect>
+@using Disertatie.Helpers
+
+
+<table id="services">
+	
+    <thead>
+		<tr>
+			<th>
+            </th>
+			<th>
+				Trimisa la
+			</th>
+			<th>
+				Expeditor
+			</th>
+			
+			<th>
+			    Proiect
+			</th>
+           <th>
+			    Respinsa la
+			</th>
+            
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model) {
+	
+         <tr>
+				<td>
+                @Html.ActionLink("Sterge", "StergeCererePrimita", "Proiecte", new { id = item.Id }, new { @class = "delete" })
+                </td>
+              
+				<td>
+					@item.DataCreare.ToString("dd-MM-yyyy HH:mm")
+				</td>
+				<td>
+					@item.Expeditor.Nume @item.Expeditor.Prenume
+				</td>
+				<td>
+					<a href="@Url.Action("DetaliiProiectCereri", "Proiecte", new { id = @item.Proiect.Id })" style=" color: #5777BB;"> @item.Proiect.Titlu</a>
+				</td>  
+                <td>
+					@item.DataRespingerii
+				</td>               
+				
+			</tr>
+      
+  }
+	</tbody>
+    <tfoot>
+        <tr>
+            <td colspan="6">
+                @Html.Partial("PaginationCereriPrimiteRespinse", Model)
+            </td>
+        </tr>
+    </tfoot>
+</table>

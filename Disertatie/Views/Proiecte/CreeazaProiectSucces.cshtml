@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "CreeazaProiectSucces";
+    Layout = "~/Views/Shared/_LayoutAnonymousProfilePicture.cshtml";
+}
+@using Disertatie.Core
+@using Disertatie.Helpers
+
+<a href="@Url.Action("Proiecte", "Proiecte")">Inapoi la proiecte</a>
+@if (TempData["exc"] != null) {@Html.ErrorBox("A aparut o eroare la selectia datelor!"); }
+else{
+@Html.SuccessBox("Proiectul a fost creat cu succes!")}

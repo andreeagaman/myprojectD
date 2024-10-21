@@ -1,0 +1,50 @@
+﻿@model Disertatie.Core.IPagedList
+@{
+    // Model.PageIndex is zero-based
+    var pageIndex = Model.PageIndex + 1;
+    var min = Math.Max(1, pageIndex - 7);
+    var max = Math.Min(Model.PageCount, pageIndex + 7);
+    var htmlAttr = new Dictionary<string, object> {
+        { "class", "pagelink" }
+    };
+}
+@functions {
+    private RouteValueDictionary GetForPageIndex(int pageIndex) {
+        
+        var temp = new RouteValueDictionary(this.ViewContext.RouteData.Values);
+        temp.Add("page2", pageIndex);
+        return temp;
+    }
+    
+
+}
+<div class="pagination">
+
+  Pagina @(Model.PageCount < pageIndex ? 0 : pageIndex)
+    din @Model.PageCount
+    &nbsp;
+
+    @if (Model.HasPreviousPage)
+    { 
+        @Html.RouteLink("Inapoi", GetForPageIndex(pageIndex -1), htmlAttr);
+    }
+    @foreach (var page in Enumerable.Range(min, max))
+    {
+        if (page <= Model.PageCount)
+        {
+            if (page == pageIndex)
+            {
+            <span>@pageIndex</span>
+            }
+            else
+            { 
+            @Html.RouteLink(page.ToString(), GetForPageIndex(page), htmlAttr);
+            }
+        }
+    }
+    @if (Model.HasNextPage) { 
+        @Html.RouteLink("Inainte", GetForPageIndex(pageIndex + 1), htmlAttr);
+    }
+
+</div>
+    

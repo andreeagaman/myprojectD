@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head> 
+    <meta content="NoIndex" name="Robots" />
+    <title>@ViewBag.Title</title>    
+    <link href="@Url.Content("~/Content/css/site.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/css/common.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/css/menu.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/css/tables.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/css/form.css")" rel="stylesheet" type="text/css" />
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript"></script>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.js" type="text/javascript"></script>
+    @RenderSection("Scripts", required: false)
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">@Html.Partial("_UserBox")<div id="logo"></div></div>
+        <div id="menu">@Html.Partial("_Menu")</div>
+        <div style="clear: both;"></div>
+        <div id="middlepart">
+            <div id="singlecolumn">
+                @RenderBody()
+            </div>          
+        </div>
+    </div>
+    <div id="footer">
+        <p class="copyright">
+            &copy; Copyright 2012, DICE
+            <br />Aplicatie pentru Departamentul de Informatica si Cibernetica Economica
+        </p>
+    </div>
+    <script type="text/javascript">
+        var notifier = function () {
+
+            setTimeout('notifier', 30000); // 30 sec
+        };
+        $(function () {
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Disertatie.Core.Models.Utilizator>
+@using Disertatie.Helpers
+<table>
+ <thead>
+ <tr>
+ <th> Nume</th>
+ <th></th>
+ </tr>
+ </thead>
+ <tbody>
+ @foreach (var item in Model)
+ {
+	
+ <tr>
+ <td>
+ @item.Nume @item.Prenume
+ </td>
+ <td>
+  @Html.ActionLink("Elimina", "EliminaMembruProiect", "Proiecte", new { id = item.Id }, new { @class = "publish" })
+ </td>
+ </tr>
+ }
+ </tbody>
+ </table>

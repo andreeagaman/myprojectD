@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Disertatie.Core.Models.InvitatiiProiect>
+@using Disertatie.Helpers
+
+
+<table id="services">
+	
+    <thead>
+		<tr>
+			
+			<th>
+				Trimisa la
+			</th>
+			<th>
+				Destinatar
+			</th>
+			
+			<th>
+			    Proiect
+			</th>
+            <th>
+            </th>
+            
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model) {
+	
+         <tr>
+				
+              
+				<td>
+					@item.DataCreare.ToString("dd-MM-yyyy HH:mm")
+				</td>
+				<td>
+					@item.Destinatar.Nume @item.Destinatar.Prenume
+				</td>
+				<td>
+                <a href="@Url.Action("DetaliiProiectInvitatii", "Proiecte",new {id= @item.Proiect.Id})" style=" color: #5777BB;"> @item.Proiect.Titlu</a>
+					
+				</td>                
+				<td>
+                @Html.ActionLink("Sterge", "StergeInvitatie", "Proiecte", new { id = item.Id }, new { @class = "delete" })
+                </td>
+				
+			</tr>
+      
+  }
+	</tbody>
+    <tfoot>
+        <tr>
+            <td colspan="6">
+                @Html.Partial("PaginationInvitatiiProiectInAsteptare", Model)
+            </td>
+        </tr>
+    </tfoot>
+</table>

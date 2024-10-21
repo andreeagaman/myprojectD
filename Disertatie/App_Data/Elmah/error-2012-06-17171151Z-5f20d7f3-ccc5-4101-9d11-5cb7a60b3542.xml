@@ -1,0 +1,174 @@
+﻿<error errorId="5f20d7f3-ccc5-4101-9d11-5cb7a60b3542" host="ANDREEA-PC" type="System.NullReferenceException" message="Object reference not set to an instance of an object." source="NHibernate" detail="NHibernate.Exceptions.GenericADOException: could not load collection by subselect: [Disertatie.Core.Models.Utilizator.Roluri#System.Object[]]&#xD;&#xA;[ SELECT roluri0_.id_utilizator as id2_1_, roluri0_.id_rol as id1_1_, rol1_.id_rol as id1_3_0_, rol1_.nume_rol as nume2_3_0_, rol1_.nume_aplicatie as nume3_3_0_, rol1_.activ as activ3_0_ FROM UtilizatoriRoluri roluri0_ left outer join Roluri rol1_ on roluri0_.id_rol=rol1_.id_rol WHERE roluri0_.id_utilizator in (select utilizator0_.id_utilizator from Utilizatori utilizator0_ ) ]&#xD;&#xA;[SQL: SELECT roluri0_.id_utilizator as id2_1_, roluri0_.id_rol as id1_1_, rol1_.id_rol as id1_3_0_, rol1_.nume_rol as nume2_3_0_, rol1_.nume_aplicatie as nume3_3_0_, rol1_.activ as activ3_0_ FROM UtilizatoriRoluri roluri0_ left outer join Roluri rol1_ on roluri0_.id_rol=rol1_.id_rol WHERE roluri0_.id_utilizator in (select utilizator0_.id_utilizator from Utilizatori utilizator0_ )] ---&gt; System.NullReferenceException: Object reference not set to an instance of an object.&#xD;&#xA;   at NHibernate.Engine.Loading.CollectionLoadContext.AddCollectionToCache(LoadingCollectionEntry lce, ICollectionPersister persister) in d:\CSharp\NH\nhibernate\src\NHibernate\Engine\Loading\CollectionLoadContext.cs:line 317&#xD;&#xA;   at NHibernate.Engine.Loading.CollectionLoadContext.EndLoadingCollection(LoadingCollectionEntry lce, ICollectionPersister persister) in d:\CSharp\NH\nhibernate\src\NHibernate\Engine\Loading\CollectionLoadContext.cs:line 271&#xD;&#xA;   at NHibernate.Engine.Loading.CollectionLoadContext.EndLoadingCollections(ICollectionPersister persister, IList`1 matchedCollectionEntries) in d:\CSharp\NH\nhibernate\src\NHibernate\Engine\Loading\CollectionLoadContext.cs:line 224&#xD;&#xA;   at NHibernate.Engine.Loading.CollectionLoadContext.EndLoadingCollections(ICollectionPersister persister) in d:\CSharp\NH\nhibernate\src\NHibernate\Engine\Loading\CollectionLoadContext.cs:line 192&#xD;&#xA;   at NHibernate.Loader.Loader.EndCollectionLoad(Object resultSetId, ISessionImplementor session, ICollectionPersister collectionPersister) in d:\CSharp\NH\nhibernate\src\NHibernate\Loader\Loader.cs:line 616&#xD;&#xA;   at NHibernate.Loader.Loader.InitializeEntitiesAndCollections(IList hydratedObjects, Object resultSetId, ISessionImplementor session, Boolean readOnly) in d:\CSharp\NH\nhibernate\src\NHibernate\Loader\Loader.cs:line 606&#xD;&#xA;   at NHibernate.Loader.Loader.DoQuery(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies) in d:\CSharp\NH\nhibernate\src\NHibernate\Loader\Loader.cs:line 460&#xD;&#xA;   at NHibernate.Loader.Loader.DoQueryAndInitializeNonLazyCollections(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies) in d:\CSharp\NH\nhibernate\src\NHibernate\Loader\Loader.cs:line 236&#xD;&#xA;   at NHibernate.Loader.Loader.LoadCollectionSubselect(ISessionImplementor session, Object[] ids, Object[] parameterValues, IType[] parameterTypes, IDictionary`2 namedParameters, IType type) in d:\CSharp\NH\nhibernate\src\NHibernate\Loader\Loader.cs:line 1545&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;   at NHibernate.Loader.Loader.LoadCollectionSubselect(ISessionImplementor session, Object[] ids, Object[] parameterValues, IType[] parameterTypes, IDictionary`2 namedParameters, IType type) in d:\CSharp\NH\nhibernate\src\NHibernate\Loader\Loader.cs:line 1556&#xD;&#xA;   at NHibernate.Loader.Collection.SubselectCollectionLoader.Initialize(Object id, ISessionImplementor session) in d:\CSharp\NH\nhibernate\src\NHibernate\Loader\Collection\SubselectCollectionLoader.cs:line 39&#xD;&#xA;   at NHibernate.Persister.Collection.AbstractCollectionPersister.Initialize(Object key, ISessionImplementor session) in d:\CSharp\NH\nhibernate\src\NHibernate\Persister\Collection\AbstractCollectionPersister.cs:line 578&#xD;&#xA;   at NHibernate.Event.Default.DefaultInitializeCollectionEventListener.OnInitializeCollection(InitializeCollectionEvent event) in d:\CSharp\NH\nhibernate\src\NHibernate\Event\Default\DefaultInitializeCollectionEventListener.cs:line 51&#xD;&#xA;   at NHibernate.Impl.SessionImpl.InitializeCollection(IPersistentCollection collection, Boolean writing) in d:\CSharp\NH\nhibernate\src\NHibernate\Impl\SessionImpl.cs:line 1594&#xD;&#xA;   at NHibernate.Collection.AbstractPersistentCollection.ForceInitialization() in d:\CSharp\NH\nhibernate\src\NHibernate\Collection\AbstractPersistentCollection.cs:line 606&#xD;&#xA;   at NHibernate.Engine.StatefulPersistenceContext.InitializeNonLazyCollections() in d:\CSharp\NH\nhibernate\src\NHibernate\Engine\StatefulPersistenceContext.cs:line 933&#xD;&#xA;   at NHibernate.Loader.Loader.DoQueryAndInitializeNonLazyCollections(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies) in d:\CSharp\NH\nhibernate\src\NHibernate\Loader\Loader.cs:line 242&#xD;&#xA;   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters) in d:\CSharp\NH\nhibernate\src\NHibernate\Loader\Loader.cs:line 1667&#xD;&#xA;   at NHibernate.Loader.Loader.ListIgnoreQueryCache(ISessionImplementor session, QueryParameters queryParameters) in d:\CSharp\NH\nhibernate\src\NHibernate\Loader\Loader.cs:line 1589&#xD;&#xA;   at NHibernate.Loader.Loader.List(ISessionImplementor session, QueryParameters queryParameters, ISet`1 querySpaces, IType[] resultTypes) in d:\CSharp\NH\nhibernate\src\NHibernate\Loader\Loader.cs:line 1579&#xD;&#xA;   at NHibernate.Hql.Ast.ANTLR.Loader.QueryLoader.List(ISessionImplementor session, QueryParameters queryParameters) in d:\CSharp\NH\nhibernate\src\NHibernate\Hql\Ast\ANTLR\Loader\QueryLoader.cs:line 297&#xD;&#xA;   at NHibernate.Hql.Ast.ANTLR.QueryTranslatorImpl.List(ISessionImplementor session, QueryParameters queryParameters) in d:\CSharp\NH\nhibernate\src\NHibernate\Hql\Ast\ANTLR\QueryTranslatorImpl.cs:line 107&#xD;&#xA;   at NHibernate.Engine.Query.HQLQueryPlan.PerformList(QueryParameters queryParameters, ISessionImplementor session, IList results) in d:\CSharp\NH\nhibernate\src\NHibernate\Engine\Query\HQLQueryPlan.cs:line 105&#xD;&#xA;   at NHibernate.Impl.SessionImpl.List(IQueryExpression queryExpression, QueryParameters queryParameters, IList results) in d:\CSharp\NH\nhibernate\src\NHibernate\Impl\SessionImpl.cs:line 655&#xD;&#xA;   at NHibernate.Impl.SessionImpl.List(IQueryExpression queryExpression, QueryParameters parameters) in d:\CSharp\NH\nhibernate\src\NHibernate\Impl\SessionImpl.cs:line 634&#xD;&#xA;   at NHibernate.Impl.ExpressionQueryImpl.List() in d:\CSharp\NH\nhibernate\src\NHibernate\Impl\ExpressionQueryImpl.cs:line 63&#xD;&#xA;   at NHibernate.Linq.NhQueryProvider.ExecuteQuery(NhLinqExpression nhLinqExpression, IQuery query, NhLinqExpression nhQuery) in d:\CSharp\NH\nhibernate\src\NHibernate\Linq\NhQueryProvider.cs:line 78&#xD;&#xA;   at NHibernate.Linq.NhQueryProvider.Execute(Expression expression) in d:\CSharp\NH\nhibernate\src\NHibernate\Linq\NhQueryProvider.cs:line 27&#xD;&#xA;   at NHibernate.Linq.NhQueryProvider.Execute[TResult](Expression expression) in d:\CSharp\NH\nhibernate\src\NHibernate\Linq\NhQueryProvider.cs:line 101&#xD;&#xA;   at Remotion.Data.Linq.QueryableBase`1.GetEnumerator()&#xD;&#xA;   at System.Collections.Generic.List`1.InsertRange(Int32 index, IEnumerable`1 collection)&#xD;&#xA;   at System.Collections.Generic.List`1.AddRange(IEnumerable`1 collection)&#xD;&#xA;   at Disertatie.Core.PageList`1..ctor(Int32 pageIndex, Int32 totalCount, Int32 pageSize, IEnumerable`1 results) in D:\Fac\disertatie\Disertatie\Disertatie\Disertatie.Core\PageList.cs:line 48&#xD;&#xA;   at Disertatie.Core.QuerableExtensions.ToPageList[TEntity](IQueryable`1 queryable, Int32 pageIndex, Int32 pageSize) in D:\Fac\disertatie\Disertatie\Disertatie\Disertatie.Core\QuerableExtensions.cs:line 14&#xD;&#xA;   at Disertatie.Core.Repositories.RepositoryBase`2.GetPageList(Int32 pageIndex, Int32 pageSize) in D:\Fac\disertatie\Disertatie\Disertatie\Disertatie.Core\Repositories\RepositoryBase.Generic.cs:line 24&#xD;&#xA;   at Disertatie.Areas.Admin.Controllers.UsersController.Index(Nullable`1 page) in D:\Fac\disertatie\Disertatie\Disertatie\Disertatie\Areas\Admin\Controllers\UsersController.cs:line 25&#xD;&#xA;   at lambda_method(Closure , ControllerBase , Object[] )&#xD;&#xA;   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)&#xD;&#xA;   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.&lt;&gt;c__DisplayClass15.&lt;InvokeActionMethodWithFilters&gt;b__12()&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.&lt;&gt;c__DisplayClass15.&lt;&gt;c__DisplayClass17.&lt;InvokeActionMethodWithFilters&gt;b__14()&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.&lt;&gt;c__DisplayClass15.&lt;&gt;c__DisplayClass17.&lt;InvokeActionMethodWithFilters&gt;b__14()&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.&lt;&gt;c__DisplayClass15.&lt;&gt;c__DisplayClass17.&lt;InvokeActionMethodWithFilters&gt;b__14()&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)&#xD;&#xA;   at System.Web.Mvc.Controller.ExecuteCore()&#xD;&#xA;   at System.Web.Mvc.ControllerBase.Execute(RequestContext requestContext)&#xD;&#xA;   at System.Web.Mvc.ControllerBase.System.Web.Mvc.IController.Execute(RequestContext requestContext)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c__DisplayClass6.&lt;&gt;c__DisplayClassb.&lt;BeginProcessRequest&gt;b__5()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.&lt;&gt;c__DisplayClass1.&lt;MakeVoidDelegate&gt;b__0()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.&lt;&gt;c__DisplayClass8`1.&lt;BeginSynchronous&gt;b__7(IAsyncResult _)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c__DisplayClasse.&lt;EndProcessRequest&gt;b__d()&#xD;&#xA;   at System.Web.Mvc.SecurityUtil.&lt;GetCallInAppTrustThunk&gt;b__0(Action f)&#xD;&#xA;   at System.Web.Mvc.SecurityUtil.ProcessInApplicationTrust(Action action)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="test1" time="2012-06-17T17:11:51.4791913Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CACHE_CONTROL:max-age=0&#xD;&#xA;HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_CHARSET:ISO-8859-2,utf-8;q=0.7,*;q=0.3&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip,deflate,sdch&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:ro-RO,ro;q=0.8,en-US;q=0.6,en;q=0.4&#xD;&#xA;HTTP_COOKIE:Disertatie.SessionId=lczsxzcgjhrzedwsp50s1nwj; Disertatie.Auth=422B5F608A83B185BD1DA7621331F36FD7B30080856E36380459003E00873F714AE11110527D3972273DBC65243CDF37EA671D00696B2276E5C69D271C78BB130607D0A22AE5E401881012E921B1ED3F29CBD4A6EE2386B4BF6424951138FEB74CD6AC88BBA54DC1674CA3F3EFD786CC058917CAF2E93FA4B9EC1159FED4BDE8; Disertatie.Roles=YDvEI4S2Li0Ea9y5zgutfTdXw2KwlOHGTHU8ZwNDQRZa7QXbBQyCnolGOiNZGFRyoCgyzWr8PsMa4QeaEKcbqoZklM0GH02mKt_VIHv_DaFHQXrbIHHzshRKk6d8So6XaiqXEJydZoW0uEONN6RGF4yfD0K1p3F1s_efG5YKcgU9njN6HNimBJj_HFQ3pKyEUpU8OMB3zxxRZvxN0RMsO9hmemVpWNXQCBsz7dDRxxPoxtKicyws2fjxZlUcY9lbPL8c9zJ-mq7N02lm5ENKuo9XDETMg_v3ltHe7tqSlF3PT9VpNMTCQfQt4UQpCcS9E6Uw28hDhNtBfsQMszuEG15K9B7hcH-_LogG6YLOvhC0vDdW7nAG8SDJQR5Y6vkGv-SCHZZ0a-WPT6UK26eR39RTP7dLclKEEKpHPWhaHJYUKYxWrk3gHn0ErlfUFvUTdqHAoUXlPs6iG0y48j4U72NNW0pMHtTdG5MIhBWCIVScrKLFhz7FYqsJ4etRSwhzdU8MfSx7iF_Sfd1oO3dLn9N4bB7yli0C49pvzuY-P901&#xD;&#xA;HTTP_HOST:localhost&#xD;&#xA;HTTP_REFERER:http://localhost/Disertatie/admin/Users/create&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.1) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.56 Safari/536.5&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Cache-Control: max-age=0&#xD;&#xA;Connection: keep-alive&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;Accept-Charset: ISO-8859-2,utf-8;q=0.7,*;q=0.3&#xD;&#xA;Accept-Encoding: gzip,deflate,sdch&#xD;&#xA;Accept-Language: ro-RO,ro;q=0.8,en-US;q=0.6,en;q=0.4&#xD;&#xA;Cookie: Disertatie.SessionId=lczsxzcgjhrzedwsp50s1nwj; Disertatie.Auth=422B5F608A83B185BD1DA7621331F36FD7B30080856E36380459003E00873F714AE11110527D3972273DBC65243CDF37EA671D00696B2276E5C69D271C78BB130607D0A22AE5E401881012E921B1ED3F29CBD4A6EE2386B4BF6424951138FEB74CD6AC88BBA54DC1674CA3F3EFD786CC058917CAF2E93FA4B9EC1159FED4BDE8; Disertatie.Roles=YDvEI4S2Li0Ea9y5zgutfTdXw2KwlOHGTHU8ZwNDQRZa7QXbBQyCnolGOiNZGFRyoCgyzWr8PsMa4QeaEKcbqoZklM0GH02mKt_VIHv_DaFHQXrbIHHzshRKk6d8So6XaiqXEJydZoW0uEONN6RGF4yfD0K1p3F1s_efG5YKcgU9njN6HNimBJj_HFQ3pKyEUpU8OMB3zxxRZvxN0RMsO9hmemVpWNXQCBsz7dDRxxPoxtKicyws2fjxZlUcY9lbPL8c9zJ-mq7N02lm5ENKuo9XDETMg_v3ltHe7tqSlF3PT9VpNMTCQfQt4UQpCcS9E6Uw28hDhNtBfsQMszuEG15K9B7hcH-_LogG6YLOvhC0vDdW7nAG8SDJQR5Y6vkGv-SCHZZ0a-WPT6UK26eR39RTP7dLclKEEKpHPWhaHJYUKYxWrk3gHn0ErlfUFvUTdqHAoUXlPs6iG0y48j4U72NNW0pMHtTdG5MIhBWCIVScrKLFhz7FYqsJ4etRSwhzdU8MfSx7iF_Sfd1oO3dLn9N4bB7yli0C49pvzuY-P901&#xD;&#xA;Host: localhost&#xD;&#xA;Referer: http://localhost/Disertatie/admin/Users/create&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.56 Safari/536.5&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/1/ROOT/Disertatie" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="D:\Fac\disertatie\Disertatie\Disertatie\Disertatie\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="Forms" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="test1" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="test1" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="test1" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="1" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/1" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Disertatie/admin/Users" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="D:\Fac\disertatie\Disertatie\Disertatie\Disertatie\admin\Users" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="57023" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Disertatie/admin/Users" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="80" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/7.5" />
+    </item>
+    <item name="URL">
+      <value string="/Disertatie/admin/Users" />
+    </item>
+    <item name="HTTP_CACHE_CONTROL">
+      <value string="max-age=0" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_CHARSET">
+      <value string="ISO-8859-2,utf-8;q=0.7,*;q=0.3" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip,deflate,sdch" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="ro-RO,ro;q=0.8,en-US;q=0.6,en;q=0.4" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="Disertatie.SessionId=lczsxzcgjhrzedwsp50s1nwj; Disertatie.Auth=422B5F608A83B185BD1DA7621331F36FD7B30080856E36380459003E00873F714AE11110527D3972273DBC65243CDF37EA671D00696B2276E5C69D271C78BB130607D0A22AE5E401881012E921B1ED3F29CBD4A6EE2386B4BF6424951138FEB74CD6AC88BBA54DC1674CA3F3EFD786CC058917CAF2E93FA4B9EC1159FED4BDE8; Disertatie.Roles=YDvEI4S2Li0Ea9y5zgutfTdXw2KwlOHGTHU8ZwNDQRZa7QXbBQyCnolGOiNZGFRyoCgyzWr8PsMa4QeaEKcbqoZklM0GH02mKt_VIHv_DaFHQXrbIHHzshRKk6d8So6XaiqXEJydZoW0uEONN6RGF4yfD0K1p3F1s_efG5YKcgU9njN6HNimBJj_HFQ3pKyEUpU8OMB3zxxRZvxN0RMsO9hmemVpWNXQCBsz7dDRxxPoxtKicyws2fjxZlUcY9lbPL8c9zJ-mq7N02lm5ENKuo9XDETMg_v3ltHe7tqSlF3PT9VpNMTCQfQt4UQpCcS9E6Uw28hDhNtBfsQMszuEG15K9B7hcH-_LogG6YLOvhC0vDdW7nAG8SDJQR5Y6vkGv-SCHZZ0a-WPT6UK26eR39RTP7dLclKEEKpHPWhaHJYUKYxWrk3gHn0ErlfUFvUTdqHAoUXlPs6iG0y48j4U72NNW0pMHtTdG5MIhBWCIVScrKLFhz7FYqsJ4etRSwhzdU8MfSx7iF_Sfd1oO3dLn9N4bB7yli0C49pvzuY-P901" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost/Disertatie/admin/Users/create" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.1) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.56 Safari/536.5" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name="Disertatie.SessionId">
+      <value string="lczsxzcgjhrzedwsp50s1nwj" />
+    </item>
+    <item name="Disertatie.Auth">
+      <value string="422B5F608A83B185BD1DA7621331F36FD7B30080856E36380459003E00873F714AE11110527D3972273DBC65243CDF37EA671D00696B2276E5C69D271C78BB130607D0A22AE5E401881012E921B1ED3F29CBD4A6EE2386B4BF6424951138FEB74CD6AC88BBA54DC1674CA3F3EFD786CC058917CAF2E93FA4B9EC1159FED4BDE8" />
+    </item>
+    <item name="Disertatie.Roles">
+      <value string="YDvEI4S2Li0Ea9y5zgutfTdXw2KwlOHGTHU8ZwNDQRZa7QXbBQyCnolGOiNZGFRyoCgyzWr8PsMa4QeaEKcbqoZklM0GH02mKt_VIHv_DaFHQXrbIHHzshRKk6d8So6XaiqXEJydZoW0uEONN6RGF4yfD0K1p3F1s_efG5YKcgU9njN6HNimBJj_HFQ3pKyEUpU8OMB3zxxRZvxN0RMsO9hmemVpWNXQCBsz7dDRxxPoxtKicyws2fjxZlUcY9lbPL8c9zJ-mq7N02lm5ENKuo9XDETMg_v3ltHe7tqSlF3PT9VpNMTCQfQt4UQpCcS9E6Uw28hDhNtBfsQMszuEG15K9B7hcH-_LogG6YLOvhC0vDdW7nAG8SDJQR5Y6vkGv-SCHZZ0a-WPT6UK26eR39RTP7dLclKEEKpHPWhaHJYUKYxWrk3gHn0ErlfUFvUTdqHAoUXlPs6iG0y48j4U72NNW0pMHtTdG5MIhBWCIVScrKLFhz7FYqsJ4etRSwhzdU8MfSx7iF_Sfd1oO3dLn9N4bB7yli0C49pvzuY-P901" />
+    </item>
+  </cookies>
+</error>

@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "DetaliiAnunt";
+    Layout = "~/Views/Shared/_LayoutAnonymousProfilePicture.cshtml";
+}
+@model Disertatie.Models.MembruHomeModel
+<a href="@Url.Action("Membru", "Home")">Inapoi la pagina acasa</a>
+ <div id="form">
+ <p>
+  @Html.Label("Titlu:")
+ @Html.DisplayTextFor(m => m.Anunt.Nume)
+ </p>
+  <p>
+  @Html.Label("Detalii:")
+ @Html.DisplayTextFor(m => m.Anunt.Detalii)
+ </p>
+ <p>
+  @Html.Label("Creat la:")
+ @Html.DisplayTextFor(m => m.Anunt.DataCreare)
+ </p>
+  <p>
+  @Html.Label("Creat de:")
+ @Html.DisplayTextFor(m => m.Anunt.Utilizator.Nume) @Html.DisplayTextFor(m => m.Anunt.Utilizator.Prenume)
+ </p>
+ </div>

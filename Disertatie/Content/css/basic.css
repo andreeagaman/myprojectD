@@ -1,0 +1,137 @@
+html, body {
+	margin:0;
+	padding:0;
+}
+body{
+	text-align: center;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
+	background-color: #eee;
+	color: #444;
+	font-size: 75%;
+}
+a{
+	color: #27D;
+	text-decoration: none;
+}
+a:focus, a:hover, a:active {
+	text-decoration: underline;
+}
+p, li {
+	line-height: 1.8em;
+}
+h1, h2 {
+	font-family: "Trebuchet MS", Verdana, sans-serif;
+	margin: 0 0 10px 0;
+	letter-spacing:-1px;
+}
+h1 {
+	padding: 0;
+	font-size: 3em;
+	color: #333;
+}
+h2 {
+	padding-top: 10px;
+	font-size:2em;
+}
+pre {
+	font-size: 1.2em;
+	line-height: 1.2em;
+	overflow-x: auto;
+}
+div#page {
+	width: 1000px;
+	background-color: #fff;
+	margin: 0 auto;
+	text-align: left;
+	border-color: #ddd;
+	border-style: none solid solid;
+	border-width: medium 1px 1px; border-top:1px solid;
+}
+div#container {
+	padding: 20px;
+}
+div#ads {
+	clear: both;
+	padding: 12px 0 12px 66px;
+}
+div#footer {
+	clear: both;
+	color: #777;
+	margin: 0 auto;
+	padding: 20px 0 40px;
+	text-align: center;
+}
+.profileLine {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+    border-top: 1px dashed #CBCBCE;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 5px 0;
+}
+.profileLine:hover {
+    background: none repeat scroll 0 0 #F7F7F7;
+    cursor: pointer;
+}
+.profileLine img {
+    padding: 0 5px 2px 0;
+}
+.contentPad_5 {
+    margin: 5px;
+}
+.nameText, .nameText a, .nameText a:visited {
+    color: #148DFD;
+    font-size: 14px;
+}
+.textLinks {
+    color: #A0A1A2;
+    font-size: 10px;
+    font-weight: normal;
+}
+#doc_table_header {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #FFFFFF;
+    background-position: center bottom;
+    background-repeat: repeat-x;
+    border-color: -moz-use-text-color #D5D5D5 #D5D5D5;
+    border-right: 1px solid #D5D5D5;
+    border-style: none solid solid;
+    border-width: medium 1px 1px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+#doc_table_header .last {
+    border-right: medium none;
+}
+#doc_table_header a.btn {
+    background-color: #FAFAF8;
+    border: 1px solid #D5D5D5;
+    border-radius: 3px 3px 3px 3px;
+    color: #00CC00;
+    font-size: 10px;
+    margin-right: 6px;
+    padding: 1px 4px;
+}
+#doc_table_header td {
+    border-bottom: 1px solid #D5D5D5;
+    border-right: 1px solid #D5D5D5;
+    font-size: 11px;
+    padding: 7px;
+}
+#doc_bottom {
+    float: left;
+    margin: 10px;
+    width: 720px;
+}
+.commentTextArea {
+    border: 1px solid #CCCCCC;
+    color: #9A9B9E;
+    font-size: 11px;
+    margin: 10px 0;
+    width: 99%;
+}

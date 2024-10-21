@@ -1,0 +1,35 @@
+Ca sa poti incepe testarea mai intai trebuie srisa documentatia aplicatiei
+adrian popescu is typing...
+adrian popescu: asta este scrisa de catre beneficiar(aici intra persoana care se ocupa cu business aplicatiei, un tehnical lead care trebuie sa stie daca se poate implementa acele functionalitati, o persoana experimentata pe user experience, etc
+dupa ce se scrie docuemntatia, apoi depinde de ce metodologie se foloste incepe sa implementeze ceea ce doreste clientu
+ scuze inloc de metodologie modifica cu tehnici de testare
+aici sunt mai multe tehnici(agile, Watefall
+apoi incep sa se scrie test case de catre echipa de qa
+
+acum in fuctie de tehnica de testare aleasa se asteapta ca dezvolatrea sa inceapa
+adrian popescu: iar cand se poate testa se folosesc test case create si se urmeaza pasi de acolo daca sunt pass or faild
+ daca sunt faild(chair unul din  el) atunci testul ala e picat si se trece ca bug si developmentu trebuie sa repare
+ si apoi iar se retesteaza
+ca testare se foloste atat testarea manuala, sau testarea automata
+automata se foloste cand aplicatia este stabila si se tot urmeaza aceasi pasi zi de zi si ca sa ajuta la economisirea timpului atunci se automatizeaza
+adrian popescu: dar nu e ok sa faci testare automata cand aplicatia se tot modifica (muncesti degeaba)
+testarea manuala poti sa o faci dua test case sau exploratory
+exploratory(de obicei se foloste cand nu prea sunt multe specificaty si timpul este scurt
+adrian popescu: aici sutn multe de spus andreea dar intram in alte amantu care nu are legatura cu tema ta
+adrian popescu is typing...
+adrian popescu: sa ne gandim la ceva scenari de testare vad eu acolo
+
+scenarile sutn cam asa: datele de intrare, functionalitatile supuse testului si datele care trebuiesc obtinute
+cand apesi pe buton daca trebuie sa te trimita pe alta pagina si el da eraore atunci e faild
+
+uite am gasit ceva care explica mai bine
+adrian popescu is typing...
+adrian popescu: un scenariu de test
+2
+specifica
+•
+datele de intrare,
+•
+functionalitatile supuse testului si
+•
+datele care trebuiesc obtinute.Datele de test reprezinta datele de intrare utilizate pentru executia scenariilor de test.La final datele rezultate ca urmare a executiei scenariilor de test se compara cu rezultelespecificate de catre scenariul de test. Daca rezultatele sunt identice se considera ca testul afost realizat cu succes. Un posibil e?ec al unui scenariu de test poate indica prezen?a uneiasau a mai multor erori în cadrul modulelor sistemului informatic, module utilizate pentrurespectivul scenariu de test.

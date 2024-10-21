@@ -1,0 +1,183 @@
+﻿<error errorId="ffd614d0-dbae-4f51-bee8-007d3050985b" host="ANDREEA-PC" type="System.Web.HttpException" message="Maximum request length exceeded." source="System.Web" detail="System.Web.HttpException (0x80004005): Maximum request length exceeded.&#xD;&#xA;   at System.Web.HttpRequest.GetEntireRawContent()&#xD;&#xA;   at System.Web.HttpRequest.GetMultipartContent()&#xD;&#xA;   at System.Web.HttpRequest.FillInFormCollection()&#xD;&#xA;   at System.Web.HttpRequest.get_Form()&#xD;&#xA;   at Microsoft.Web.Infrastructure.DynamicValidationHelper.ValidationUtility.CollectionReplacer.&lt;&gt;c__DisplayClass8.&lt;MakeCollectionsLazy&gt;b__2()&#xD;&#xA;   at Microsoft.Web.Infrastructure.DynamicValidationHelper.ValidationUtility.CollectionReplacer.&lt;&gt;c__DisplayClass12.&lt;ReplaceCollection&gt;b__e()&#xD;&#xA;   at Microsoft.Web.Infrastructure.DynamicValidationHelper.ValidationUtility.CollectionReplacer.&lt;&gt;c__DisplayClass12.&lt;ReplaceCollection&gt;b__11()&#xD;&#xA;   at Microsoft.Web.Infrastructure.DynamicValidationHelper.DeferredCountArrayList.get_Count()&#xD;&#xA;   at System.Collections.Specialized.NameObjectCollectionBase.get_Count()&#xD;&#xA;   at System.Web.HttpRequest.ValidateNameValueCollection(NameValueCollection nvc, RequestValidationSource requestCollection)&#xD;&#xA;   at System.Web.HttpRequest.get_Form()&#xD;&#xA;   at System.Web.HttpRequestWrapper.get_Form()&#xD;&#xA;   at System.Web.Mvc.HttpRequestExtensions.GetHttpMethodOverride(HttpRequestBase request)&#xD;&#xA;   at System.Web.Mvc.AcceptVerbsAttribute.IsValidForRequest(ControllerContext controllerContext, MethodInfo methodInfo)&#xD;&#xA;   at System.Web.Mvc.HttpPostAttribute.IsValidForRequest(ControllerContext controllerContext, MethodInfo methodInfo)&#xD;&#xA;   at System.Web.Mvc.ActionMethodSelector.&lt;&gt;c__DisplayClass11.&lt;RunSelectionFilters&gt;b__d(ActionMethodSelectorAttribute attr)&#xD;&#xA;   at System.Linq.Enumerable.All[TSource](IEnumerable`1 source, Func`2 predicate)&#xD;&#xA;   at System.Web.Mvc.ActionMethodSelector.RunSelectionFilters(ControllerContext controllerContext, List`1 methodInfos)&#xD;&#xA;   at System.Web.Mvc.ActionMethodSelector.FindActionMethod(ControllerContext controllerContext, String actionName)&#xD;&#xA;   at System.Web.Mvc.ReflectedControllerDescriptor.FindAction(ControllerContext controllerContext, String actionName)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.FindAction(ControllerContext controllerContext, ControllerDescriptor controllerDescriptor, String actionName)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)&#xD;&#xA;   at System.Web.Mvc.Controller.ExecuteCore()&#xD;&#xA;   at System.Web.Mvc.ControllerBase.Execute(RequestContext requestContext)&#xD;&#xA;   at System.Web.Mvc.ControllerBase.System.Web.Mvc.IController.Execute(RequestContext requestContext)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c__DisplayClass6.&lt;&gt;c__DisplayClassb.&lt;BeginProcessRequest&gt;b__5()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.&lt;&gt;c__DisplayClass1.&lt;MakeVoidDelegate&gt;b__0()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.&lt;&gt;c__DisplayClass8`1.&lt;BeginSynchronous&gt;b__7(IAsyncResult _)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c__DisplayClasse.&lt;EndProcessRequest&gt;b__d()&#xD;&#xA;   at System.Web.Mvc.SecurityUtil.&lt;GetCallInAppTrustThunk&gt;b__0(Action f)&#xD;&#xA;   at System.Web.Mvc.SecurityUtil.ProcessInApplicationTrust(Action action)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="test" time="2012-06-14T23:09:26.0693530Z" statusCode="500">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_CONTENT_LENGTH:8646223&#xD;&#xA;HTTP_CONTENT_TYPE:multipart/form-data; boundary=---------------------------491299511942&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:ro-ro,ro;q=0.8,en-us;q=0.6,en-gb;q=0.4,en;q=0.2&#xD;&#xA;HTTP_COOKIE:rating24=6/11/2012 9:16:03 PM; rating1=6/11/2012 11:27:07 PM; Disertatie.SessionId=4gwxavmvb1dk3urbwpqub5tg; Disertatie.Auth=3AC59B1C93BCD58DDDDE3A61D7334465395C6FBB6FB5E623B7110C881989301A9FF4B5E0FD54238B7B0D854363A79B5697FBDF3CA634E38A1A112612ED6B3C39F81621C355598448C56C8BABC6CDE45F7E66DBE86A3BA1498A6275A1E2375DB2DC61D5624058513EDE699C0F168BB4DA4A8EC7EB3EC1650B1350651728D9B9B2; Disertatie.Roles=gsWNyYA3xMoDzqzJYSdOIiZWwrbVSQEbBVDNN94kMkoaY7OGNw6iQ49nU6pENR4T63yMsQ-3ICmUmGWUQk-rpvz7BZjNSN3z-XdAh3QW7LIzKZ3irCqPn90_Hap3-AqoPn_0nGBLkuAweS9HO3iktudMSqvENc6THN0byK8J7hR9-kPVw077RnpavPjRkljQcC44RR6oFXO63CQVAxNmxTeM0VUx_qOFnf3nxdWRchi5UXQY0EvoxyfBxsHiLEUuVaGhx8kw4bDg-krHnoLqUNG_MgK16jKYj_VCBKdUEOWkC-eIAN8TaAxARRE7YEDFUPQLI70rgQEnwtsa9hA1WV-iD_T_W4P_nM-fI4_KcYcFiWUUW78IyK5KnxIGKj_uMbj_6W6HttAonliMbIJoG972Jeh7ml7MHMvG8ZCc-j0XMgIAtbgO1ssQhmOO8LDeHhFragon7ypAzH6P2Gd_7XH1Cr1RlKYfBDMfX6QUsqDvLynCH9_m3uMBPz7Yth3IIw8KEutViNkZTaJ62Nj2sBOa7b37ZB-sHheu6YNLCho1; __RequestVerificationToken_L0Rpc2VydGF0aWU_=JbSpSS07OqCarCVyGgeRoQFeZg99+YIlpk5jE0eUnYgt4OEzDUNjxjR7RSS7ra9ur960VqHkVbbVtimWPhOX7dWHW8dX0o1FVAY3vPOK8dkoSUS1Moevw1z5QESMg1qvbN1E6vbxWOUiKbD8d/mAKUIoyxvI8cic0/uQNQ0x7cU=&#xD;&#xA;HTTP_HOST:localhost&#xD;&#xA;HTTP_REFERER:http://localhost/Disertatie/Proiecte/UploadDocumenteProiect/24&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.1; rv:12.0) Gecko/20100101 Firefox/12.0&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Content-Length: 8646223&#xD;&#xA;Content-Type: multipart/form-data; boundary=---------------------------491299511942&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: ro-ro,ro;q=0.8,en-us;q=0.6,en-gb;q=0.4,en;q=0.2&#xD;&#xA;Cookie: rating24=6/11/2012 9:16:03 PM; rating1=6/11/2012 11:27:07 PM; Disertatie.SessionId=4gwxavmvb1dk3urbwpqub5tg; Disertatie.Auth=3AC59B1C93BCD58DDDDE3A61D7334465395C6FBB6FB5E623B7110C881989301A9FF4B5E0FD54238B7B0D854363A79B5697FBDF3CA634E38A1A112612ED6B3C39F81621C355598448C56C8BABC6CDE45F7E66DBE86A3BA1498A6275A1E2375DB2DC61D5624058513EDE699C0F168BB4DA4A8EC7EB3EC1650B1350651728D9B9B2; Disertatie.Roles=gsWNyYA3xMoDzqzJYSdOIiZWwrbVSQEbBVDNN94kMkoaY7OGNw6iQ49nU6pENR4T63yMsQ-3ICmUmGWUQk-rpvz7BZjNSN3z-XdAh3QW7LIzKZ3irCqPn90_Hap3-AqoPn_0nGBLkuAweS9HO3iktudMSqvENc6THN0byK8J7hR9-kPVw077RnpavPjRkljQcC44RR6oFXO63CQVAxNmxTeM0VUx_qOFnf3nxdWRchi5UXQY0EvoxyfBxsHiLEUuVaGhx8kw4bDg-krHnoLqUNG_MgK16jKYj_VCBKdUEOWkC-eIAN8TaAxARRE7YEDFUPQLI70rgQEnwtsa9hA1WV-iD_T_W4P_nM-fI4_KcYcFiWUUW78IyK5KnxIGKj_uMbj_6W6HttAonliMbIJoG972Jeh7ml7MHMvG8ZCc-j0XMgIAtbgO1ssQhmOO8LDeHhFragon7ypAzH6P2Gd_7XH1Cr1RlKYfBDMfX6QUsqDvLynCH9_m3uMBPz7Yth3IIw8KEutViNkZTaJ62Nj2sBOa7b37ZB-sHheu6YNLCho1; __RequestVerificationToken_L0Rpc2VydGF0aWU_=JbSpSS07OqCarCVyGgeRoQFeZg99+YIlpk5jE0eUnYgt4OEzDUNjxjR7RSS7ra9ur960VqHkVbbVtimWPhOX7dWHW8dX0o1FVAY3vPOK8dkoSUS1Moevw1z5QESMg1qvbN1E6vbxWOUiKbD8d/mAKUIoyxvI8cic0/uQNQ0x7cU=&#xD;&#xA;Host: localhost&#xD;&#xA;Referer: http://localhost/Disertatie/Proiecte/UploadDocumenteProiect/24&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:12.0) Gecko/20100101 Firefox/12.0&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/1/ROOT/Disertatie" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="D:\Fac\disertatie\Disertatie\Disertatie\Disertatie\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="Forms" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="test" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="test" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="test" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="8646223" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="multipart/form-data; boundary=---------------------------491299511942" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="1" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/1" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Disertatie/Proiecte/UploadDocument/24" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="D:\Fac\disertatie\Disertatie\Disertatie\Disertatie\Proiecte\UploadDocument\24" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="57926" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="POST" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Disertatie/Proiecte/UploadDocument/24" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="80" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/7.5" />
+    </item>
+    <item name="URL">
+      <value string="/Disertatie/Proiecte/UploadDocument/24" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_CONTENT_LENGTH">
+      <value string="8646223" />
+    </item>
+    <item name="HTTP_CONTENT_TYPE">
+      <value string="multipart/form-data; boundary=---------------------------491299511942" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="ro-ro,ro;q=0.8,en-us;q=0.6,en-gb;q=0.4,en;q=0.2" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="rating24=6/11/2012 9:16:03 PM; rating1=6/11/2012 11:27:07 PM; Disertatie.SessionId=4gwxavmvb1dk3urbwpqub5tg; Disertatie.Auth=3AC59B1C93BCD58DDDDE3A61D7334465395C6FBB6FB5E623B7110C881989301A9FF4B5E0FD54238B7B0D854363A79B5697FBDF3CA634E38A1A112612ED6B3C39F81621C355598448C56C8BABC6CDE45F7E66DBE86A3BA1498A6275A1E2375DB2DC61D5624058513EDE699C0F168BB4DA4A8EC7EB3EC1650B1350651728D9B9B2; Disertatie.Roles=gsWNyYA3xMoDzqzJYSdOIiZWwrbVSQEbBVDNN94kMkoaY7OGNw6iQ49nU6pENR4T63yMsQ-3ICmUmGWUQk-rpvz7BZjNSN3z-XdAh3QW7LIzKZ3irCqPn90_Hap3-AqoPn_0nGBLkuAweS9HO3iktudMSqvENc6THN0byK8J7hR9-kPVw077RnpavPjRkljQcC44RR6oFXO63CQVAxNmxTeM0VUx_qOFnf3nxdWRchi5UXQY0EvoxyfBxsHiLEUuVaGhx8kw4bDg-krHnoLqUNG_MgK16jKYj_VCBKdUEOWkC-eIAN8TaAxARRE7YEDFUPQLI70rgQEnwtsa9hA1WV-iD_T_W4P_nM-fI4_KcYcFiWUUW78IyK5KnxIGKj_uMbj_6W6HttAonliMbIJoG972Jeh7ml7MHMvG8ZCc-j0XMgIAtbgO1ssQhmOO8LDeHhFragon7ypAzH6P2Gd_7XH1Cr1RlKYfBDMfX6QUsqDvLynCH9_m3uMBPz7Yth3IIw8KEutViNkZTaJ62Nj2sBOa7b37ZB-sHheu6YNLCho1; __RequestVerificationToken_L0Rpc2VydGF0aWU_=JbSpSS07OqCarCVyGgeRoQFeZg99+YIlpk5jE0eUnYgt4OEzDUNjxjR7RSS7ra9ur960VqHkVbbVtimWPhOX7dWHW8dX0o1FVAY3vPOK8dkoSUS1Moevw1z5QESMg1qvbN1E6vbxWOUiKbD8d/mAKUIoyxvI8cic0/uQNQ0x7cU=" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost/Disertatie/Proiecte/UploadDocumenteProiect/24" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.1; rv:12.0) Gecko/20100101 Firefox/12.0" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name="rating24">
+      <value string="6/11/2012 9:16:03 PM" />
+    </item>
+    <item name="rating1">
+      <value string="6/11/2012 11:27:07 PM" />
+    </item>
+    <item name="Disertatie.SessionId">
+      <value string="4gwxavmvb1dk3urbwpqub5tg" />
+    </item>
+    <item name="Disertatie.Auth">
+      <value string="3AC59B1C93BCD58DDDDE3A61D7334465395C6FBB6FB5E623B7110C881989301A9FF4B5E0FD54238B7B0D854363A79B5697FBDF3CA634E38A1A112612ED6B3C39F81621C355598448C56C8BABC6CDE45F7E66DBE86A3BA1498A6275A1E2375DB2DC61D5624058513EDE699C0F168BB4DA4A8EC7EB3EC1650B1350651728D9B9B2" />
+    </item>
+    <item name="Disertatie.Roles">
+      <value string="gsWNyYA3xMoDzqzJYSdOIiZWwrbVSQEbBVDNN94kMkoaY7OGNw6iQ49nU6pENR4T63yMsQ-3ICmUmGWUQk-rpvz7BZjNSN3z-XdAh3QW7LIzKZ3irCqPn90_Hap3-AqoPn_0nGBLkuAweS9HO3iktudMSqvENc6THN0byK8J7hR9-kPVw077RnpavPjRkljQcC44RR6oFXO63CQVAxNmxTeM0VUx_qOFnf3nxdWRchi5UXQY0EvoxyfBxsHiLEUuVaGhx8kw4bDg-krHnoLqUNG_MgK16jKYj_VCBKdUEOWkC-eIAN8TaAxARRE7YEDFUPQLI70rgQEnwtsa9hA1WV-iD_T_W4P_nM-fI4_KcYcFiWUUW78IyK5KnxIGKj_uMbj_6W6HttAonliMbIJoG972Jeh7ml7MHMvG8ZCc-j0XMgIAtbgO1ssQhmOO8LDeHhFragon7ypAzH6P2Gd_7XH1Cr1RlKYfBDMfX6QUsqDvLynCH9_m3uMBPz7Yth3IIw8KEutViNkZTaJ62Nj2sBOa7b37ZB-sHheu6YNLCho1" />
+    </item>
+    <item name="__RequestVerificationToken_L0Rpc2VydGF0aWU_">
+      <value string="JbSpSS07OqCarCVyGgeRoQFeZg99+YIlpk5jE0eUnYgt4OEzDUNjxjR7RSS7ra9ur960VqHkVbbVtimWPhOX7dWHW8dX0o1FVAY3vPOK8dkoSUS1Moevw1z5QESMg1qvbN1E6vbxWOUiKbD8d/mAKUIoyxvI8cic0/uQNQ0x7cU=" />
+    </item>
+  </cookies>
+</error>

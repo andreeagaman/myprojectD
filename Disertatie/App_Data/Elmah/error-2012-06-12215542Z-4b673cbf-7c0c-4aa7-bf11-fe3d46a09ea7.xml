@@ -1,0 +1,206 @@
+﻿<error errorId="4b673cbf-7c0c-4aa7-bf11-fe3d46a09ea7" host="ANDREEA-PC" type="System.Data.SqlClient.SqlException" message="Invalid object name 'UtilizatoriAutentificari'." source=".Net SqlClient Data Provider" detail="NHibernate.Exceptions.GenericADOException: could not insert: [Disertatie.Core.Models.UtilizatorAutentificari][SQL: INSERT INTO UtilizatoriAutentificari (data_autentificarii, utilizator_adresa_host, utilizator_nume_host, agent_utilizat, id_utilizator) VALUES (?, ?, ?, ?, ?); select SCOPE_IDENTITY()] ---&gt; System.Data.SqlClient.SqlException: Invalid object name 'UtilizatoriAutentificari'.&#xD;&#xA;   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)&#xD;&#xA;   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)&#xD;&#xA;   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()&#xD;&#xA;   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)&#xD;&#xA;   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()&#xD;&#xA;   at System.Data.SqlClient.SqlDataReader.get_MetaData()&#xD;&#xA;   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)&#xD;&#xA;   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)&#xD;&#xA;   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)&#xD;&#xA;   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)&#xD;&#xA;   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)&#xD;&#xA;   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)&#xD;&#xA;   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()&#xD;&#xA;   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd) in d:\CSharp\NH\nhibernate\src\NHibernate\AdoNet\AbstractBatcher.cs:line 247&#xD;&#xA;   at NHibernate.Id.IdentityGenerator.InsertSelectDelegate.ExecuteAndExtract(IDbCommand insert, ISessionImplementor session) in d:\CSharp\NH\nhibernate\src\NHibernate\Id\IdentityGenerator.cs:line 74&#xD;&#xA;   at NHibernate.Id.Insert.AbstractReturningDelegate.PerformInsert(SqlCommandInfo insertSQL, ISessionImplementor session, IBinder binder) in d:\CSharp\NH\nhibernate\src\NHibernate\Id\Insert\AbstractReturningDelegate.cs:line 42&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;   at NHibernate.Id.Insert.AbstractReturningDelegate.PerformInsert(SqlCommandInfo insertSQL, ISessionImplementor session, IBinder binder) in d:\CSharp\NH\nhibernate\src\NHibernate\Id\Insert\AbstractReturningDelegate.cs:line 51&#xD;&#xA;   at NHibernate.Persister.Entity.AbstractEntityPersister.Insert(Object[] fields, Boolean[] notNull, SqlCommandInfo sql, Object obj, ISessionImplementor session) in d:\CSharp\NH\nhibernate\src\NHibernate\Persister\Entity\AbstractEntityPersister.cs:line 2562&#xD;&#xA;   at NHibernate.Persister.Entity.AbstractEntityPersister.Insert(Object[] fields, Object obj, ISessionImplementor session) in d:\CSharp\NH\nhibernate\src\NHibernate\Persister\Entity\AbstractEntityPersister.cs:line 2988&#xD;&#xA;   at NHibernate.Action.EntityIdentityInsertAction.Execute() in d:\CSharp\NH\nhibernate\src\NHibernate\Action\EntityIdentityInsertAction.cs:line 75&#xD;&#xA;   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable) in d:\CSharp\NH\nhibernate\src\NHibernate\Engine\ActionQueue.cs:line 136&#xD;&#xA;   at NHibernate.Event.Default.AbstractSaveEventListener.PerformSaveOrReplicate(Object entity, EntityKey key, IEntityPersister persister, Boolean useIdentityColumn, Object anything, IEventSource source, Boolean requiresImmediateIdAccess) in d:\CSharp\NH\nhibernate\src\NHibernate\Event\Default\AbstractSaveEventListener.cs:line 259&#xD;&#xA;   at NHibernate.Event.Default.AbstractSaveEventListener.PerformSave(Object entity, Object id, IEntityPersister persister, Boolean useIdentityColumn, Object anything, IEventSource source, Boolean requiresImmediateIdAccess) in d:\CSharp\NH\nhibernate\src\NHibernate\Event\Default\AbstractSaveEventListener.cs:line 187&#xD;&#xA;   at NHibernate.Event.Default.AbstractSaveEventListener.SaveWithGeneratedId(Object entity, String entityName, Object anything, IEventSource source, Boolean requiresImmediateIdAccess) in d:\CSharp\NH\nhibernate\src\NHibernate\Event\Default\AbstractSaveEventListener.cs:line 119&#xD;&#xA;   at NHibernate.Event.Default.DefaultSaveOrUpdateEventListener.SaveWithGeneratedOrRequestedId(SaveOrUpdateEvent event) in d:\CSharp\NH\nhibernate\src\NHibernate\Event\Default\DefaultSaveOrUpdateEventListener.cs:line 162&#xD;&#xA;   at NHibernate.Event.Default.DefaultSaveEventListener.SaveWithGeneratedOrRequestedId(SaveOrUpdateEvent event) in d:\CSharp\NH\nhibernate\src\NHibernate\Event\Default\DefaultSaveEventListener.cs:line 27&#xD;&#xA;   at NHibernate.Event.Default.DefaultSaveOrUpdateEventListener.EntityIsTransient(SaveOrUpdateEvent event) in d:\CSharp\NH\nhibernate\src\NHibernate\Event\Default\DefaultSaveOrUpdateEventListener.cs:line 148&#xD;&#xA;   at NHibernate.Event.Default.DefaultSaveEventListener.PerformSaveOrUpdate(SaveOrUpdateEvent event) in d:\CSharp\NH\nhibernate\src\NHibernate\Event\Default\DefaultSaveEventListener.cs:line 21&#xD;&#xA;   at NHibernate.Event.Default.DefaultSaveOrUpdateEventListener.OnSaveOrUpdate(SaveOrUpdateEvent event) in d:\CSharp\NH\nhibernate\src\NHibernate\Event\Default\DefaultSaveOrUpdateEventListener.cs:line 53&#xD;&#xA;   at NHibernate.Impl.SessionImpl.FireSave(SaveOrUpdateEvent event) in d:\CSharp\NH\nhibernate\src\NHibernate\Impl\SessionImpl.cs:line 2601&#xD;&#xA;   at NHibernate.Impl.SessionImpl.Save(Object obj) in d:\CSharp\NH\nhibernate\src\NHibernate\Impl\SessionImpl.cs:line 473&#xD;&#xA;   at Disertatie.Core.Repositories.UtilizatorRepository.AddLoginEntry(Utilizator user, HttpRequestBase request) in D:\Fac\disertatie\Disertatie\Disertatie\Disertatie.Core\Repositories\UtilizatorRepository.cs:line 260&#xD;&#xA;   at Disertatie.Controllers.AccountController.LogOn(LogOnModel model, String returnUrl) in D:\Fac\disertatie\Disertatie\Disertatie\Disertatie\Controllers\AccountController.cs:line 46&#xD;&#xA;   at lambda_method(Closure , ControllerBase , Object[] )&#xD;&#xA;   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)&#xD;&#xA;   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.&lt;&gt;c__DisplayClass15.&lt;InvokeActionMethodWithFilters&gt;b__12()&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.&lt;&gt;c__DisplayClass15.&lt;&gt;c__DisplayClass17.&lt;InvokeActionMethodWithFilters&gt;b__14()&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.&lt;&gt;c__DisplayClass15.&lt;&gt;c__DisplayClass17.&lt;InvokeActionMethodWithFilters&gt;b__14()&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)&#xD;&#xA;   at System.Web.Mvc.Controller.ExecuteCore()&#xD;&#xA;   at System.Web.Mvc.ControllerBase.Execute(RequestContext requestContext)&#xD;&#xA;   at System.Web.Mvc.ControllerBase.System.Web.Mvc.IController.Execute(RequestContext requestContext)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c__DisplayClass6.&lt;&gt;c__DisplayClassb.&lt;BeginProcessRequest&gt;b__5()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.&lt;&gt;c__DisplayClass1.&lt;MakeVoidDelegate&gt;b__0()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.&lt;&gt;c__DisplayClass8`1.&lt;BeginSynchronous&gt;b__7(IAsyncResult _)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c__DisplayClasse.&lt;EndProcessRequest&gt;b__d()&#xD;&#xA;   at System.Web.Mvc.SecurityUtil.&lt;GetCallInAppTrustThunk&gt;b__0(Action f)&#xD;&#xA;   at System.Web.Mvc.SecurityUtil.ProcessInApplicationTrust(Action action)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="test1" time="2012-06-12T21:55:42.3066645Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_CONTENT_LENGTH:66&#xD;&#xA;HTTP_CONTENT_TYPE:application/x-www-form-urlencoded&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:ro-ro,ro;q=0.8,en-us;q=0.6,en-gb;q=0.4,en;q=0.2&#xD;&#xA;HTTP_COOKIE:rating24=6/11/2012 9:16:03 PM; rating1=6/11/2012 11:27:07 PM; Disertatie.SessionId=fxmm1i21sc3xsvu0yd5dmfr3; Astra.Daune.SessionId=yolfkpwx3o0ypzg1xtzzjm4a; Astra.Daune.Auth=6A349C0575B54AE881A5B5E17D90EF68E9D3B4FA77CDB361B6DF41981FC263316BCDA327CF3B02D32482AA492C7A5147558EC1BB29B914547438D2D6C4D869415D69EC721E03E2A46F11B3FBDA949A05A342A1B9243E5DDAEA70E66738EEE9F2A57C784A49E1DF1B588E73B250C552C86DA4E9CE1D1FF49ADD8D3BC9E290BFA75C2D1898EDA029E9DFEE03ADA7DC4295; Astra.Daune.Roles=ZnjVbzLiFYb-7AuVpj-x1ulojUEjKMeaS_zjQj66b6QS4HpwxjyWWU5BvxmJDhO9mE9bIa5FuypvmybuZlxUS0rB7m2w_ZeMMS28ghoeV-g5h9GA4ASwElvjsKHMH-ilpfr-gMmd6S8kv4-SX4rPviydpw8fxEF0FFptMsg4_dvFPNsAfWv7FYOdcEBdRq8Q56uYCrK3KwVQjQg7vFnkcORSRsfh0XA9hkqZmV8vG6W03Ql_25B58npVWIGHNJvzL1P39uD-Iv4KxQnno5at1rzxVxTdpxfqn5YggtiQK2Gh9kQrj6fkz3c-8jMOSUEYcXatSQvtRB8BH6cT8XLcwbThkl9rAFJXiax7koSaIfXdemhYvtc97Pr80JHMoUlun-O9U9PVyZRd8-YeiPuQCuM3fl8n2LznO07_epnxGMOzRMiQymA8Pl6aATdUUfoDWi01pmMNBmhBNKOl8Wv3dV77iXLmIIcQYdKXXAgoM3t6YnErjiH47z1jqrSl5NSIJ5wpnT14xdfvgu9fQ2Bb-2VVr32ScAF38Qct6mSTvGk1; __RequestVerificationToken_L0RhdW5lU2VydmljZS5XZWI_=BVK5RaAYKiHoZ5tUEkn6oo82vAer2iNyXbHAvbh6yyP6gEW2++v4afeH04JJUauso1lGYVmBfnkOQNiEd8HwAzOuPqFtBv1Sht3+i8G5W/azI8fNL09gaN3+gJqKgRO0fwErLCFAxUiSjVJJa15M9j34scMWi6EjLuGj51Xxt+s=; Disertatie.Auth=E4FDC9B3B87F8BC420B6DF444E16BA8AA968D142629D02E28E98D65EC2345DF6860BB2554633FA5ACC8DD235A4DC9D1D3400593E8032CCFDB3168EC76FF21441940602E0A19918CCCAE7212FB574443D8A300C65B9A90264C0BFB1937C4AC5851D772C49B43A7D23135A4C8A43B68193A756B8E514F5066BA089B7CCA19002D0; Disertatie.Roles=E_HSAkpL57QCCTZvFZcB39JAa8qVPJ2ZS1e1qWzB5dOtZvukumLYjkknIMeK8wJ87dydioo6DPIJ4nZ_hkMoY2p2NEpHLAnkZbS4RAwatfiEwXEIVY2w_6vyPO33-2gTSQv0Hv8HxgdVHjbkODsd5nf-FuIGj9roD6IwFzEDaZAw1lX9k8IfSpyQ93FCZ4FDdZFTJ-uoCbXEFVcSv_u2XQwbT9ugNKDl6T9_GRnMQ5BxM3B9Beh5D5MBc5ot_ZNl-6VTD--1_w5FP0rIzRTzl1I_DazNZF-QxSdrqJBqpEpQ9LHOiboZcvXijFUpeJ0fIOuE3VfEhkccN5YG3eFBrkb9GU_-OnY2x9GKYQYHwic2nnnsbwKTdaoX1h_727eTpk5xeg2h6FZ9w8ZMb-4kVnfjncHHoHJiIW4UKUAITcXmi0eWZIVbHg4NEmjVTTGiVYVt-omEQm0JOPa5j_OCcvtI5-ZmuBSHFnBeGovpFqMmCBzC_SRB-Rmeg2cAhKyP3gK8JNkh7Q_HR-SauVE5R7vy1OEEXS-3AMCdylDBAYw1&#xD;&#xA;HTTP_HOST:localhost&#xD;&#xA;HTTP_REFERER:http://localhost/Disertatie/login&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.1; rv:12.0) Gecko/20100101 Firefox/12.0&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Content-Length: 66&#xD;&#xA;Content-Type: application/x-www-form-urlencoded&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: ro-ro,ro;q=0.8,en-us;q=0.6,en-gb;q=0.4,en;q=0.2&#xD;&#xA;Cookie: rating24=6/11/2012 9:16:03 PM; rating1=6/11/2012 11:27:07 PM; Disertatie.SessionId=fxmm1i21sc3xsvu0yd5dmfr3; Astra.Daune.SessionId=yolfkpwx3o0ypzg1xtzzjm4a; Astra.Daune.Auth=6A349C0575B54AE881A5B5E17D90EF68E9D3B4FA77CDB361B6DF41981FC263316BCDA327CF3B02D32482AA492C7A5147558EC1BB29B914547438D2D6C4D869415D69EC721E03E2A46F11B3FBDA949A05A342A1B9243E5DDAEA70E66738EEE9F2A57C784A49E1DF1B588E73B250C552C86DA4E9CE1D1FF49ADD8D3BC9E290BFA75C2D1898EDA029E9DFEE03ADA7DC4295; Astra.Daune.Roles=ZnjVbzLiFYb-7AuVpj-x1ulojUEjKMeaS_zjQj66b6QS4HpwxjyWWU5BvxmJDhO9mE9bIa5FuypvmybuZlxUS0rB7m2w_ZeMMS28ghoeV-g5h9GA4ASwElvjsKHMH-ilpfr-gMmd6S8kv4-SX4rPviydpw8fxEF0FFptMsg4_dvFPNsAfWv7FYOdcEBdRq8Q56uYCrK3KwVQjQg7vFnkcORSRsfh0XA9hkqZmV8vG6W03Ql_25B58npVWIGHNJvzL1P39uD-Iv4KxQnno5at1rzxVxTdpxfqn5YggtiQK2Gh9kQrj6fkz3c-8jMOSUEYcXatSQvtRB8BH6cT8XLcwbThkl9rAFJXiax7koSaIfXdemhYvtc97Pr80JHMoUlun-O9U9PVyZRd8-YeiPuQCuM3fl8n2LznO07_epnxGMOzRMiQymA8Pl6aATdUUfoDWi01pmMNBmhBNKOl8Wv3dV77iXLmIIcQYdKXXAgoM3t6YnErjiH47z1jqrSl5NSIJ5wpnT14xdfvgu9fQ2Bb-2VVr32ScAF38Qct6mSTvGk1; __RequestVerificationToken_L0RhdW5lU2VydmljZS5XZWI_=BVK5RaAYKiHoZ5tUEkn6oo82vAer2iNyXbHAvbh6yyP6gEW2++v4afeH04JJUauso1lGYVmBfnkOQNiEd8HwAzOuPqFtBv1Sht3+i8G5W/azI8fNL09gaN3+gJqKgRO0fwErLCFAxUiSjVJJa15M9j34scMWi6EjLuGj51Xxt+s=; Disertatie.Auth=E4FDC9B3B87F8BC420B6DF444E16BA8AA968D142629D02E28E98D65EC2345DF6860BB2554633FA5ACC8DD235A4DC9D1D3400593E8032CCFDB3168EC76FF21441940602E0A19918CCCAE7212FB574443D8A300C65B9A90264C0BFB1937C4AC5851D772C49B43A7D23135A4C8A43B68193A756B8E514F5066BA089B7CCA19002D0; Disertatie.Roles=E_HSAkpL57QCCTZvFZcB39JAa8qVPJ2ZS1e1qWzB5dOtZvukumLYjkknIMeK8wJ87dydioo6DPIJ4nZ_hkMoY2p2NEpHLAnkZbS4RAwatfiEwXEIVY2w_6vyPO33-2gTSQv0Hv8HxgdVHjbkODsd5nf-FuIGj9roD6IwFzEDaZAw1lX9k8IfSpyQ93FCZ4FDdZFTJ-uoCbXEFVcSv_u2XQwbT9ugNKDl6T9_GRnMQ5BxM3B9Beh5D5MBc5ot_ZNl-6VTD--1_w5FP0rIzRTzl1I_DazNZF-QxSdrqJBqpEpQ9LHOiboZcvXijFUpeJ0fIOuE3VfEhkccN5YG3eFBrkb9GU_-OnY2x9GKYQYHwic2nnnsbwKTdaoX1h_727eTpk5xeg2h6FZ9w8ZMb-4kVnfjncHHoHJiIW4UKUAITcXmi0eWZIVbHg4NEmjVTTGiVYVt-omEQm0JOPa5j_OCcvtI5-ZmuBSHFnBeGovpFqMmCBzC_SRB-Rmeg2cAhKyP3gK8JNkh7Q_HR-SauVE5R7vy1OEEXS-3AMCdylDBAYw1&#xD;&#xA;Host: localhost&#xD;&#xA;Referer: http://localhost/Disertatie/login&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:12.0) Gecko/20100101 Firefox/12.0&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/1/ROOT/Disertatie" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="D:\Fac\disertatie\Disertatie\Disertatie\Disertatie\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="Forms" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="test1" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="test1" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="test1" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="66" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="1" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/1" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Disertatie/login" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="D:\Fac\disertatie\Disertatie\Disertatie\Disertatie\login" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="53763" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="POST" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Disertatie/login" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="80" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/7.5" />
+    </item>
+    <item name="URL">
+      <value string="/Disertatie/login" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_CONTENT_LENGTH">
+      <value string="66" />
+    </item>
+    <item name="HTTP_CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="ro-ro,ro;q=0.8,en-us;q=0.6,en-gb;q=0.4,en;q=0.2" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="rating24=6/11/2012 9:16:03 PM; rating1=6/11/2012 11:27:07 PM; Disertatie.SessionId=fxmm1i21sc3xsvu0yd5dmfr3; Astra.Daune.SessionId=yolfkpwx3o0ypzg1xtzzjm4a; Astra.Daune.Auth=6A349C0575B54AE881A5B5E17D90EF68E9D3B4FA77CDB361B6DF41981FC263316BCDA327CF3B02D32482AA492C7A5147558EC1BB29B914547438D2D6C4D869415D69EC721E03E2A46F11B3FBDA949A05A342A1B9243E5DDAEA70E66738EEE9F2A57C784A49E1DF1B588E73B250C552C86DA4E9CE1D1FF49ADD8D3BC9E290BFA75C2D1898EDA029E9DFEE03ADA7DC4295; Astra.Daune.Roles=ZnjVbzLiFYb-7AuVpj-x1ulojUEjKMeaS_zjQj66b6QS4HpwxjyWWU5BvxmJDhO9mE9bIa5FuypvmybuZlxUS0rB7m2w_ZeMMS28ghoeV-g5h9GA4ASwElvjsKHMH-ilpfr-gMmd6S8kv4-SX4rPviydpw8fxEF0FFptMsg4_dvFPNsAfWv7FYOdcEBdRq8Q56uYCrK3KwVQjQg7vFnkcORSRsfh0XA9hkqZmV8vG6W03Ql_25B58npVWIGHNJvzL1P39uD-Iv4KxQnno5at1rzxVxTdpxfqn5YggtiQK2Gh9kQrj6fkz3c-8jMOSUEYcXatSQvtRB8BH6cT8XLcwbThkl9rAFJXiax7koSaIfXdemhYvtc97Pr80JHMoUlun-O9U9PVyZRd8-YeiPuQCuM3fl8n2LznO07_epnxGMOzRMiQymA8Pl6aATdUUfoDWi01pmMNBmhBNKOl8Wv3dV77iXLmIIcQYdKXXAgoM3t6YnErjiH47z1jqrSl5NSIJ5wpnT14xdfvgu9fQ2Bb-2VVr32ScAF38Qct6mSTvGk1; __RequestVerificationToken_L0RhdW5lU2VydmljZS5XZWI_=BVK5RaAYKiHoZ5tUEkn6oo82vAer2iNyXbHAvbh6yyP6gEW2++v4afeH04JJUauso1lGYVmBfnkOQNiEd8HwAzOuPqFtBv1Sht3+i8G5W/azI8fNL09gaN3+gJqKgRO0fwErLCFAxUiSjVJJa15M9j34scMWi6EjLuGj51Xxt+s=; Disertatie.Auth=E4FDC9B3B87F8BC420B6DF444E16BA8AA968D142629D02E28E98D65EC2345DF6860BB2554633FA5ACC8DD235A4DC9D1D3400593E8032CCFDB3168EC76FF21441940602E0A19918CCCAE7212FB574443D8A300C65B9A90264C0BFB1937C4AC5851D772C49B43A7D23135A4C8A43B68193A756B8E514F5066BA089B7CCA19002D0; Disertatie.Roles=E_HSAkpL57QCCTZvFZcB39JAa8qVPJ2ZS1e1qWzB5dOtZvukumLYjkknIMeK8wJ87dydioo6DPIJ4nZ_hkMoY2p2NEpHLAnkZbS4RAwatfiEwXEIVY2w_6vyPO33-2gTSQv0Hv8HxgdVHjbkODsd5nf-FuIGj9roD6IwFzEDaZAw1lX9k8IfSpyQ93FCZ4FDdZFTJ-uoCbXEFVcSv_u2XQwbT9ugNKDl6T9_GRnMQ5BxM3B9Beh5D5MBc5ot_ZNl-6VTD--1_w5FP0rIzRTzl1I_DazNZF-QxSdrqJBqpEpQ9LHOiboZcvXijFUpeJ0fIOuE3VfEhkccN5YG3eFBrkb9GU_-OnY2x9GKYQYHwic2nnnsbwKTdaoX1h_727eTpk5xeg2h6FZ9w8ZMb-4kVnfjncHHoHJiIW4UKUAITcXmi0eWZIVbHg4NEmjVTTGiVYVt-omEQm0JOPa5j_OCcvtI5-ZmuBSHFnBeGovpFqMmCBzC_SRB-Rmeg2cAhKyP3gK8JNkh7Q_HR-SauVE5R7vy1OEEXS-3AMCdylDBAYw1" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost/Disertatie/login" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.1; rv:12.0) Gecko/20100101 Firefox/12.0" />
+    </item>
+  </serverVariables>
+  <form>
+    <item name="UserName">
+      <value string="test1" />
+    </item>
+    <item name="Password">
+      <value string="test" />
+    </item>
+    <item name="RememberMe">
+      <value string="false" />
+    </item>
+    <item name="submit">
+      <value string="Autentificare" />
+    </item>
+  </form>
+  <cookies>
+    <item name="rating24">
+      <value string="6/11/2012 9:16:03 PM" />
+    </item>
+    <item name="rating1">
+      <value string="6/11/2012 11:27:07 PM" />
+    </item>
+    <item name="Disertatie.SessionId">
+      <value string="fxmm1i21sc3xsvu0yd5dmfr3" />
+    </item>
+    <item name="Astra.Daune.SessionId">
+      <value string="yolfkpwx3o0ypzg1xtzzjm4a" />
+    </item>
+    <item name="Astra.Daune.Auth">
+      <value string="6A349C0575B54AE881A5B5E17D90EF68E9D3B4FA77CDB361B6DF41981FC263316BCDA327CF3B02D32482AA492C7A5147558EC1BB29B914547438D2D6C4D869415D69EC721E03E2A46F11B3FBDA949A05A342A1B9243E5DDAEA70E66738EEE9F2A57C784A49E1DF1B588E73B250C552C86DA4E9CE1D1FF49ADD8D3BC9E290BFA75C2D1898EDA029E9DFEE03ADA7DC4295" />
+    </item>
+    <item name="Astra.Daune.Roles">
+      <value string="ZnjVbzLiFYb-7AuVpj-x1ulojUEjKMeaS_zjQj66b6QS4HpwxjyWWU5BvxmJDhO9mE9bIa5FuypvmybuZlxUS0rB7m2w_ZeMMS28ghoeV-g5h9GA4ASwElvjsKHMH-ilpfr-gMmd6S8kv4-SX4rPviydpw8fxEF0FFptMsg4_dvFPNsAfWv7FYOdcEBdRq8Q56uYCrK3KwVQjQg7vFnkcORSRsfh0XA9hkqZmV8vG6W03Ql_25B58npVWIGHNJvzL1P39uD-Iv4KxQnno5at1rzxVxTdpxfqn5YggtiQK2Gh9kQrj6fkz3c-8jMOSUEYcXatSQvtRB8BH6cT8XLcwbThkl9rAFJXiax7koSaIfXdemhYvtc97Pr80JHMoUlun-O9U9PVyZRd8-YeiPuQCuM3fl8n2LznO07_epnxGMOzRMiQymA8Pl6aATdUUfoDWi01pmMNBmhBNKOl8Wv3dV77iXLmIIcQYdKXXAgoM3t6YnErjiH47z1jqrSl5NSIJ5wpnT14xdfvgu9fQ2Bb-2VVr32ScAF38Qct6mSTvGk1" />
+    </item>
+    <item name="__RequestVerificationToken_L0RhdW5lU2VydmljZS5XZWI_">
+      <value string="BVK5RaAYKiHoZ5tUEkn6oo82vAer2iNyXbHAvbh6yyP6gEW2++v4afeH04JJUauso1lGYVmBfnkOQNiEd8HwAzOuPqFtBv1Sht3+i8G5W/azI8fNL09gaN3+gJqKgRO0fwErLCFAxUiSjVJJa15M9j34scMWi6EjLuGj51Xxt+s=" />
+    </item>
+    <item name="Disertatie.Auth">
+      <value string="E4FDC9B3B87F8BC420B6DF444E16BA8AA968D142629D02E28E98D65EC2345DF6860BB2554633FA5ACC8DD235A4DC9D1D3400593E8032CCFDB3168EC76FF21441940602E0A19918CCCAE7212FB574443D8A300C65B9A90264C0BFB1937C4AC5851D772C49B43A7D23135A4C8A43B68193A756B8E514F5066BA089B7CCA19002D0" />
+    </item>
+    <item name="Disertatie.Roles">
+      <value string="E_HSAkpL57QCCTZvFZcB39JAa8qVPJ2ZS1e1qWzB5dOtZvukumLYjkknIMeK8wJ87dydioo6DPIJ4nZ_hkMoY2p2NEpHLAnkZbS4RAwatfiEwXEIVY2w_6vyPO33-2gTSQv0Hv8HxgdVHjbkODsd5nf-FuIGj9roD6IwFzEDaZAw1lX9k8IfSpyQ93FCZ4FDdZFTJ-uoCbXEFVcSv_u2XQwbT9ugNKDl6T9_GRnMQ5BxM3B9Beh5D5MBc5ot_ZNl-6VTD--1_w5FP0rIzRTzl1I_DazNZF-QxSdrqJBqpEpQ9LHOiboZcvXijFUpeJ0fIOuE3VfEhkccN5YG3eFBrkb9GU_-OnY2x9GKYQYHwic2nnnsbwKTdaoX1h_727eTpk5xeg2h6FZ9w8ZMb-4kVnfjncHHoHJiIW4UKUAITcXmi0eWZIVbHg4NEmjVTTGiVYVt-omEQm0JOPa5j_OCcvtI5-ZmuBSHFnBeGovpFqMmCBzC_SRB-Rmeg2cAhKyP3gK8JNkh7Q_HR-SauVE5R7vy1OEEXS-3AMCdylDBAYw1" />
+    </item>
+  </cookies>
+</error>

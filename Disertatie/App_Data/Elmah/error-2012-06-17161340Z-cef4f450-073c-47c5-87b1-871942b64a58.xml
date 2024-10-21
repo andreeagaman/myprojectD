@@ -1,0 +1,221 @@
+﻿<error errorId="cef4f450-073c-47c5-87b1-871942b64a58" host="ANDREEA-PC" type="System.ArgumentException" message="The parameters dictionary contains a null entry for parameter 'indexOG' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult StergeObiectivGeneral(Disertatie.Models.MembruHomeModel, Int32)' in 'Disertatie.Controllers.ProiecteController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.&#xD;&#xA;Parameter name: parameters" source="System.Web.Mvc" detail="System.ArgumentException: The parameters dictionary contains a null entry for parameter 'indexOG' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult StergeObiectivGeneral(Disertatie.Models.MembruHomeModel, Int32)' in 'Disertatie.Controllers.ProiecteController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.&#xD;&#xA;Parameter name: parameters&#xD;&#xA;   at System.Web.Mvc.ActionDescriptor.ExtractParameterFromDictionary(ParameterInfo parameterInfo, IDictionary`2 parameters, MethodInfo methodInfo)&#xD;&#xA;   at System.Web.Mvc.ReflectedActionDescriptor.&lt;&gt;c__DisplayClass1.&lt;Execute&gt;b__0(ParameterInfo parameterInfo)&#xD;&#xA;   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()&#xD;&#xA;   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)&#xD;&#xA;   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)&#xD;&#xA;   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.&lt;&gt;c__DisplayClass15.&lt;InvokeActionMethodWithFilters&gt;b__12()&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.&lt;&gt;c__DisplayClass15.&lt;&gt;c__DisplayClass17.&lt;InvokeActionMethodWithFilters&gt;b__14()&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.&lt;&gt;c__DisplayClass15.&lt;&gt;c__DisplayClass17.&lt;InvokeActionMethodWithFilters&gt;b__14()&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)&#xD;&#xA;   at System.Web.Mvc.Controller.ExecuteCore()&#xD;&#xA;   at System.Web.Mvc.ControllerBase.Execute(RequestContext requestContext)&#xD;&#xA;   at System.Web.Mvc.ControllerBase.System.Web.Mvc.IController.Execute(RequestContext requestContext)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c__DisplayClass6.&lt;&gt;c__DisplayClassb.&lt;BeginProcessRequest&gt;b__5()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.&lt;&gt;c__DisplayClass1.&lt;MakeVoidDelegate&gt;b__0()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.&lt;&gt;c__DisplayClass8`1.&lt;BeginSynchronous&gt;b__7(IAsyncResult _)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c__DisplayClasse.&lt;EndProcessRequest&gt;b__d()&#xD;&#xA;   at System.Web.Mvc.SecurityUtil.&lt;GetCallInAppTrustThunk&gt;b__0(Action f)&#xD;&#xA;   at System.Web.Mvc.SecurityUtil.ProcessInApplicationTrust(Action action)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="test" time="2012-06-17T16:13:40.1304976Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CACHE_CONTROL:no-cache&#xD;&#xA;HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_PRAGMA:no-cache&#xD;&#xA;HTTP_CONTENT_LENGTH:422&#xD;&#xA;HTTP_CONTENT_TYPE:application/x-www-form-urlencoded; charset=UTF-8&#xD;&#xA;HTTP_ACCEPT:*/*&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:ro-ro,ro;q=0.8,en-us;q=0.6,en-gb;q=0.4,en;q=0.2&#xD;&#xA;HTTP_COOKIE:rating24=6/11/2012 9:16:03 PM; rating1=6/11/2012 11:27:07 PM; Disertatie.SessionId=kvucgo4fqaoo1tc4rwxl043l; Disertatie.Auth=DD28DE9C741EF6A09ED82D96A74F2F88F78C6E30E5FC5FF1391151F669A3C06BFB14E5A5F14828ADC51752FE14642590EC4B4242CEC00851C09C7A5F56042E214120D75FD3336367356A81BA22025B09E8A5200408FDF23BE0C6C7749E98E291B18A696FD432FB69A6AE347655E7FD4E18B8221ADD124A2029A84C1B6FF9961E; Disertatie.Roles=BaXAGTnGNLSODuLDYcanuMeaAdJGNKRS5s_ee519vcNsOmpF6H_DW426bm-CVRPw9bGmFTIWDVcBMSvvC9ftUqmTV1WtT25ruws6-qYWgVaFON90tuxCTEeB-pBMj2yJcT5O40Q-B-QHkkPr9qqZHLM-QjNcUn3VXB-8Mf8G1ih6pd0hob4Gz4L40LDmlKhkBqC7FoXA-iWeVfwHLlbux87o8F7KAeE2OvfUwPWY_t0VpaD_wbvtCj6MvRQiLAnnf6VWD0Fb-1WUPgtyvIa8uyTNDdt3sEPaZuNActAzmFE5B4eGbhwI2gFocIQSwb02sJfnLp23COS5gwUsqXB7WWsemM-TQbiXtFyFWu9T9py1a3g--d1qAgicx7uVr3IhFzNySPmkn2mPBsst_LF5LKV_MIMM_iE318fNKcNxn8NLz8r3pZnVd5MX55NW4xSthTzW2xmsNC0ZM8MNBOxQ-IfRFNeDhMlBX80GTHs658QqG_rxpC47EQd-f7W0qw8MEBAKEoz_ocRvXVab970_3OqLpDHEAVigR9IM661ZtbI1; __RequestVerificationToken_L0Rpc2VydGF0aWU_=4h1xJ7HpEjGIh9zjxICs5cylyQZXNGyNjXTjB+dD1vUj02FB7d1S422JzU6y+P3OafROQ4aOnlN4Ppn4zH9pIchxIDu/g8yhJssj08rvNg5TPHAC2OBL4Pl4VL+uKTDdNhU6rMTZu9zdbYVbEAaSnvvTQNyjymZTEA2DHDQA3ug=&#xD;&#xA;HTTP_HOST:localhost&#xD;&#xA;HTTP_REFERER:http://localhost/Disertatie/Proiecte/EditeazProiect/30&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.1; rv:12.0) Gecko/20100101 Firefox/12.0&#xD;&#xA;HTTP_X_REQUESTED_WITH:XMLHttpRequest&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Cache-Control: no-cache&#xD;&#xA;Connection: keep-alive&#xD;&#xA;Pragma: no-cache&#xD;&#xA;Content-Length: 422&#xD;&#xA;Content-Type: application/x-www-form-urlencoded; charset=UTF-8&#xD;&#xA;Accept: */*&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: ro-ro,ro;q=0.8,en-us;q=0.6,en-gb;q=0.4,en;q=0.2&#xD;&#xA;Cookie: rating24=6/11/2012 9:16:03 PM; rating1=6/11/2012 11:27:07 PM; Disertatie.SessionId=kvucgo4fqaoo1tc4rwxl043l; Disertatie.Auth=DD28DE9C741EF6A09ED82D96A74F2F88F78C6E30E5FC5FF1391151F669A3C06BFB14E5A5F14828ADC51752FE14642590EC4B4242CEC00851C09C7A5F56042E214120D75FD3336367356A81BA22025B09E8A5200408FDF23BE0C6C7749E98E291B18A696FD432FB69A6AE347655E7FD4E18B8221ADD124A2029A84C1B6FF9961E; Disertatie.Roles=BaXAGTnGNLSODuLDYcanuMeaAdJGNKRS5s_ee519vcNsOmpF6H_DW426bm-CVRPw9bGmFTIWDVcBMSvvC9ftUqmTV1WtT25ruws6-qYWgVaFON90tuxCTEeB-pBMj2yJcT5O40Q-B-QHkkPr9qqZHLM-QjNcUn3VXB-8Mf8G1ih6pd0hob4Gz4L40LDmlKhkBqC7FoXA-iWeVfwHLlbux87o8F7KAeE2OvfUwPWY_t0VpaD_wbvtCj6MvRQiLAnnf6VWD0Fb-1WUPgtyvIa8uyTNDdt3sEPaZuNActAzmFE5B4eGbhwI2gFocIQSwb02sJfnLp23COS5gwUsqXB7WWsemM-TQbiXtFyFWu9T9py1a3g--d1qAgicx7uVr3IhFzNySPmkn2mPBsst_LF5LKV_MIMM_iE318fNKcNxn8NLz8r3pZnVd5MX55NW4xSthTzW2xmsNC0ZM8MNBOxQ-IfRFNeDhMlBX80GTHs658QqG_rxpC47EQd-f7W0qw8MEBAKEoz_ocRvXVab970_3OqLpDHEAVigR9IM661ZtbI1; __RequestVerificationToken_L0Rpc2VydGF0aWU_=4h1xJ7HpEjGIh9zjxICs5cylyQZXNGyNjXTjB+dD1vUj02FB7d1S422JzU6y+P3OafROQ4aOnlN4Ppn4zH9pIchxIDu/g8yhJssj08rvNg5TPHAC2OBL4Pl4VL+uKTDdNhU6rMTZu9zdbYVbEAaSnvvTQNyjymZTEA2DHDQA3ug=&#xD;&#xA;Host: localhost&#xD;&#xA;Referer: http://localhost/Disertatie/Proiecte/EditeazProiect/30&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:12.0) Gecko/20100101 Firefox/12.0&#xD;&#xA;X-Requested-With: XMLHttpRequest&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/1/ROOT/Disertatie" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="D:\Fac\disertatie\Disertatie\Disertatie\Disertatie\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="Forms" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="test" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="test" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="test" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="422" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded; charset=UTF-8" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="1" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/1" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Disertatie/Proiecte/StergeObiectivGeneral" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="D:\Fac\disertatie\Disertatie\Disertatie\Disertatie\Proiecte\StergeObiectivGeneral" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="56191" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="POST" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Disertatie/Proiecte/StergeObiectivGeneral" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="80" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/7.5" />
+    </item>
+    <item name="URL">
+      <value string="/Disertatie/Proiecte/StergeObiectivGeneral" />
+    </item>
+    <item name="HTTP_CACHE_CONTROL">
+      <value string="no-cache" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_PRAGMA">
+      <value string="no-cache" />
+    </item>
+    <item name="HTTP_CONTENT_LENGTH">
+      <value string="422" />
+    </item>
+    <item name="HTTP_CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded; charset=UTF-8" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="*/*" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="ro-ro,ro;q=0.8,en-us;q=0.6,en-gb;q=0.4,en;q=0.2" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="rating24=6/11/2012 9:16:03 PM; rating1=6/11/2012 11:27:07 PM; Disertatie.SessionId=kvucgo4fqaoo1tc4rwxl043l; Disertatie.Auth=DD28DE9C741EF6A09ED82D96A74F2F88F78C6E30E5FC5FF1391151F669A3C06BFB14E5A5F14828ADC51752FE14642590EC4B4242CEC00851C09C7A5F56042E214120D75FD3336367356A81BA22025B09E8A5200408FDF23BE0C6C7749E98E291B18A696FD432FB69A6AE347655E7FD4E18B8221ADD124A2029A84C1B6FF9961E; Disertatie.Roles=BaXAGTnGNLSODuLDYcanuMeaAdJGNKRS5s_ee519vcNsOmpF6H_DW426bm-CVRPw9bGmFTIWDVcBMSvvC9ftUqmTV1WtT25ruws6-qYWgVaFON90tuxCTEeB-pBMj2yJcT5O40Q-B-QHkkPr9qqZHLM-QjNcUn3VXB-8Mf8G1ih6pd0hob4Gz4L40LDmlKhkBqC7FoXA-iWeVfwHLlbux87o8F7KAeE2OvfUwPWY_t0VpaD_wbvtCj6MvRQiLAnnf6VWD0Fb-1WUPgtyvIa8uyTNDdt3sEPaZuNActAzmFE5B4eGbhwI2gFocIQSwb02sJfnLp23COS5gwUsqXB7WWsemM-TQbiXtFyFWu9T9py1a3g--d1qAgicx7uVr3IhFzNySPmkn2mPBsst_LF5LKV_MIMM_iE318fNKcNxn8NLz8r3pZnVd5MX55NW4xSthTzW2xmsNC0ZM8MNBOxQ-IfRFNeDhMlBX80GTHs658QqG_rxpC47EQd-f7W0qw8MEBAKEoz_ocRvXVab970_3OqLpDHEAVigR9IM661ZtbI1; __RequestVerificationToken_L0Rpc2VydGF0aWU_=4h1xJ7HpEjGIh9zjxICs5cylyQZXNGyNjXTjB+dD1vUj02FB7d1S422JzU6y+P3OafROQ4aOnlN4Ppn4zH9pIchxIDu/g8yhJssj08rvNg5TPHAC2OBL4Pl4VL+uKTDdNhU6rMTZu9zdbYVbEAaSnvvTQNyjymZTEA2DHDQA3ug=" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost/Disertatie/Proiecte/EditeazProiect/30" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.1; rv:12.0) Gecko/20100101 Firefox/12.0" />
+    </item>
+    <item name="HTTP_X_REQUESTED_WITH">
+      <value string="XMLHttpRequest" />
+    </item>
+  </serverVariables>
+  <form>
+    <item name="CreeazaProiectModel.Titlu">
+      <value string="tiltu" />
+    </item>
+    <item name="txtDescriereOG">
+      <value string="ofgdfgdfsghghgfhgfhgfhgfhghghghghghgfhghgfhghghghghghghghghghghghg" />
+    </item>
+    <item name="CreeazaProiectModel.ObiectiveGenerale[0].Descriere">
+      <value string="ofgdfgdfsghghgfhgfhgfhgfhghghghghghgfhghgfhghghghghghghghghghghghg" />
+    </item>
+    <item name="txtDescriereOS">
+      <value string="" />
+    </item>
+    <item name="CreeazaProiectModel.ObiectiveSpecifice[0].Descriere">
+      <value string="ob3" />
+    </item>
+    <item name="CreeazaProiectModel.Detalii">
+      <value string="" />
+    </item>
+    <item name="CreeazaProiectModel.Durata">
+      <value string="1" />
+    </item>
+    <item name="CreeazaProiectModel.NumarMembrii">
+      <value string="2" />
+    </item>
+    <item name="indexOG">
+      <value string="undefined" />
+    </item>
+  </form>
+  <cookies>
+    <item name="rating24">
+      <value string="6/11/2012 9:16:03 PM" />
+    </item>
+    <item name="rating1">
+      <value string="6/11/2012 11:27:07 PM" />
+    </item>
+    <item name="Disertatie.SessionId">
+      <value string="kvucgo4fqaoo1tc4rwxl043l" />
+    </item>
+    <item name="Disertatie.Auth">
+      <value string="DD28DE9C741EF6A09ED82D96A74F2F88F78C6E30E5FC5FF1391151F669A3C06BFB14E5A5F14828ADC51752FE14642590EC4B4242CEC00851C09C7A5F56042E214120D75FD3336367356A81BA22025B09E8A5200408FDF23BE0C6C7749E98E291B18A696FD432FB69A6AE347655E7FD4E18B8221ADD124A2029A84C1B6FF9961E" />
+    </item>
+    <item name="Disertatie.Roles">
+      <value string="BaXAGTnGNLSODuLDYcanuMeaAdJGNKRS5s_ee519vcNsOmpF6H_DW426bm-CVRPw9bGmFTIWDVcBMSvvC9ftUqmTV1WtT25ruws6-qYWgVaFON90tuxCTEeB-pBMj2yJcT5O40Q-B-QHkkPr9qqZHLM-QjNcUn3VXB-8Mf8G1ih6pd0hob4Gz4L40LDmlKhkBqC7FoXA-iWeVfwHLlbux87o8F7KAeE2OvfUwPWY_t0VpaD_wbvtCj6MvRQiLAnnf6VWD0Fb-1WUPgtyvIa8uyTNDdt3sEPaZuNActAzmFE5B4eGbhwI2gFocIQSwb02sJfnLp23COS5gwUsqXB7WWsemM-TQbiXtFyFWu9T9py1a3g--d1qAgicx7uVr3IhFzNySPmkn2mPBsst_LF5LKV_MIMM_iE318fNKcNxn8NLz8r3pZnVd5MX55NW4xSthTzW2xmsNC0ZM8MNBOxQ-IfRFNeDhMlBX80GTHs658QqG_rxpC47EQd-f7W0qw8MEBAKEoz_ocRvXVab970_3OqLpDHEAVigR9IM661ZtbI1" />
+    </item>
+    <item name="__RequestVerificationToken_L0Rpc2VydGF0aWU_">
+      <value string="4h1xJ7HpEjGIh9zjxICs5cylyQZXNGyNjXTjB+dD1vUj02FB7d1S422JzU6y+P3OafROQ4aOnlN4Ppn4zH9pIchxIDu/g8yhJssj08rvNg5TPHAC2OBL4Pl4VL+uKTDdNhU6rMTZu9zdbYVbEAaSnvvTQNyjymZTEA2DHDQA3ug=" />
+    </item>
+  </cookies>
+</error>

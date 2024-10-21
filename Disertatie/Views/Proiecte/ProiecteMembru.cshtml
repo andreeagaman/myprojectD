@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "ProiecteMembru";
+    Layout = "~/Views/Shared/_LayoutAnonymousProfilePicture.cshtml";
+}
+@using Disertatie.Helpers
+@model Disertatie.Models.MembruHomeModel
+   
+ <script src="@Url.Content("~/Scripts/jquery-1.4.4.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery-ui.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.js")" type="text/javascript"></script>
+
+<a href="@Url.Action("MembriiDepartament", "Home")">Inapoi la membrii departament</a>
+<h3>Proiectele membrului: @Model.MembruCuProiecte.Nume @Model.MembruCuProiecte.Prenume</h3>
+<div id="app_main">
+
+@if (Model.ProiecteMembru.Count > 0)
+{ 
+@Html.Partial("ProiecteMembruList", Model.ProiecteMembru)
+}
+else
+{
+    @Html.WarningBox(Model.MembruCuProiecte.Nume+" "+Model.MembruCuProiecte.Prenume +" nu are nici un proiect",Model.MembruCuProiecte.Nume+" "+Model.MembruCuProiecte.Prenume +" nu are nici un proiect")
+}
+</div>

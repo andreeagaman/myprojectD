@@ -1,0 +1,74 @@
+﻿@model Disertatie.Models.CreeazaAnuntModel
+           
+<style type="text/css">
+form label {
+display : block;
+float : left;
+width : 50px;
+padding : 0 10px 0 0;
+margin : 6px 0 0;
+text-align : left;
+}
+td, th {
+    border-bottom: 1px solid #CACACA;
+    border-width: 1px 0;
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+}
+a
+{
+    background: url("../content/themes/base/images/ui-bg_glass_75_e6e6e6_1x400.png") repeat-x scroll 50% 50% #E6E6E6;
+    border: 1px solid #D3D3D3;
+    color: #555555;
+    font-weight: normal;
+    font-family: Verdana,Arial,sans-serif;
+
+    padding: 0.4em 1em;
+    border-radius: 4px 4px 4px 4px;
+}
+</style>
+
+
+@using (Ajax.BeginForm( new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "emailDialog" }))
+{
+
+ @Html.ValidationSummary(true)
+  <div class="ui-dialog-content ui-widget-content" style="width: auto;">
+ <table>
+ <tr>
+ <td align="left" style="text-align:left">
+ @Html.Label("Titlu:")
+ </td>
+ <td align="left">
+ @Html.TextBoxFor(m => m.Titlu, new { @maxlength = "100", @minlength = "1", @autocomplete = "off", @class = "text ui-widget-content ui-corner-all", @style = "width:210px" })
+<br />
+ @Html.ValidationMessageFor(m => m.Titlu)
+ </td>
+ </tr>
+ <tr>
+ <td align="left">
+
+ @Html.Label("Detalii:")
+ </td>
+ <td align="left" >
+ @Html.TextAreaFor(m=>m.Detalii, 10, 15, new {@maxlength="250",@minlength=1, @class = "text ui-widget-content ui-corner-all", @style = "width:210px" })
+  <br />
+   @Html.ValidationMessageFor(m => m.Detalii)
+ </td>
+ </tr>
+ <tr>
+ <td>
+ <input style="margin:0px" type="submit" value="Creeaza anunt" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" />
+ </td>
+ <td >
+
+ <a href="javascript:void(0);"  class="close" style="  width:auto; padding:0.4em 1em; float:right; display: inline-block;margin-right: 0.1em;overflow: visible; position:relative;text-align: center; text-decoration: none !important; cursor: pointer; color: #555555; vertical-align:middle">Anuleaza</a>
+ </td>
+ </tr>
+ </table>
+ 
+
+ 
+    </div> 
+}

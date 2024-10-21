@@ -1,0 +1,112 @@
+﻿@model Disertatie.Models.TrimiteInvitatieModel
+           
+           <script src="@Url.Content("~/Scripts/chosen.jquery.min.js")" type="text/javascript"></script>
+           
+<script src="@Url.Content("~/Scripts/chosen.jquery.js")" type="text/javascript"></script>
+
+@*<script src="@Url.Content("~/Scripts/chosen.proto.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/chosen.proto.min.js")" type="text/javascript"></script>*@
+
+
+<link type="text/css" rel="stylesheet" href="../Content/themes/base/chosen.css" />
+<script type="text/javascript">
+    document.observe('dom:loaded', function (evt) {
+        var select, selects, _i, _len, _results;
+        if (Prototype.Browser.IE && (Prototype.BrowserFeatures['Version'] === 6 || Prototype.BrowserFeatures['Version'] === 7)) {
+            return;
+        }
+        selects = $$(".chzn-select");
+        _results = [];
+        for (_i = 0, _len = selects.length; _i < _len; _i++) {
+            select = selects[_i];
+            _results.push(new Chosen(select));
+        }
+        deselects = $$(".chzn-select-deselect");
+        for (_i = 0, _len = deselects.length; _i < _len; _i++) {
+            select = deselects[_i];
+            _results.push(new Chosen(select, { allow_single_deselect: true }));
+        }
+        return _results;
+    });
+</script>
+<style type="text/css">
+form label {
+display :block;
+float : left;
+width : 50px;
+padding : 0 10px 0 0;
+margin : 6px 0 0;
+text-align : left;
+}
+td, th {
+    border-bottom: 1px solid #CACACA;
+    border-width: 1px 0;
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+}
+a
+{
+    background: url("../Content/themes/base/images/ui-bg_glass_75_e6e6e6_1x400.png") repeat-x scroll 50% 50% #E6E6E6;
+    border: 1px solid #D3D3D3;
+    color: #555555;
+    font-weight: normal;
+    font-family: Verdana,Arial,sans-serif;
+
+    padding: 0.4em 1em;
+    border-radius: 4px 4px 4px 4px;
+}
+
+</style>
+
+@using (Ajax.BeginForm( new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "emailDialog" }))
+{
+ @Html.ValidationSummary(true)
+  <div class="ui-dialog-content ui-widget-content" style="width: auto; height:250px">
+  @Html.Hidden("txtIdProiect", Model.Proiect.Id)
+ <div>
+ @Html.Label("Membrii:")
+ </div>
+ <div style="float:right">
+ @Html.ListBox("lbMembrii", new MultiSelectList(Model.Membrii, "Id", "NumeComplet"), new { @class = "chzn-select",data_placeholder = "Selectati membrii..."})
+ </div>
+ 
+ <br />
+ <br />
+  <br />
+ <br />
+  <br />
+ <br />
+ <br />
+ <br />
+  <br />
+ <br />
+  <br />
+ <br />
+ <div>
+ <input type="submit" style="margin:0px" value="Trimite invitatii" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" />
+
+ <a href="javascript:void(0);"  class="close" style=" float:right; width:auto; padding:0.4em 1em; display: inline-block;margin-right: 0.1em;overflow: visible; position: relative;text-align: center; text-decoration: none !important; cursor: pointer; color: #555555;">Anuleaza</a>
+</div>
+ 
+
+ 
+    </div> 
+}
+<script >
+    $(".chzn-select").chosen(
+    { no_results_text: "Nici un rezultat"
+});
+    $(".chzn-select-deselect").chosen({ allow_single_deselect: true });
+    
+</script>
+@*<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#lbMembrii").multiSelect({
+            selectAll: false,
+            noneSelected: 'Selecteaza membrii!',
+            oneOrMoreSelected: '*'
+        });
+    });
+</script>*@

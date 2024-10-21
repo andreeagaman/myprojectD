@@ -1,0 +1,180 @@
+﻿<error errorId="cfafa9ee-43ba-436c-9636-39c6462fe5bd" host="ANDREEA-PC" type="System.Web.HttpParseException" message="Unexpected &quot;for&quot; keyword after &quot;@&quot; character.  Once inside code, you do not need to prefix constructs like &quot;for&quot; with &quot;@&quot;.&#xD;&#xA;" source="System.Web.WebPages.Razor" detail="System.Web.HttpParseException (0x80004005): Unexpected &quot;for&quot; keyword after &quot;@&quot; character.  Once inside code, you do not need to prefix constructs like &quot;for&quot; with &quot;@&quot;.&#xD;&#xA;&#xD;&#xA;   at System.Web.WebPages.Razor.RazorBuildProvider.EnsureGeneratedCode()&#xD;&#xA;   at System.Web.WebPages.Razor.RazorBuildProvider.get_CodeCompilerType()&#xD;&#xA;   at System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)&#xD;&#xA;   at System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()&#xD;&#xA;   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()&#xD;&#xA;   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)&#xD;&#xA;   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)&#xD;&#xA;   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)&#xD;&#xA;   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)&#xD;&#xA;   at System.Web.Mvc.BuildManagerWrapper.System.Web.Mvc.IBuildManager.FileExists(String virtualPath)&#xD;&#xA;   at System.Web.Mvc.BuildManagerViewEngine.FileExists(ControllerContext controllerContext, String virtualPath)&#xD;&#xA;   at System.Web.Mvc.VirtualPathProviderViewEngine.GetPathFromGeneralName(ControllerContext controllerContext, List`1 locations, String name, String controllerName, String areaName, String cacheKey, String[]&amp; searchedLocations)&#xD;&#xA;   at System.Web.Mvc.VirtualPathProviderViewEngine.GetPath(ControllerContext controllerContext, String[] locations, String[] areaLocations, String locationsPropertyName, String name, String controllerName, String cacheKeyPrefix, Boolean useCache, String[]&amp; searchedLocations)&#xD;&#xA;   at System.Web.Mvc.VirtualPathProviderViewEngine.FindPartialView(ControllerContext controllerContext, String partialViewName, Boolean useCache)&#xD;&#xA;   at System.Web.Mvc.ViewEngineCollection.&lt;&gt;c__DisplayClass8.&lt;FindPartialView&gt;b__7(IViewEngine e)&#xD;&#xA;   at System.Web.Mvc.ViewEngineCollection.Find(Func`2 lookup, Boolean trackSearchedPaths)&#xD;&#xA;   at System.Web.Mvc.ViewEngineCollection.FindPartialView(ControllerContext controllerContext, String partialViewName)&#xD;&#xA;   at System.Web.Mvc.HtmlHelper.FindPartialView(ViewContext viewContext, String partialViewName, ViewEngineCollection viewEngineCollection)&#xD;&#xA;   at System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)&#xD;&#xA;   at System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model, ViewDataDictionary viewData)&#xD;&#xA;   at System.Web.Mvc.Html.PartialExtensions.Partial(HtmlHelper htmlHelper, String partialViewName, Object model)&#xD;&#xA;   at ASP._Page_Views_Proiecte_DetaliiProiectAnunturi_cshtml.Execute() in d:\Fac\disertatie\Disertatie\Disertatie\Disertatie\Views\Proiecte\DetaliiProiectAnunturi.cshtml:line 117&#xD;&#xA;   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()&#xD;&#xA;   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()&#xD;&#xA;   at System.Web.WebPages.StartPage.RunPage()&#xD;&#xA;   at System.Web.WebPages.StartPage.ExecutePageHierarchy()&#xD;&#xA;   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)&#xD;&#xA;   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)&#xD;&#xA;   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)&#xD;&#xA;   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.&lt;&gt;c__DisplayClass1c.&lt;InvokeActionResultWithFilters&gt;b__19()&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.&lt;&gt;c__DisplayClass1c.&lt;&gt;c__DisplayClass1e.&lt;InvokeActionResultWithFilters&gt;b__1b()&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.&lt;&gt;c__DisplayClass1c.&lt;&gt;c__DisplayClass1e.&lt;InvokeActionResultWithFilters&gt;b__1b()&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.&lt;&gt;c__DisplayClass1c.&lt;&gt;c__DisplayClass1e.&lt;InvokeActionResultWithFilters&gt;b__1b()&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)&#xD;&#xA;   at System.Web.Mvc.Controller.ExecuteCore()&#xD;&#xA;   at System.Web.Mvc.ControllerBase.Execute(RequestContext requestContext)&#xD;&#xA;   at System.Web.Mvc.ControllerBase.System.Web.Mvc.IController.Execute(RequestContext requestContext)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c__DisplayClass6.&lt;&gt;c__DisplayClassb.&lt;BeginProcessRequest&gt;b__5()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.&lt;&gt;c__DisplayClass1.&lt;MakeVoidDelegate&gt;b__0()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.&lt;&gt;c__DisplayClass8`1.&lt;BeginSynchronous&gt;b__7(IAsyncResult _)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c__DisplayClasse.&lt;EndProcessRequest&gt;b__d()&#xD;&#xA;   at System.Web.Mvc.SecurityUtil.&lt;GetCallInAppTrustThunk&gt;b__0(Action f)&#xD;&#xA;   at System.Web.Mvc.SecurityUtil.ProcessInApplicationTrust(Action action)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="radu.constantinescu" time="2012-06-19T00:19:46.3814714Z" statusCode="500" webHostHtmlMessage="&lt;html&gt;&#xD;&#xA;    &lt;head&gt;&#xD;&#xA;        &lt;title&gt;Parser Error&lt;/title&gt;&#xD;&#xA;        &lt;style&gt;&#xD;&#xA;         body {font-family:&quot;Verdana&quot;;font-weight:normal;font-size: .7em;color:black;} &#xD;&#xA;         p {font-family:&quot;Verdana&quot;;font-weight:normal;color:black;margin-top: -5px}&#xD;&#xA;         b {font-family:&quot;Verdana&quot;;font-weight:bold;color:black;margin-top: -5px}&#xD;&#xA;         H1 { font-family:&quot;Verdana&quot;;font-weight:normal;font-size:18pt;color:red }&#xD;&#xA;         H2 { font-family:&quot;Verdana&quot;;font-weight:normal;font-size:14pt;color:maroon }&#xD;&#xA;         pre {font-family:&quot;Lucida Console&quot;;font-size: .9em}&#xD;&#xA;         .marker {font-weight: bold; color: black;text-decoration: none;}&#xD;&#xA;         .version {color: gray;}&#xD;&#xA;         .error {margin-bottom: 10px;}&#xD;&#xA;         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }&#xD;&#xA;        &lt;/style&gt;&#xD;&#xA;    &lt;/head&gt;&#xD;&#xA;&#xD;&#xA;    &lt;body bgcolor=&quot;white&quot;&gt;&#xD;&#xA;&#xD;&#xA;            &lt;span&gt;&lt;H1&gt;Server Error in '/Disertatie' Application.&lt;hr width=100% size=1 color=silver&gt;&lt;/H1&gt;&#xD;&#xA;&#xD;&#xA;            &lt;h2&gt; &lt;i&gt;Parser Error&lt;/i&gt; &lt;/h2&gt;&lt;/span&gt;&#xD;&#xA;&#xD;&#xA;            &lt;font face=&quot;Arial, Helvetica, Geneva, SunSans-Regular, sans-serif &quot;&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt; Description: &lt;/b&gt;An error occurred during the parsing of a resource required to service this request.   Please review the following specific parse error details and modify your source file appropriately.&#xD;&#xA;            &lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt; Parser Error Message: &lt;/b&gt;Unexpected &amp;quot;for&amp;quot; keyword after &amp;quot;@&amp;quot; character. &amp;nbsp;Once inside code, you do not need to prefix constructs like &amp;quot;for&amp;quot; with &amp;quot;@&amp;quot;.&lt;br&gt;&lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt;Source Error:&lt;/b&gt; &lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;table width=100% bgcolor=&quot;#ffffcc&quot;&gt;&#xD;&#xA;               &lt;tr&gt;&#xD;&#xA;                  &lt;td&gt;&#xD;&#xA;                      &lt;code&gt;&lt;pre&gt;&#xD;&#xA;&#xD;&#xA;Line 38:                   @foreach( var obiectivGeneral in Model.CreeazaProiectModel.ObiectiveGenerale)&#xD;&#xA;Line 39:                   {&#xD;&#xA;&lt;font color=red&gt;Line 40:                          @for (int i = 0; i &amp;lt; Model.CreeazaProiectModel.ObiectiveGenerale.Count; i++)&#xD;&#xA;&lt;/font&gt;Line 41:                          {&#xD;&#xA;Line 42:                         &amp;lt;tr&amp;gt;&lt;/pre&gt;&lt;/code&gt;&#xD;&#xA;&#xD;&#xA;                  &lt;/td&gt;&#xD;&#xA;               &lt;/tr&gt;&#xD;&#xA;            &lt;/table&gt;&#xD;&#xA;&#xD;&#xA;            &lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt; Source File: &lt;/b&gt; /Disertatie/Views/Shared/ObiectiveGeneraleAfisare.cshtml&lt;b&gt; &amp;nbsp;&amp;nbsp; Line: &lt;/b&gt; 40&#xD;&#xA;            &lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;    &lt;/body&gt;&#xD;&#xA;&lt;/html&gt;&#xD;&#xA;">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CACHE_CONTROL:max-age=0&#xD;&#xA;HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:ro-ro,ro;q=0.8,en-us;q=0.6,en-gb;q=0.4,en;q=0.2&#xD;&#xA;HTTP_COOKIE:rating24=6/11/2012 9:16:03 PM; rating1=6/11/2012 11:27:07 PM; rating31=6/19/2012 2:27:49 AM; Disertatie.SessionId=0aorpcislcmbhjyzul3corek; Disertatie.Auth=128EE127B270AC63DE879DCA88D526F35C657669803C7FC6CA394B041C7CB5E3477F8E39E8EC6B06C93086879644F10C85CC0D4CED68E21B725A0649B8F56D6EC72136CCE57527E15D6B1A70042B2935CAE2B7581D8BDE838C73CE37CCF07A9F9A488731051156E29931194FD5CA52068A5E509250421AE65DD44CEE6AB8F3E8B78408854BD38C2C0C92E5D7A9856A33B306CCF841C3938714013DF951AD2FC9; Disertatie.Roles=zzlV5pROMActOMZGxgadsK1tpAKrPh01GKL_nBTXOXsagjqEN39jLb7oKHNVDMFclPc2Fl0xF2VHkPxzaR5Cm9b8qNyEuN2l3yrKzbNFad1FYw04GLNYHTyWuAhKK0fJ0IAl1YQ29GqES68UI7MVCQhzlmhYmDF611GYfrh_hDycn-3AIiwjcbfHXJaJa2TXZFJQ-IRumjonh9QcnrxbNoPge75qFqNBsKGZyCVczK3RzXSyLEO5n02GGVqZSzA4fdwiLlW1UvArXdV1UXwiZfiVKOxwd83jBH-qvQUI8z4X5YHtTlyo7KxiYfjvzQu_SopudArw20CPuXxFzOmaI5TwGD4-WYOUH9KcVZXGrjHaCBqX4cB36K6Qw6zLnYgk5qIKJZZaDaYV2YbiGaA_kG87Q1YaM0IoLt3DIuUQHOUbliNh32f0xAR4NmLwlPDNo-HJ6buGiaaP0EC3ylsw08Yg6YPw1YOyMxyx2-rl7lkn_GP7Ld37YKXLknXrz5VN7zcxKH3vxY3S0T5cN7Mkcb3InQBCWyEyQP0vqnbYYXoYoIEXZSjRIYivniIhgXW00&#xD;&#xA;HTTP_HOST:localhost&#xD;&#xA;HTTP_REFERER:http://localhost/Disertatie/Membru&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.1; rv:12.0) Gecko/20100101 Firefox/12.0&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Cache-Control: max-age=0&#xD;&#xA;Connection: keep-alive&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: ro-ro,ro;q=0.8,en-us;q=0.6,en-gb;q=0.4,en;q=0.2&#xD;&#xA;Cookie: rating24=6/11/2012 9:16:03 PM; rating1=6/11/2012 11:27:07 PM; rating31=6/19/2012 2:27:49 AM; Disertatie.SessionId=0aorpcislcmbhjyzul3corek; Disertatie.Auth=128EE127B270AC63DE879DCA88D526F35C657669803C7FC6CA394B041C7CB5E3477F8E39E8EC6B06C93086879644F10C85CC0D4CED68E21B725A0649B8F56D6EC72136CCE57527E15D6B1A70042B2935CAE2B7581D8BDE838C73CE37CCF07A9F9A488731051156E29931194FD5CA52068A5E509250421AE65DD44CEE6AB8F3E8B78408854BD38C2C0C92E5D7A9856A33B306CCF841C3938714013DF951AD2FC9; Disertatie.Roles=zzlV5pROMActOMZGxgadsK1tpAKrPh01GKL_nBTXOXsagjqEN39jLb7oKHNVDMFclPc2Fl0xF2VHkPxzaR5Cm9b8qNyEuN2l3yrKzbNFad1FYw04GLNYHTyWuAhKK0fJ0IAl1YQ29GqES68UI7MVCQhzlmhYmDF611GYfrh_hDycn-3AIiwjcbfHXJaJa2TXZFJQ-IRumjonh9QcnrxbNoPge75qFqNBsKGZyCVczK3RzXSyLEO5n02GGVqZSzA4fdwiLlW1UvArXdV1UXwiZfiVKOxwd83jBH-qvQUI8z4X5YHtTlyo7KxiYfjvzQu_SopudArw20CPuXxFzOmaI5TwGD4-WYOUH9KcVZXGrjHaCBqX4cB36K6Qw6zLnYgk5qIKJZZaDaYV2YbiGaA_kG87Q1YaM0IoLt3DIuUQHOUbliNh32f0xAR4NmLwlPDNo-HJ6buGiaaP0EC3ylsw08Yg6YPw1YOyMxyx2-rl7lkn_GP7Ld37YKXLknXrz5VN7zcxKH3vxY3S0T5cN7Mkcb3InQBCWyEyQP0vqnbYYXoYoIEXZSjRIYivniIhgXW00&#xD;&#xA;Host: localhost&#xD;&#xA;Referer: http://localhost/Disertatie/Membru&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:12.0) Gecko/20100101 Firefox/12.0&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/1/ROOT/Disertatie" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="D:\Fac\disertatie\Disertatie\Disertatie\Disertatie\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="Forms" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="radu.constantinescu" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="radu.constantinescu" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="radu.constantinescu" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="1" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/1" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Disertatie/Proiecte/DetaliiProiectAnunturi/32" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="D:\Fac\disertatie\Disertatie\Disertatie\Disertatie\Proiecte\DetaliiProiectAnunturi\32" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="55876" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Disertatie/Proiecte/DetaliiProiectAnunturi/32" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="80" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/7.5" />
+    </item>
+    <item name="URL">
+      <value string="/Disertatie/Proiecte/DetaliiProiectAnunturi/32" />
+    </item>
+    <item name="HTTP_CACHE_CONTROL">
+      <value string="max-age=0" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="ro-ro,ro;q=0.8,en-us;q=0.6,en-gb;q=0.4,en;q=0.2" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="rating24=6/11/2012 9:16:03 PM; rating1=6/11/2012 11:27:07 PM; rating31=6/19/2012 2:27:49 AM; Disertatie.SessionId=0aorpcislcmbhjyzul3corek; Disertatie.Auth=128EE127B270AC63DE879DCA88D526F35C657669803C7FC6CA394B041C7CB5E3477F8E39E8EC6B06C93086879644F10C85CC0D4CED68E21B725A0649B8F56D6EC72136CCE57527E15D6B1A70042B2935CAE2B7581D8BDE838C73CE37CCF07A9F9A488731051156E29931194FD5CA52068A5E509250421AE65DD44CEE6AB8F3E8B78408854BD38C2C0C92E5D7A9856A33B306CCF841C3938714013DF951AD2FC9; Disertatie.Roles=zzlV5pROMActOMZGxgadsK1tpAKrPh01GKL_nBTXOXsagjqEN39jLb7oKHNVDMFclPc2Fl0xF2VHkPxzaR5Cm9b8qNyEuN2l3yrKzbNFad1FYw04GLNYHTyWuAhKK0fJ0IAl1YQ29GqES68UI7MVCQhzlmhYmDF611GYfrh_hDycn-3AIiwjcbfHXJaJa2TXZFJQ-IRumjonh9QcnrxbNoPge75qFqNBsKGZyCVczK3RzXSyLEO5n02GGVqZSzA4fdwiLlW1UvArXdV1UXwiZfiVKOxwd83jBH-qvQUI8z4X5YHtTlyo7KxiYfjvzQu_SopudArw20CPuXxFzOmaI5TwGD4-WYOUH9KcVZXGrjHaCBqX4cB36K6Qw6zLnYgk5qIKJZZaDaYV2YbiGaA_kG87Q1YaM0IoLt3DIuUQHOUbliNh32f0xAR4NmLwlPDNo-HJ6buGiaaP0EC3ylsw08Yg6YPw1YOyMxyx2-rl7lkn_GP7Ld37YKXLknXrz5VN7zcxKH3vxY3S0T5cN7Mkcb3InQBCWyEyQP0vqnbYYXoYoIEXZSjRIYivniIhgXW00" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost/Disertatie/Membru" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.1; rv:12.0) Gecko/20100101 Firefox/12.0" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name="rating24">
+      <value string="6/11/2012 9:16:03 PM" />
+    </item>
+    <item name="rating1">
+      <value string="6/11/2012 11:27:07 PM" />
+    </item>
+    <item name="rating31">
+      <value string="6/19/2012 2:27:49 AM" />
+    </item>
+    <item name="Disertatie.SessionId">
+      <value string="0aorpcislcmbhjyzul3corek" />
+    </item>
+    <item name="Disertatie.Auth">
+      <value string="128EE127B270AC63DE879DCA88D526F35C657669803C7FC6CA394B041C7CB5E3477F8E39E8EC6B06C93086879644F10C85CC0D4CED68E21B725A0649B8F56D6EC72136CCE57527E15D6B1A70042B2935CAE2B7581D8BDE838C73CE37CCF07A9F9A488731051156E29931194FD5CA52068A5E509250421AE65DD44CEE6AB8F3E8B78408854BD38C2C0C92E5D7A9856A33B306CCF841C3938714013DF951AD2FC9" />
+    </item>
+    <item name="Disertatie.Roles">
+      <value string="zzlV5pROMActOMZGxgadsK1tpAKrPh01GKL_nBTXOXsagjqEN39jLb7oKHNVDMFclPc2Fl0xF2VHkPxzaR5Cm9b8qNyEuN2l3yrKzbNFad1FYw04GLNYHTyWuAhKK0fJ0IAl1YQ29GqES68UI7MVCQhzlmhYmDF611GYfrh_hDycn-3AIiwjcbfHXJaJa2TXZFJQ-IRumjonh9QcnrxbNoPge75qFqNBsKGZyCVczK3RzXSyLEO5n02GGVqZSzA4fdwiLlW1UvArXdV1UXwiZfiVKOxwd83jBH-qvQUI8z4X5YHtTlyo7KxiYfjvzQu_SopudArw20CPuXxFzOmaI5TwGD4-WYOUH9KcVZXGrjHaCBqX4cB36K6Qw6zLnYgk5qIKJZZaDaYV2YbiGaA_kG87Q1YaM0IoLt3DIuUQHOUbliNh32f0xAR4NmLwlPDNo-HJ6buGiaaP0EC3ylsw08Yg6YPw1YOyMxyx2-rl7lkn_GP7Ld37YKXLknXrz5VN7zcxKH3vxY3S0T5cN7Mkcb3InQBCWyEyQP0vqnbYYXoYoIEXZSjRIYivniIhgXW00" />
+    </item>
+  </cookies>
+</error>

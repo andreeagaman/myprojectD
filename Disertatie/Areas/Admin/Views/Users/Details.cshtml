@@ -1,0 +1,105 @@
+﻿@model Disertatie.Core.Models.Utilizator
+@{
+    ViewBag.Title = "Detalii";
+}
+
+<style type="text/css">
+    p label
+    {
+        background-color: #F4F6FB;
+        color: #757576;
+        display: inline;
+        float: left;
+        font-weight: bold;
+        margin-right: 10px;
+        padding: 0px 10px 0px 10px;
+        text-align: right;
+        width: 100px;
+    }
+    input[type="submit"]:hover
+    {
+        background-color: #CEF09F;
+        background-image: none;
+        color: #5F9E0B;
+        cursor: pointer;
+    }
+    input[type="submit"]
+    {
+        background-color: #71A22F;
+        background-image: url(images/gradient_green.jpg);
+        background-repeat: repeat-x;
+        color: #fff;
+        cursor: pointer;
+        moz-border-radius: 4px;
+        padding: 5px 10px;
+        webkit-border-radius: 4px;
+        width: 70px;
+    }
+</style>
+<h2>Detalii utilizator @Model.Username</h2>
+
+<p>
+    @Html.ActionLink("Editeaza", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Inapoi la lista utilizatorilor", "Index")
+</p>
+<fieldset>
+    <legend>Utilizator</legend>
+ <p>
+        @Html.Label("Nume:")
+        @Html.DisplayFor(m=>m.Nume)
+        </p>
+         <p>
+        @Html.Label("Prenume:")
+        @Html.DisplayFor(m => m.Prenume)
+        </p>
+         <p>
+        @Html.Label("Titlu:")
+        @Html.DisplayFor(m => m.Titlu)
+        </p>
+       <p>
+            @Html.Label("Nume utilizator:")
+            @Html.DisplayFor(model => model.Username)
+       </p>
+       <br />
+        <p>
+            @Html.Label("E-mail:")
+        
+            @Html.DisplayFor(model => model.Email)
+        </p>
+        <p>
+         @Html.Label("Colectiv:")
+         @Html.DisplayTextFor(m=>m.Colectiv.Nume)
+           @* @Html.ValidationMessageFor(model => model.Colectiv)*@
+        </p>
+        <p>
+         @Html.Label("Rol:")
+         @Html.DisplayTextFor(m=>m.Roluri.ToList()[0].NumeRol)
+        </p>
+
+       <p>
+            @Html.Label("Intrebare parola:")
+       
+            @Html.DisplayTextFor(model => model.IntrebareParola)
+       </p>
+       <br />
+       <br />
+        <p>
+            @Html.Label("Raspuns parola:")
+       
+            @Html.DisplayTextFor(model => model.RaspunsParola)
+        </p>
+        <br />
+        <br />
+        <p>
+            @Html.Label("Comentariu:")
+       
+            @Html.DisplayTextFor(model => model.Comentariu)
+        </p>
+        <br />
+        <p>
+            @Html.Label("Aprobat:")
+      
+            @Html.DisplayFor(model => model.Aprobat)
+        </p>
+</fieldset>
+

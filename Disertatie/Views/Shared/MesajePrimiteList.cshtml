@@ -1,0 +1,142 @@
+﻿@model IEnumerable<Disertatie.Core.Models.Mesaj>
+@using Disertatie.Helpers
+
+
+<table id="mesajePrimite">
+	
+    <thead>
+		<tr>
+			<th scope="col" style="width: 20px; max-width: 20px;">
+                        <a id="expand_all" href="#">+</a>
+				
+			</th>
+			<th>
+				Trimis la
+			</th>
+			<th>
+				Expeditor
+			</th>
+			
+			<th>
+				Titlu
+			</th>
+            <th>
+            </th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model) {
+	
+         <tr>
+				<td style="width: 20px;" align="center">
+                <a class="expand"  id="hLinkExpand" href="#" >
+                <img src="../Content/images/plus_ico.png"/ alt="" />
+                
+                </a> 
+ 
+                
+            </td>
+              
+				<td>
+					@item.DataTrimitere.ToString("dd-MM-yyyy HH:mm")
+				</td>
+				<td>
+					@string.Format("{0} {1}", @item.Expeditor.Nume, @item.Expeditor.Prenume)
+				</td>
+				<td>
+					@item.Titlu
+				</td>                
+				<td>
+                @Html.ActionLink("Sterge", "StergeMesaj", "Mesaje", new { id = item.Id }, new { @class = "delete" })
+                </td>
+				
+			</tr>
+       <tr class="doc-details" style="display:none">
+           
+            <td colspan="8" style="text-align:left">
+                
+               @item.Detalii
+               
+            </td>
+        </tr>
+      
+  }
+	</tbody>
+    <tfoot>
+        <tr>
+            <td colspan="6" style="text-align:left">
+                @Html.Partial("PaginationMesajePrimite", Model)
+            </td>
+        </tr>
+    </tfoot>
+</table>
+<script type="text/javascript">
+    var childWindow = null;
+    var isPostBack = false;
+    var plus_img_url = "../Content/images/plus_ico.png";
+    var minus_img_url = "../Content/images/minus_ico.png";
+
+
+    $(function () {
+        window.onunload = function (event) {
+            if (!isPostBack) {
+                if (childWindow != null) childWindow.close();
+            }
+        }
+
+        $('#toggle-advanced-filters').click(function (e) {
+            e.preventDefault();
+            $('#advanced-filters').slideToggle('fast');
+            if ($(this).text() == 'Arata alte filtre') {
+                $(this).text('Ascunde alte filtre');
+            } else {
+                $(this).text('Arata alte filtre');
+            }
+        });
+
+        $('#mesajePrimite a.expand').click(function (event) {
+            event.preventDefault();
+            var href = $(this).attr('href');
+            var img = $('img', $(this));
+            var mainRow = $(this).parent().parent();
+            var tableRow = mainRow.next();
+
+            if (img.attr('src') != minus_img_url) {
+                // expanding
+                var ajaxError = false;
+                img.attr('src', minus_img_url);
+                // se deschide randul, se va afisa automat mesajul "loading" (e pus acolo)
+                var details = tableRow.toggle().find('.doc-details');
+                //var tr = document.getElementById('trDetailsMesajePrimite');
+                //tr.style.display = 'table-row';
+                // se cauta in copii "div.doc-details-inner", dak nu exista atunci trebuie adus via AJAX dp server
+
+                // deschide detaliile din rand
+                 details.toggle();
+            } else {
+                // collapsing
+                img.attr('src', plus_img_url);
+                //var tr = document.getElementById('trDetailsMesajePrimite');
+                //tr.style.display = 'none';
+                tableRow.find('.doc-details').slideToggle();
+                tableRow.toggle();
+            }
+        });
+
+    });
+
+    function showSendMailModal(row, politaUrl) {
+        alert('mail');
+
+    }
+
+    function hideMailForm(hide) {
+        alert('hide mial');
+
+    }
+
+    function setAdvancedFilters(value) {
+        alert('advace filtring');
+
+    }
+</script>

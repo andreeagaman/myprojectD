@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Disertatie.Core.Models.Proiect>
+@using Disertatie.Helpers
+
+
+<table id="services">
+	
+    <thead>
+		<tr>
+			<th>
+				
+			</th>
+            <th>
+				
+			</th>
+        
+			<th>
+				Creat la
+			</th>
+			<th>
+				Titlu
+			</th>
+			
+		
+            <th>
+            </th>
+            <th>
+            </th>
+              <th>
+            </th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model) {
+	
+         <tr>
+				<td style="background-color: #E4E6CC;">
+					@Html.ActionLink("Editeaza", "EditeazProiect", "Proiecte", new { id = item.Id }, null)
+                </td>
+                <td style="background-color: #E4E6CC;">
+					@Html.ActionLink("Incarca documente", "UploadDocumenteProiect", "Proiecte", new { id = item.Id }, null)
+                </td>
+               
+              
+				<td>
+					@item.DataCreare.ToString("dd-MM-yyyy HH:mm")
+				</td>
+				<td>
+					<a href="@Url.Action("DetaliiProiecteAnulate", "Proiecte", new { id = item.Id })" style="color: #148DFD;">@item.Titlu</a>
+				</td>
+				            
+				<td>
+                @Html.ActionLink("Propus", "DeschideProiect", "Proiecte", new { id = item.Id }, new { @class = "delete" })
+                </td>
+				<td>
+                @Html.ActionLink("Finalizeaza", "InchideProiect", "Proiecte", new { id = item.Id }, new { @class = "delete" })
+                </td>
+                <td>
+                @Html.ActionLink("Anuleaza", "AnuleazaProiect", "Proiecte", new { id = item.Id }, new { @class = "delete" })
+                </td>
+			</tr>
+      
+  }
+	</tbody>
+    <tfoot>
+        <tr>
+            <td colspan="7">
+                @Html.Partial("PaginationProiecteInLucru", Model)
+            </td>
+        </tr>
+    </tfoot>
+</table>

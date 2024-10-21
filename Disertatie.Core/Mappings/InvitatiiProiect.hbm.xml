@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Disertatie.Core" namespace="Disertatie.Core.Models">
+  <class name="InvitatiiProiect" table="InvitatiiProiect">
+  <id name="Id" column="id_invitatie" unsaved-value="0">
+    <generator class="native" />
+  </id>
+   
+    <many-to-one name="Proiect" column="id_proiect" lazy="false"/>
+    <many-to-one name="Expeditor" column="id_expeditor" lazy="false"/>
+    <many-to-one name="Destinatar" column="id_destinatar" lazy="false"/>
+    <property name="Status" column="status" />
+    <property name="ActivaExpeditor" column="activa_expeditor"></property>
+    <property name="ActivaDestinatar" column="activa_destinatar"></property>
+    <property name="DataCreare" column="data_creare" />
+    <property name="DataAcceptarii" column="data_acceptarii" />
+    <property name="DataRespingerii" column="data_respingerii" />
+    <property name="DataInactivariiExpeditor" column="data_inactivarii_expeditor" />
+    <property name="DataInactivariiDestinatar" column="data_inactivarii_destinatar" />
+  </class>
+</hibernate-mapping>

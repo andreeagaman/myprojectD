@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Disertatie.Core.Models.Proiect>
+@using Disertatie.Helpers
+
+
+<table id="services">
+	
+    <thead>
+		<tr>
+			<th>
+				
+			</th>
+			<th>
+				Creat la
+			</th>
+			<th>
+				Titlu
+			</th>
+			
+		
+            <th>
+            </th>
+             <th>
+            </th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model) {
+	
+         <tr>
+				<td style="background-color: #E4E6CC;">
+					@Html.ActionLink("Detalii", "DetaliiProiecteAnulate", "Proiecte", new { id = item.Id }, null)
+                </td>
+              
+				<td>
+					@item.DataCreare.ToString("dd-MM-yyyy HH:mm")
+				</td>
+				<td>
+					@item.Titlu
+				</td>
+				             
+				
+				<td>
+                @Html.ActionLink("In lucru", "InLucruProiect", "Proiecte", new { id = item.Id }, new { @class = "delete" })
+                </td>
+                <td>
+                @Html.ActionLink("Anuleaza", "AnuleazaProiect", "Proiecte", new { id = item.Id }, new { @class = "delete" })
+                </td>
+			</tr>
+      
+  }
+	</tbody>
+    <tfoot>
+        <tr>
+            <td colspan="6">
+                @Html.Partial("PaginationProiecteInchise", Model)
+            </td>
+        </tr>
+    </tfoot>
+</table>

@@ -1,0 +1,168 @@
+﻿<error errorId="e99bf395-f852-4e60-8fc2-f63d04e69afe" host="ANDREEA-PC" type="NHibernate.StaleObjectStateException" message="Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect): [Disertatie.Core.Models.Utilizator#1]" source="NHibernate" detail="NHibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect): [Disertatie.Core.Models.Utilizator#1]&#xD;&#xA;   at NHibernate.Persister.Entity.AbstractEntityPersister.Check(Int32 rows, Object id, Int32 tableNumber, IExpectation expectation, IDbCommand statement) in d:\CSharp\NH\nhibernate\src\NHibernate\Persister\Entity\AbstractEntityPersister.cs:line 2172&#xD;&#xA;   at NHibernate.Persister.Entity.AbstractEntityPersister.Update(Object id, Object[] fields, Object[] oldFields, Object rowId, Boolean[] includeProperty, Int32 j, Object oldVersion, Object obj, SqlCommandInfo sql, ISessionImplementor session) in d:\CSharp\NH\nhibernate\src\NHibernate\Persister\Entity\AbstractEntityPersister.cs:line 2777&#xD;&#xA;   at NHibernate.Persister.Entity.AbstractEntityPersister.UpdateOrInsert(Object id, Object[] fields, Object[] oldFields, Object rowId, Boolean[] includeProperty, Int32 j, Object oldVersion, Object obj, SqlCommandInfo sql, ISessionImplementor session) in d:\CSharp\NH\nhibernate\src\NHibernate\Persister\Entity\AbstractEntityPersister.cs:line 2689&#xD;&#xA;   at NHibernate.Persister.Entity.AbstractEntityPersister.Update(Object id, Object[] fields, Int32[] dirtyFields, Boolean hasDirtyCollection, Object[] oldFields, Object oldVersion, Object obj, Object rowId, ISessionImplementor session) in d:\CSharp\NH\nhibernate\src\NHibernate\Persister\Entity\AbstractEntityPersister.cs:line 2965&#xD;&#xA;   at NHibernate.Action.EntityUpdateAction.Execute() in d:\CSharp\NH\nhibernate\src\NHibernate\Action\EntityUpdateAction.cs:line 79&#xD;&#xA;   at NHibernate.Engine.ActionQueue.Execute(IExecutable executable) in d:\CSharp\NH\nhibernate\src\NHibernate\Engine\ActionQueue.cs:line 136&#xD;&#xA;   at NHibernate.Engine.ActionQueue.ExecuteActions(IList list) in d:\CSharp\NH\nhibernate\src\NHibernate\Engine\ActionQueue.cs:line 126&#xD;&#xA;   at NHibernate.Engine.ActionQueue.ExecuteActions() in d:\CSharp\NH\nhibernate\src\NHibernate\Engine\ActionQueue.cs:line 170&#xD;&#xA;   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session) in d:\CSharp\NH\nhibernate\src\NHibernate\Event\Default\AbstractFlushingEventListener.cs:line 249&#xD;&#xA;   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event) in d:\CSharp\NH\nhibernate\src\NHibernate\Event\Default\DefaultFlushEventListener.cs:line 19&#xD;&#xA;   at NHibernate.Impl.SessionImpl.Flush() in d:\CSharp\NH\nhibernate\src\NHibernate\Impl\SessionImpl.cs:line 1479&#xD;&#xA;   at NHibernate.Transaction.AdoTransaction.Commit() in d:\CSharp\NH\nhibernate\src\NHibernate\Transaction\AdoTransaction.cs:line 187&#xD;&#xA;   at Disertatie.Core.Security.RoleProvider.GetRolesForUser(String username) in D:\Fac\disertatie\Disertatie\Disertatie\Disertatie.Core\Security\RoleProvider.cs:line 149&#xD;&#xA;   at System.Web.Security.RolePrincipal.IsInRole(String role)&#xD;&#xA;   at Disertatie.Core.UserExtensions.EsteMembru(IPrincipal user) in D:\Fac\disertatie\Disertatie\Disertatie\Disertatie.Core\UserExtensions.cs:line 16&#xD;&#xA;   at Disertatie.Mvc.NotificationAttribute.OnActionExecuted(ActionExecutedContext filterContext) in D:\Fac\disertatie\Disertatie\Disertatie\Disertatie.Mvc\NotificationAttribute.cs:line 26&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.&lt;&gt;c__DisplayClass15.&lt;&gt;c__DisplayClass17.&lt;InvokeActionMethodWithFilters&gt;b__14()&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.&lt;&gt;c__DisplayClass15.&lt;&gt;c__DisplayClass17.&lt;InvokeActionMethodWithFilters&gt;b__14()&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)&#xD;&#xA;   at System.Web.Mvc.Controller.ExecuteCore()&#xD;&#xA;   at System.Web.Mvc.ControllerBase.Execute(RequestContext requestContext)&#xD;&#xA;   at System.Web.Mvc.ControllerBase.System.Web.Mvc.IController.Execute(RequestContext requestContext)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c__DisplayClass6.&lt;&gt;c__DisplayClassb.&lt;BeginProcessRequest&gt;b__5()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.&lt;&gt;c__DisplayClass1.&lt;MakeVoidDelegate&gt;b__0()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.&lt;&gt;c__DisplayClass8`1.&lt;BeginSynchronous&gt;b__7(IAsyncResult _)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c__DisplayClasse.&lt;EndProcessRequest&gt;b__d()&#xD;&#xA;   at System.Web.Mvc.SecurityUtil.&lt;GetCallInAppTrustThunk&gt;b__0(Action f)&#xD;&#xA;   at System.Web.Mvc.SecurityUtil.ProcessInApplicationTrust(Action action)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="test" time="2012-04-18T21:12:24.5416834Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:ro-ro,ro;q=0.8,en-us;q=0.6,en-gb;q=0.4,en;q=0.2&#xD;&#xA;HTTP_COOKIE:.ASPXAUTH=555F150527CD96391A7190B5406E6B7259E5454E597B32A0898975BFB377FDDE43F9888ACB9DF0B1DF365D88087959157E6E6A7F2B7664AF0212157D2A32CFF2A6CFA7A507868D1F9811DE845A6F98B4; ASP.NET_SessionId=22fbj3dlhmmr0ubdarrsdkui; Disertatie.SessionId=5oq0sgolzh0zprb4fu4ygthn; Disertatie.Auth=0FEF4ED30CB28B2619AB44C024DDC220C09FAC5F6317F61D2EAD702803D40F326B529421A0F8829FC239A1A2F9D1A5113800114C8BA13FC751CCE8C0B722FA176BCBCC918700BD24147C81661970572D&#xD;&#xA;HTTP_HOST:localhost&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.1; rv:11.0) Gecko/20100101 Firefox/11.0&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: ro-ro,ro;q=0.8,en-us;q=0.6,en-gb;q=0.4,en;q=0.2&#xD;&#xA;Cookie: .ASPXAUTH=555F150527CD96391A7190B5406E6B7259E5454E597B32A0898975BFB377FDDE43F9888ACB9DF0B1DF365D88087959157E6E6A7F2B7664AF0212157D2A32CFF2A6CFA7A507868D1F9811DE845A6F98B4; ASP.NET_SessionId=22fbj3dlhmmr0ubdarrsdkui; Disertatie.SessionId=5oq0sgolzh0zprb4fu4ygthn; Disertatie.Auth=0FEF4ED30CB28B2619AB44C024DDC220C09FAC5F6317F61D2EAD702803D40F326B529421A0F8829FC239A1A2F9D1A5113800114C8BA13FC751CCE8C0B722FA176BCBCC918700BD24147C81661970572D&#xD;&#xA;Host: localhost&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:11.0) Gecko/20100101 Firefox/11.0&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/1/ROOT/Disertatie" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="D:\Fac\disertatie\Disertatie\Disertatie\Disertatie\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="Forms" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="test" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="test" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="test" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="1" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/1" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="127.0.0.1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Disertatie/login" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="D:\Fac\disertatie\Disertatie\Disertatie\Disertatie\login" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="127.0.0.1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="127.0.0.1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="52980" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Disertatie/login" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="80" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/7.5" />
+    </item>
+    <item name="URL">
+      <value string="/Disertatie/login" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="ro-ro,ro;q=0.8,en-us;q=0.6,en-gb;q=0.4,en;q=0.2" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string=".ASPXAUTH=555F150527CD96391A7190B5406E6B7259E5454E597B32A0898975BFB377FDDE43F9888ACB9DF0B1DF365D88087959157E6E6A7F2B7664AF0212157D2A32CFF2A6CFA7A507868D1F9811DE845A6F98B4; ASP.NET_SessionId=22fbj3dlhmmr0ubdarrsdkui; Disertatie.SessionId=5oq0sgolzh0zprb4fu4ygthn; Disertatie.Auth=0FEF4ED30CB28B2619AB44C024DDC220C09FAC5F6317F61D2EAD702803D40F326B529421A0F8829FC239A1A2F9D1A5113800114C8BA13FC751CCE8C0B722FA176BCBCC918700BD24147C81661970572D" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.1; rv:11.0) Gecko/20100101 Firefox/11.0" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name=".ASPXAUTH">
+      <value string="555F150527CD96391A7190B5406E6B7259E5454E597B32A0898975BFB377FDDE43F9888ACB9DF0B1DF365D88087959157E6E6A7F2B7664AF0212157D2A32CFF2A6CFA7A507868D1F9811DE845A6F98B4" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="22fbj3dlhmmr0ubdarrsdkui" />
+    </item>
+    <item name="Disertatie.SessionId">
+      <value string="5oq0sgolzh0zprb4fu4ygthn" />
+    </item>
+    <item name="Disertatie.Auth">
+      <value string="0FEF4ED30CB28B2619AB44C024DDC220C09FAC5F6317F61D2EAD702803D40F326B529421A0F8829FC239A1A2F9D1A5113800114C8BA13FC751CCE8C0B722FA176BCBCC918700BD24147C81661970572D" />
+    </item>
+  </cookies>
+</error>

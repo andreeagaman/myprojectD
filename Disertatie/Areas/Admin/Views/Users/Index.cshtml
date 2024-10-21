@@ -1,0 +1,119 @@
+﻿@model Disertatie.Core.PageList<Disertatie.Core.Models.Utilizator>
+@{
+    ViewBag.Title = "Lista utilizatori";
+}
+<p>@Html.ActionLink("Creaza nou", "create", null, new { @class = "add" })</p>
+
+<a  id="refresh" href="@Url.Action("Index","Users")" style="float:right">
+                    <img src="@Url.Content("~/Content/Images/refresh.png")" alt="" />
+                </a>
+<table style="width: 100%;" cellpadding="0" cellspacing="0" border="0">
+    <thead>
+    <tr>
+        <th colspan="8" class="capt">Lista utilizatori</th>
+    </tr>
+    <tr>
+        <th>
+        </th>
+        <th>
+            Modificat la
+        </th>
+        <th>
+        Nume</th>
+        <th>
+        Prenume</th>
+        <th>
+            Nume utilizator
+        </th>
+        <th>
+            E-mail
+        </th>
+        <th>
+            Rol
+        </th>
+        <th>
+            Este aprobat
+        </th>
+        
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.ActionLink("Editeaza", "Edit", new { id = item.Id }, new { @class = "edit" })
+                @Html.ActionLink("Detalii", "Details", new { id = item.Id }, new { @class = "publish" })
+                @Html.ActionLink("Sterge", "Delete", new { id = item.Id }, new { @class = "delete" })
+            </td>
+            <td>
+                @String.Format("{0:g}", item.DataModificare)
+            </td>
+            <td>
+            @item.Nume
+            </td>
+            <td>
+            @item.Prenume
+            </td>
+            <td>
+                @item.Username
+            </td>
+            <td>
+                @item.Email
+            </td>
+            <td>
+                @string.Join(", ", item.Roluri.Select(r => r.NumeRol))
+            </td>
+            <td>
+                @if (item.Aprobat==true)
+                {
+                    <span>Da</span>
+                }
+                else
+                {
+                    <span>Nu</span>
+                }
+            </td>
+           
+        </tr>
+    }
+    </tbody>
+    <tfoot>
+        <tr>
+            <th colspan="8">
+                Filtreaza utilizator dupa nume:
+                 @using (Html.BeginForm("CautaUtilizator", "Users", FormMethod.Get))
+                 { 
+                <input type="text" name="filter" />
+                <input type="submit" value="Cauta" />
+                 }
+            </th>
+        </tr>
+        <tr>
+            <td colspan="8">
+                @Html.Partial("Pagination", Model)
+            </td>
+        </tr>
+    </tfoot>
+</table>
+@*<script type="text/javascript">
+$(document).ready(function () {
+        
+        
+
+  
+        $('#addButton1').click(function (ev) {
+            ev.preventDefault();
+            $.ajax({
+                url: '@Url.Action("Index", "Users")',
+                type: 'POST',
+                datatype: 'json',
+             
+                success: function (result) { }
+            });
+
+        });
+       
+
+
+</script>
+*@

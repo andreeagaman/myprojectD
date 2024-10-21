@@ -1,0 +1,168 @@
+﻿<error errorId="e781c126-53a1-448e-8b69-4deb22493cae" host="ANDREEA-PC" type="System.Web.HttpException" message="The controller for path '/Disertatie/Scripts/jquery-1.3.2.min.js' was not found or does not implement IController." source="System.Web.Mvc" detail="System.Web.HttpException (0x80004005): The controller for path '/Disertatie/Scripts/jquery-1.3.2.min.js' was not found or does not implement IController.&#xD;&#xA;   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)&#xD;&#xA;   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController&amp; controller, IControllerFactory&amp; factory)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c__DisplayClass6.&lt;BeginProcessRequest&gt;b__2()&#xD;&#xA;   at System.Web.Mvc.SecurityUtil.&lt;&gt;c__DisplayClassb`1.&lt;ProcessInApplicationTrust&gt;b__a()&#xD;&#xA;   at System.Web.Mvc.SecurityUtil.&lt;GetCallInAppTrustThunk&gt;b__0(Action f)&#xD;&#xA;   at System.Web.Mvc.SecurityUtil.ProcessInApplicationTrust(Action action)&#xD;&#xA;   at System.Web.Mvc.SecurityUtil.ProcessInApplicationTrust[TResult](Func`1 func)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="test" time="2012-05-14T20:14:39.2882380Z" statusCode="404">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:*/*&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:ro-ro,ro;q=0.8,en-us;q=0.6,en-gb;q=0.4,en;q=0.2&#xD;&#xA;HTTP_COOKIE:Disertatie.SessionId=pjrfh34c3ylqgnjimnu2gbt5; Disertatie.Auth=9835642BB791C3E37FA16E96F0EB1474B2FD8F268BAC5930DA21E9DB9D1BDA36F10DA110C49575C5874EAEE8BC15CC468B818C8BF9D35164941BDA3C4B3C8C0198C9DB1833ECAFF2EF96DC863677587FB3F85A530627E7B65EB1D0259F56437266FA7A56792F0B500B8021B2A28DE040C3BD174E5CAAD50005787C4BF8238A57; Disertatie.Roles=438TqRpAl2Mku_XzSYNWQ95nLJFxb3XE4qaV5YRiI8H0_4NIMquZTEMEb6ob0a03apowuZq2XToh0PzEHIh6Kulij2w2y6-A07-I0cJVRRemAIh147vvZeZ2H-q75pTDOLZFZKAjR7NPDSpxuXasf5yZW0CPcfSQm3zZ4-QaAcDCqouLj4cPTOWFl4toBPKLWIHEo-ROoanJ1G3MxFayDWok328M-GA7-zBVYDnOkSjoVsMkK5GQR7XXq0WNwOZazepN3RG4Nd1iV4tX2pH6HAXVCr4MDsvomlu0PfZdnHkiF8FI9g5yC5hrmbSp8P7Q_wFoljI4_sADNDYKRXkTevsV_GEq_H5nA6GmxEhLoMf6P50pjudIa6WGwUDkieQwjvnAxCtwnOaw44itzYH1EsmxMY_EoK-s1Cs6lqNalP0_oLVVw5GlJyH6GmGpOS76Pxm7ztEgACNB_iN4hDn7EWs039qcMSAEA2YxuoNJvBvT53-6zolgSuDGE23dKKILGuC0m4uVyUPpIHpXep-dD7o5lS8RnYkQEEQOlNiQugWNrLxFu1AbEBjb4Z2j5JNt0&#xD;&#xA;HTTP_HOST:localhost&#xD;&#xA;HTTP_REFERER:http://localhost/Disertatie/Home/Mesaje&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.1; rv:11.0) Gecko/20100101 Firefox/11.0&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Accept: */*&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: ro-ro,ro;q=0.8,en-us;q=0.6,en-gb;q=0.4,en;q=0.2&#xD;&#xA;Cookie: Disertatie.SessionId=pjrfh34c3ylqgnjimnu2gbt5; Disertatie.Auth=9835642BB791C3E37FA16E96F0EB1474B2FD8F268BAC5930DA21E9DB9D1BDA36F10DA110C49575C5874EAEE8BC15CC468B818C8BF9D35164941BDA3C4B3C8C0198C9DB1833ECAFF2EF96DC863677587FB3F85A530627E7B65EB1D0259F56437266FA7A56792F0B500B8021B2A28DE040C3BD174E5CAAD50005787C4BF8238A57; Disertatie.Roles=438TqRpAl2Mku_XzSYNWQ95nLJFxb3XE4qaV5YRiI8H0_4NIMquZTEMEb6ob0a03apowuZq2XToh0PzEHIh6Kulij2w2y6-A07-I0cJVRRemAIh147vvZeZ2H-q75pTDOLZFZKAjR7NPDSpxuXasf5yZW0CPcfSQm3zZ4-QaAcDCqouLj4cPTOWFl4toBPKLWIHEo-ROoanJ1G3MxFayDWok328M-GA7-zBVYDnOkSjoVsMkK5GQR7XXq0WNwOZazepN3RG4Nd1iV4tX2pH6HAXVCr4MDsvomlu0PfZdnHkiF8FI9g5yC5hrmbSp8P7Q_wFoljI4_sADNDYKRXkTevsV_GEq_H5nA6GmxEhLoMf6P50pjudIa6WGwUDkieQwjvnAxCtwnOaw44itzYH1EsmxMY_EoK-s1Cs6lqNalP0_oLVVw5GlJyH6GmGpOS76Pxm7ztEgACNB_iN4hDn7EWs039qcMSAEA2YxuoNJvBvT53-6zolgSuDGE23dKKILGuC0m4uVyUPpIHpXep-dD7o5lS8RnYkQEEQOlNiQugWNrLxFu1AbEBjb4Z2j5JNt0&#xD;&#xA;Host: localhost&#xD;&#xA;Referer: http://localhost/Disertatie/Home/Mesaje&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:11.0) Gecko/20100101 Firefox/11.0&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/1/ROOT/Disertatie" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="D:\Fac\disertatie\Disertatie\Disertatie\Disertatie\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="Forms" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="test" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="test" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="test" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="1" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/1" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Disertatie/Scripts/jquery-1.3.2.min.js" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="D:\Fac\disertatie\Disertatie\Disertatie\Disertatie\Scripts\jquery-1.3.2.min.js" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="55482" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Disertatie/Scripts/jquery-1.3.2.min.js" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="80" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/7.5" />
+    </item>
+    <item name="URL">
+      <value string="/Disertatie/Scripts/jquery-1.3.2.min.js" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="*/*" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="ro-ro,ro;q=0.8,en-us;q=0.6,en-gb;q=0.4,en;q=0.2" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="Disertatie.SessionId=pjrfh34c3ylqgnjimnu2gbt5; Disertatie.Auth=9835642BB791C3E37FA16E96F0EB1474B2FD8F268BAC5930DA21E9DB9D1BDA36F10DA110C49575C5874EAEE8BC15CC468B818C8BF9D35164941BDA3C4B3C8C0198C9DB1833ECAFF2EF96DC863677587FB3F85A530627E7B65EB1D0259F56437266FA7A56792F0B500B8021B2A28DE040C3BD174E5CAAD50005787C4BF8238A57; Disertatie.Roles=438TqRpAl2Mku_XzSYNWQ95nLJFxb3XE4qaV5YRiI8H0_4NIMquZTEMEb6ob0a03apowuZq2XToh0PzEHIh6Kulij2w2y6-A07-I0cJVRRemAIh147vvZeZ2H-q75pTDOLZFZKAjR7NPDSpxuXasf5yZW0CPcfSQm3zZ4-QaAcDCqouLj4cPTOWFl4toBPKLWIHEo-ROoanJ1G3MxFayDWok328M-GA7-zBVYDnOkSjoVsMkK5GQR7XXq0WNwOZazepN3RG4Nd1iV4tX2pH6HAXVCr4MDsvomlu0PfZdnHkiF8FI9g5yC5hrmbSp8P7Q_wFoljI4_sADNDYKRXkTevsV_GEq_H5nA6GmxEhLoMf6P50pjudIa6WGwUDkieQwjvnAxCtwnOaw44itzYH1EsmxMY_EoK-s1Cs6lqNalP0_oLVVw5GlJyH6GmGpOS76Pxm7ztEgACNB_iN4hDn7EWs039qcMSAEA2YxuoNJvBvT53-6zolgSuDGE23dKKILGuC0m4uVyUPpIHpXep-dD7o5lS8RnYkQEEQOlNiQugWNrLxFu1AbEBjb4Z2j5JNt0" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost/Disertatie/Home/Mesaje" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.1; rv:11.0) Gecko/20100101 Firefox/11.0" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name="Disertatie.SessionId">
+      <value string="pjrfh34c3ylqgnjimnu2gbt5" />
+    </item>
+    <item name="Disertatie.Auth">
+      <value string="9835642BB791C3E37FA16E96F0EB1474B2FD8F268BAC5930DA21E9DB9D1BDA36F10DA110C49575C5874EAEE8BC15CC468B818C8BF9D35164941BDA3C4B3C8C0198C9DB1833ECAFF2EF96DC863677587FB3F85A530627E7B65EB1D0259F56437266FA7A56792F0B500B8021B2A28DE040C3BD174E5CAAD50005787C4BF8238A57" />
+    </item>
+    <item name="Disertatie.Roles">
+      <value string="438TqRpAl2Mku_XzSYNWQ95nLJFxb3XE4qaV5YRiI8H0_4NIMquZTEMEb6ob0a03apowuZq2XToh0PzEHIh6Kulij2w2y6-A07-I0cJVRRemAIh147vvZeZ2H-q75pTDOLZFZKAjR7NPDSpxuXasf5yZW0CPcfSQm3zZ4-QaAcDCqouLj4cPTOWFl4toBPKLWIHEo-ROoanJ1G3MxFayDWok328M-GA7-zBVYDnOkSjoVsMkK5GQR7XXq0WNwOZazepN3RG4Nd1iV4tX2pH6HAXVCr4MDsvomlu0PfZdnHkiF8FI9g5yC5hrmbSp8P7Q_wFoljI4_sADNDYKRXkTevsV_GEq_H5nA6GmxEhLoMf6P50pjudIa6WGwUDkieQwjvnAxCtwnOaw44itzYH1EsmxMY_EoK-s1Cs6lqNalP0_oLVVw5GlJyH6GmGpOS76Pxm7ztEgACNB_iN4hDn7EWs039qcMSAEA2YxuoNJvBvT53-6zolgSuDGE23dKKILGuC0m4uVyUPpIHpXep-dD7o5lS8RnYkQEEQOlNiQugWNrLxFu1AbEBjb4Z2j5JNt0" />
+    </item>
+  </cookies>
+</error>

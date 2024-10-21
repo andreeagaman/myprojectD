@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="robots" content="noindex" />
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/content/css/common.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/content/css/tables.css")" rel="stylesheet" type="text/css" />
+</head>
+<body class="login">
+    <div id="wrapper">
+        <div id="header">
+            <div id="logo">&nbsp;
+            <h1 style=" text-align:center">Departamentul de Informatică și Cibernetică Economică</h1>
+            </div>
+            
+        </div>
+        <div id="menu">
+        </div>
+        <div style="clear: both;"></div>
+        <div id="middlepart">
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+﻿@model Disertatie.Models.MembruHomeModel
+@{
+    ViewBag.Title = "ProfilulMeu";
+    Layout = "~/Views/Shared/_LayoutAnonymousProfilePicture.cshtml";
+}
+
+<div class="appPad">
+    <div id="app_profile">
+        <span class="nameText ">@Model.Utilizator.Nume @Model.Utilizator.Prenume</span>
+        <br />
+        <div id="details_info">
+            <em>Colectiv</em> <span class="detailsArrow">&nbsp; &nbsp; </span>
+            @Model.Utilizator.Colectiv.Nume
+        </div>
+        <div id="application_controlBar" class="completeText">
+        </div>
+        <br />
+        <div class="window">
+            <div class="titleWindow">
+                <div id="titleText">
+                    Informatii
+                </div>
+            </div>
+            <div class="windowContent">
+                <div id="details_info" class="contentPad" style="padding-left: 10px;">
+                    <p>
+                        <em>Email: </em>
+                        @Model.Utilizator.Email
+                    </p>
+                    <p>
+                        <em>Telefon: </em>
+                        @Model.Utilizator.Telefon
+                    </p>
+                    <p>
+                        <em>Data nasterii: </em>
+                        @if (Model.Utilizator.DataNasterii.HasValue)
+                        {
+                            Model.Utilizator.DataNasterii.Value.ToString("dd MMMM");
+                        }
+                        else
+                        {
+                            <span>-</span>
+                        }
+                    </p>
+                    <p>
+                        <em>Titlu: </em>
+                        @Model.Utilizator.Titlu
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

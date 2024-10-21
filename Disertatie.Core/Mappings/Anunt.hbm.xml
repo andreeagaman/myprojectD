@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Disertatie.Core" namespace="Disertatie.Core.Models">
+  <class name="Anunt" table="Anunturi">
+    <id name="Id" column="id_anunt" unsaved-value="0">
+      <generator class="native" />
+    </id>
+
+    <property name="DataCreare" column="data_creare" />
+    <property name="Nume" column="nume" />
+    <property name="Detalii" column="detalii" />
+    <property name="Activ" column="activ" />
+    <many-to-one column="id_utilizator" name="Utilizator" lazy="false" ></many-to-one>
+  </class>
+</hibernate-mapping>
+

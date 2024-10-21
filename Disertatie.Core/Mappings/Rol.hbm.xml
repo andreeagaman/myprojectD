@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Disertatie.Core" namespace="Disertatie.Core.Models">
+  <class name="Rol" table="Roluri">
+    <cache region="utilizatori" usage="nonstrict-read-write" />
+    <id name="Id" column="id_rol" unsaved-value="0">
+      <generator class="native" />
+    </id>
+    <natural-id mutable="false"> 
+    <property name="NumeRol" column="nume_rol" unique="true" />
+    </natural-id>
+    <property name="NumeAplicatie" column="nume_aplicatie" />
+    <property name="Activ" column="activ" />
+    
+  </class>
+</hibernate-mapping>

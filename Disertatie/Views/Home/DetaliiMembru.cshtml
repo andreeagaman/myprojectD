@@ -1,0 +1,99 @@
+﻿@{
+    ViewBag.Title = "DetaliiMembru";
+    Layout = "~/Views/Shared/_LayoutAnonymousProfilePicture.cshtml";
+}
+@model Disertatie.Models.MembruHomeModel
+<a href="@Url.Action("MembriiDepartament", "Home")">Inapoi la lista membrii</a>
+<div class="appPad">
+    <div id="tab" class="appTabs">
+        <div id="app_profileBar">
+
+            <div class="contentPad">
+                @if (string.IsNullOrEmpty(Model.Membru.PozaProfil))
+                {
+                    <img class="image" src="@Url.Content("~/Content/Images/NoPhoto.jpeg")" alt="" align="left" />
+                }
+                else
+                {
+                    <img class="image" align="left" src="@Model.Membru.PozaProfil" alt="" />
+                }
+                <div id="nav_menu">
+                    <img align="left" src="../../Content/Images/mail.png" alt="" />
+                    @Html.ActionLink("Trimite mesaj", "TrimiteMesaj", "Home", new { idDestinatar = Model.Membru.Id }, new { @class = "openDialog", data_dialog_id = "emailDialog", data_dialog_title = "Trimite mesaj" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="app_profile">
+        <span class="nameText ">@Model.Membru.Nume @Model.Membru.Prenume</span>
+        <br />
+        <div id="details_info">
+            <em>Colectiv</em> <span class="detailsArrow">&nbsp; &nbsp; </span>
+            @Model.Membru.Colectiv.Nume
+        </div>
+        <div id="application_controlBar" class="completeText">
+        </div>
+        <br />
+        <div class="window">
+            <div class="titleWindow">
+                <div id="titleText">
+                    Informatii
+                </div>
+            </div>
+            <div class="windowContent">
+                <div id="details_info" class="contentPad" style="padding-left: 10px;">
+                    <p>
+                        <em>Email: </em>
+                        @Model.Membru.Email
+                    </p>
+                    <p>
+                        <em>Telefon: </em>
+                        @Model.Membru.Telefon
+                    </p>
+                    <p>
+                        <em>Data nasterii: </em>
+                        @if (Model.Membru.DataNasterii.HasValue)
+                        {
+                            Model.Membru.DataNasterii.Value.ToString("dd MMMM");
+                        }
+                        else
+                        {
+                            <span>-</span>
+                        }
+                    </p>
+                    <p>
+                        <em>Titlu: </em>
+                        @Model.Membru.Titlu
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+    $.ajaxSetup({ cache: false });
+
+    $(document).ready(function () {
+        $(".openDialog").live("click", function (e) {
+            e.preventDefault();
+
+            $("<div></div>")
+                .addClass("dialog")
+                .attr("id", $(this).attr("data-dialog-id"))
+                .appendTo("body")
+                .dialog({
+                    title: $(this).attr("data-dialog-title"),
+                    close: function () { $(this).remove() },
+                    modal: true,
+                    width: '430px'
+                })
+                .load(this.href);
+        });
+
+        $(".close").live("click", function (e) {
+            e.preventDefault();
+            $(this).closest(".dialog").dialog("close");
+        });
+    });
+</script>

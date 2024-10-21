@@ -1,0 +1,10 @@
+﻿@using Disertatie.Core
+@using Disertatie.Helpers
+@model Disertatie.Models.MembruHomeModel
+
+
+
+
+@if (TempData["exc"] != null) {@Html.ErrorBox("A aparut o eroare la selectia datelor!"); }
+else{
+@Html.SuccessBox("Modificarea a avut loc cu succes!")}

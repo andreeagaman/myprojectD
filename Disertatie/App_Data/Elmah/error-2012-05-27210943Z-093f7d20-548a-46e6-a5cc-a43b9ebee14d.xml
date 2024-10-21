@@ -1,0 +1,177 @@
+﻿<error errorId="093f7d20-548a-46e6-a5cc-a43b9ebee14d" host="ANDREEA-PC" type="System.Web.HttpException" message="Unable to make the session state request to the session state server. Please ensure that the ASP.NET State service is started and that the client and server ports are the same.  If the server is on a remote machine, please ensure that it accepts remote requests by checking the value of HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\aspnet_state\Parameters\AllowRemoteConnection.  If the server is on the local machine, and if the before mentioned registry value does not exist or is set to 0, then the state server connection string must use either 'localhost' or '127.0.0.1' as the server name." source="System.Web" detail="System.Web.HttpException (0x80072736): Unable to make the session state request to the session state server. Please ensure that the ASP.NET State service is started and that the client and server ports are the same.  If the server is on a remote machine, please ensure that it accepts remote requests by checking the value of HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\aspnet_state\Parameters\AllowRemoteConnection.  If the server is on the local machine, and if the before mentioned registry value does not exist or is set to 0, then the state server connection string must use either 'localhost' or '127.0.0.1' as the server name.&#xD;&#xA;   at System.Web.SessionState.OutOfProcSessionStateStore.MakeRequest(StateProtocolVerb verb, String id, StateProtocolExclusive exclusiveAccess, Int32 extraFlags, Int32 timeout, Int32 lockCookie, Byte[] buf, Int32 cb, Int32 networkTimeout, SessionNDMakeRequestResults&amp; results)&#xD;&#xA;   at System.Web.SessionState.OutOfProcSessionStateStore.ResetItemTimeout(HttpContext context, String id)&#xD;&#xA;   at System.Web.SessionState.SessionStateModule.BeginAcquireState(Object source, EventArgs e, AsyncCallback cb, Object extraData)&#xD;&#xA;   at System.Web.HttpApplication.AsyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="test" time="2012-05-27T21:09:43.7514891Z" statusCode="500">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CACHE_CONTROL:max-age=0&#xD;&#xA;HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:image/png,image/*;q=0.8,*/*;q=0.5&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:ro-ro,ro;q=0.8,en-us;q=0.6,en-gb;q=0.4,en;q=0.2&#xD;&#xA;HTTP_COOKIE:Disertatie.SessionId=hu4vljjb13luvqlca2vwp1oc; Disertatie.Auth=F01C6B598910979352B99B3EED25D37EC6F8576535866AB6F036AFADA522C6C5529C640126CC25E335B66D692E51D45BA384B139DE42BDFE3EA1A5103560E6473FF8FB709965EC1972F08F07038D4BD2480F315C4497BEA8C9D26994A47DA44B99C52C8F2796FE14268BC6C47B707248EBD4E88E89F25A298959F1BF649A43D3; Disertatie.Roles=OY7S9dQv49WKNvKItK3WKJmAsZ-Q2i6lpU-FJpTlSJnL2YyI-dHuWUynu5I-CJnK6wQRsvsNHXjlOJF94jz__L6iJqvZvQc6eYR35bEWUi5EnynSFGJprQkZYEka_R2nfkAJB5xvBFfjAV10oHaExsPU53_3yd3iVsVLM_75OQq7mQMnfuno94nZrsjz9aCu6kW0ZGjMIlNy2R0EfiQ-EGVqLTw1IEO_ZKQkHqO9cznhkGU_qgkN_nWqvH27Ay5KzSv2MTpBVI1QKF-HJJHcZavX7c6ED6lZ-ku7aNPku7l-JEp3DSsT-6VU-aVj5z6QsftJTourNFPDiujuDkQoVFbRXK1RxvkAFpLwK8mePBwWzk8SJjNrXRTbm7bNY4Der9FEPoyKIizBHlseZuO9EqHYz_oLY_3JkhK5_96DDl0HtHo9COcJ2Tnlp41d4Gn2ztYV4LyPCM9rDe4gweA5fohv6xc7-wGNuixPKtVj9cnISvs6SKujUeJQ8F664_e3Y4YlFwXfFLZ95TAXLiLnSdYkaOpH699t6JQDN-dQ08pZO3dj3wF7w65P1aptW2g40&#xD;&#xA;HTTP_HOST:localhost&#xD;&#xA;HTTP_IF_MODIFIED_SINCE:Mon, 24 Jan 2011 14:53:48 GMT&#xD;&#xA;HTTP_IF_NONE_MATCH:&quot;0667c81d6bbcb1:0&quot;&#xD;&#xA;HTTP_REFERER:http://localhost/Disertatie/content/css/tables.css&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.1; rv:12.0) Gecko/20100101 Firefox/12.0&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Cache-Control: max-age=0&#xD;&#xA;Connection: keep-alive&#xD;&#xA;Accept: image/png,image/*;q=0.8,*/*;q=0.5&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: ro-ro,ro;q=0.8,en-us;q=0.6,en-gb;q=0.4,en;q=0.2&#xD;&#xA;Cookie: Disertatie.SessionId=hu4vljjb13luvqlca2vwp1oc; Disertatie.Auth=F01C6B598910979352B99B3EED25D37EC6F8576535866AB6F036AFADA522C6C5529C640126CC25E335B66D692E51D45BA384B139DE42BDFE3EA1A5103560E6473FF8FB709965EC1972F08F07038D4BD2480F315C4497BEA8C9D26994A47DA44B99C52C8F2796FE14268BC6C47B707248EBD4E88E89F25A298959F1BF649A43D3; Disertatie.Roles=OY7S9dQv49WKNvKItK3WKJmAsZ-Q2i6lpU-FJpTlSJnL2YyI-dHuWUynu5I-CJnK6wQRsvsNHXjlOJF94jz__L6iJqvZvQc6eYR35bEWUi5EnynSFGJprQkZYEka_R2nfkAJB5xvBFfjAV10oHaExsPU53_3yd3iVsVLM_75OQq7mQMnfuno94nZrsjz9aCu6kW0ZGjMIlNy2R0EfiQ-EGVqLTw1IEO_ZKQkHqO9cznhkGU_qgkN_nWqvH27Ay5KzSv2MTpBVI1QKF-HJJHcZavX7c6ED6lZ-ku7aNPku7l-JEp3DSsT-6VU-aVj5z6QsftJTourNFPDiujuDkQoVFbRXK1RxvkAFpLwK8mePBwWzk8SJjNrXRTbm7bNY4Der9FEPoyKIizBHlseZuO9EqHYz_oLY_3JkhK5_96DDl0HtHo9COcJ2Tnlp41d4Gn2ztYV4LyPCM9rDe4gweA5fohv6xc7-wGNuixPKtVj9cnISvs6SKujUeJQ8F664_e3Y4YlFwXfFLZ95TAXLiLnSdYkaOpH699t6JQDN-dQ08pZO3dj3wF7w65P1aptW2g40&#xD;&#xA;Host: localhost&#xD;&#xA;If-Modified-Since: Mon, 24 Jan 2011 14:53:48 GMT&#xD;&#xA;If-None-Match: &quot;0667c81d6bbcb1:0&quot;&#xD;&#xA;Referer: http://localhost/Disertatie/content/css/tables.css&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:12.0) Gecko/20100101 Firefox/12.0&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/1/ROOT/Disertatie" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="D:\Fac\disertatie\Disertatie\Disertatie\Disertatie\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="Forms" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="test" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="test" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="test" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="1" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/1" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Disertatie/content/images/menu.gif" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="D:\Fac\disertatie\Disertatie\Disertatie\Disertatie\content\images\menu.gif" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="54015" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Disertatie/content/images/menu.gif" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="80" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/7.5" />
+    </item>
+    <item name="URL">
+      <value string="/Disertatie/content/images/menu.gif" />
+    </item>
+    <item name="HTTP_CACHE_CONTROL">
+      <value string="max-age=0" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="image/png,image/*;q=0.8,*/*;q=0.5" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="ro-ro,ro;q=0.8,en-us;q=0.6,en-gb;q=0.4,en;q=0.2" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="Disertatie.SessionId=hu4vljjb13luvqlca2vwp1oc; Disertatie.Auth=F01C6B598910979352B99B3EED25D37EC6F8576535866AB6F036AFADA522C6C5529C640126CC25E335B66D692E51D45BA384B139DE42BDFE3EA1A5103560E6473FF8FB709965EC1972F08F07038D4BD2480F315C4497BEA8C9D26994A47DA44B99C52C8F2796FE14268BC6C47B707248EBD4E88E89F25A298959F1BF649A43D3; Disertatie.Roles=OY7S9dQv49WKNvKItK3WKJmAsZ-Q2i6lpU-FJpTlSJnL2YyI-dHuWUynu5I-CJnK6wQRsvsNHXjlOJF94jz__L6iJqvZvQc6eYR35bEWUi5EnynSFGJprQkZYEka_R2nfkAJB5xvBFfjAV10oHaExsPU53_3yd3iVsVLM_75OQq7mQMnfuno94nZrsjz9aCu6kW0ZGjMIlNy2R0EfiQ-EGVqLTw1IEO_ZKQkHqO9cznhkGU_qgkN_nWqvH27Ay5KzSv2MTpBVI1QKF-HJJHcZavX7c6ED6lZ-ku7aNPku7l-JEp3DSsT-6VU-aVj5z6QsftJTourNFPDiujuDkQoVFbRXK1RxvkAFpLwK8mePBwWzk8SJjNrXRTbm7bNY4Der9FEPoyKIizBHlseZuO9EqHYz_oLY_3JkhK5_96DDl0HtHo9COcJ2Tnlp41d4Gn2ztYV4LyPCM9rDe4gweA5fohv6xc7-wGNuixPKtVj9cnISvs6SKujUeJQ8F664_e3Y4YlFwXfFLZ95TAXLiLnSdYkaOpH699t6JQDN-dQ08pZO3dj3wF7w65P1aptW2g40" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost" />
+    </item>
+    <item name="HTTP_IF_MODIFIED_SINCE">
+      <value string="Mon, 24 Jan 2011 14:53:48 GMT" />
+    </item>
+    <item name="HTTP_IF_NONE_MATCH">
+      <value string="&quot;0667c81d6bbcb1:0&quot;" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost/Disertatie/content/css/tables.css" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.1; rv:12.0) Gecko/20100101 Firefox/12.0" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name="Disertatie.SessionId">
+      <value string="hu4vljjb13luvqlca2vwp1oc" />
+    </item>
+    <item name="Disertatie.Auth">
+      <value string="F01C6B598910979352B99B3EED25D37EC6F8576535866AB6F036AFADA522C6C5529C640126CC25E335B66D692E51D45BA384B139DE42BDFE3EA1A5103560E6473FF8FB709965EC1972F08F07038D4BD2480F315C4497BEA8C9D26994A47DA44B99C52C8F2796FE14268BC6C47B707248EBD4E88E89F25A298959F1BF649A43D3" />
+    </item>
+    <item name="Disertatie.Roles">
+      <value string="OY7S9dQv49WKNvKItK3WKJmAsZ-Q2i6lpU-FJpTlSJnL2YyI-dHuWUynu5I-CJnK6wQRsvsNHXjlOJF94jz__L6iJqvZvQc6eYR35bEWUi5EnynSFGJprQkZYEka_R2nfkAJB5xvBFfjAV10oHaExsPU53_3yd3iVsVLM_75OQq7mQMnfuno94nZrsjz9aCu6kW0ZGjMIlNy2R0EfiQ-EGVqLTw1IEO_ZKQkHqO9cznhkGU_qgkN_nWqvH27Ay5KzSv2MTpBVI1QKF-HJJHcZavX7c6ED6lZ-ku7aNPku7l-JEp3DSsT-6VU-aVj5z6QsftJTourNFPDiujuDkQoVFbRXK1RxvkAFpLwK8mePBwWzk8SJjNrXRTbm7bNY4Der9FEPoyKIizBHlseZuO9EqHYz_oLY_3JkhK5_96DDl0HtHo9COcJ2Tnlp41d4Gn2ztYV4LyPCM9rDe4gweA5fohv6xc7-wGNuixPKtVj9cnISvs6SKujUeJQ8F664_e3Y4YlFwXfFLZ95TAXLiLnSdYkaOpH699t6JQDN-dQ08pZO3dj3wF7w65P1aptW2g40" />
+    </item>
+  </cookies>
+</error>

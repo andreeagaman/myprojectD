@@ -1,0 +1,177 @@
+﻿<error errorId="ead3b19e-d397-4284-808f-15631088759c" host="ANDREEA-PC" type="System.InvalidOperationException" message="The view 'Index' or its master was not found or no view engine supports the searched locations. The following locations were searched:&#xD;&#xA;~/Views/Anunturi/Index.aspx&#xD;&#xA;~/Views/Anunturi/Index.ascx&#xD;&#xA;~/Views/Shared/Index.aspx&#xD;&#xA;~/Views/Shared/Index.ascx&#xD;&#xA;~/Views/Anunturi/Index.cshtml&#xD;&#xA;~/Views/Anunturi/Index.vbhtml&#xD;&#xA;~/Views/Shared/Index.cshtml&#xD;&#xA;~/Views/Shared/Index.vbhtml" source="System.Web.Mvc" detail="System.InvalidOperationException: The view 'Index' or its master was not found or no view engine supports the searched locations. The following locations were searched:&#xD;&#xA;~/Views/Anunturi/Index.aspx&#xD;&#xA;~/Views/Anunturi/Index.ascx&#xD;&#xA;~/Views/Shared/Index.aspx&#xD;&#xA;~/Views/Shared/Index.ascx&#xD;&#xA;~/Views/Anunturi/Index.cshtml&#xD;&#xA;~/Views/Anunturi/Index.vbhtml&#xD;&#xA;~/Views/Shared/Index.cshtml&#xD;&#xA;~/Views/Shared/Index.vbhtml&#xD;&#xA;   at System.Web.Mvc.ViewResult.FindView(ControllerContext context)&#xD;&#xA;   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.&lt;&gt;c__DisplayClass1c.&lt;InvokeActionResultWithFilters&gt;b__19()&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.&lt;&gt;c__DisplayClass1c.&lt;&gt;c__DisplayClass1e.&lt;InvokeActionResultWithFilters&gt;b__1b()&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.&lt;&gt;c__DisplayClass1c.&lt;&gt;c__DisplayClass1e.&lt;InvokeActionResultWithFilters&gt;b__1b()&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)&#xD;&#xA;   at System.Web.Mvc.Controller.ExecuteCore()&#xD;&#xA;   at System.Web.Mvc.ControllerBase.Execute(RequestContext requestContext)&#xD;&#xA;   at System.Web.Mvc.ControllerBase.System.Web.Mvc.IController.Execute(RequestContext requestContext)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c__DisplayClass6.&lt;&gt;c__DisplayClassb.&lt;BeginProcessRequest&gt;b__5()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.&lt;&gt;c__DisplayClass1.&lt;MakeVoidDelegate&gt;b__0()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.&lt;&gt;c__DisplayClass8`1.&lt;BeginSynchronous&gt;b__7(IAsyncResult _)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c__DisplayClasse.&lt;EndProcessRequest&gt;b__d()&#xD;&#xA;   at System.Web.Mvc.SecurityUtil.&lt;GetCallInAppTrustThunk&gt;b__0(Action f)&#xD;&#xA;   at System.Web.Mvc.SecurityUtil.ProcessInApplicationTrust(Action action)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="catalin.boja" time="2012-06-18T23:41:48.0441580Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:ro-ro,ro;q=0.8,en-us;q=0.6,en-gb;q=0.4,en;q=0.2&#xD;&#xA;HTTP_COOKIE:rating24=6/11/2012 9:16:03 PM; rating1=6/11/2012 11:27:07 PM; rating31=6/19/2012 2:27:49 AM; Disertatie.SessionId=o04bozqv1elfefhcdfhzr2o2; Disertatie.Auth=E5321AEA19BB00D246940E4FC891890084C9AC63FAB824CF4BE203B8F516A0C518B95D07EB1D834D25CEBA0366367D40E4E028662F1EBB9505509685182A2658EDE049AD6450871B83489C587B1326E7C3531A5624331C64792BC98A13729842EDDD0B47AB1CF116566030A0AD7CA6AC0F4FEE9F5253F3CE0C11F06D6504E9D783728CB787952FADE92E289FAAC1B819; Disertatie.Roles=Uoe9rzBW6N8s6vqZXEgE_2s1ky8Zc5suv2dhqgcjV2awnb3xfXY21C4Lx3IYr2Tk60vZ9xDcN54hX2J9uo7-74XdGd9XRYUEUXxqfpGQJrWxJw9QkKq-FpQ-b8YovKevpCgcuSpLMIBCBibKGNOaXYKx2s_KbyZkkENz5lebsYIXfGa6_h__WAC-peLKbjBnV7VCMQTy3eRkZA8s30Qv5-dCCSkOF63tpFu5ijYN-FsJbt__HlElNvxciJCjnokOuRTxrxJlWtgCC464XU8BkJFvV-Jb9AXi4uV9SpxiuiiBjdFdsCR55QxtTMSmRy_I7QmKBYyCUvyal8l-gEq8yMiiNTFXjSdJyUf0epf7VRsISo-RPGhIMvouS-AWNBYIZXgp-fLr2dCr2dAKTXYqy2wN1FdLB3URrWWOCFGfJULajSvFlLF4NTf1wDPRB_nY6RLn-uOBPlqGsZdJOpzecjtN0WFvFVaFPB2Eo99ArM_Ir-ZpnV92JAp-wadwm5sIhf2OrXBlsWOp3ZeM9ug68qOJe3nnJCIc_mmUf2vr4s7cIHbgL9CRcnlAGXQliiAZ0&#xD;&#xA;HTTP_HOST:localhost&#xD;&#xA;HTTP_REFERER:http://localhost/Disertatie/Anunturi/Anunturi&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.1; rv:12.0) Gecko/20100101 Firefox/12.0&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: ro-ro,ro;q=0.8,en-us;q=0.6,en-gb;q=0.4,en;q=0.2&#xD;&#xA;Cookie: rating24=6/11/2012 9:16:03 PM; rating1=6/11/2012 11:27:07 PM; rating31=6/19/2012 2:27:49 AM; Disertatie.SessionId=o04bozqv1elfefhcdfhzr2o2; Disertatie.Auth=E5321AEA19BB00D246940E4FC891890084C9AC63FAB824CF4BE203B8F516A0C518B95D07EB1D834D25CEBA0366367D40E4E028662F1EBB9505509685182A2658EDE049AD6450871B83489C587B1326E7C3531A5624331C64792BC98A13729842EDDD0B47AB1CF116566030A0AD7CA6AC0F4FEE9F5253F3CE0C11F06D6504E9D783728CB787952FADE92E289FAAC1B819; Disertatie.Roles=Uoe9rzBW6N8s6vqZXEgE_2s1ky8Zc5suv2dhqgcjV2awnb3xfXY21C4Lx3IYr2Tk60vZ9xDcN54hX2J9uo7-74XdGd9XRYUEUXxqfpGQJrWxJw9QkKq-FpQ-b8YovKevpCgcuSpLMIBCBibKGNOaXYKx2s_KbyZkkENz5lebsYIXfGa6_h__WAC-peLKbjBnV7VCMQTy3eRkZA8s30Qv5-dCCSkOF63tpFu5ijYN-FsJbt__HlElNvxciJCjnokOuRTxrxJlWtgCC464XU8BkJFvV-Jb9AXi4uV9SpxiuiiBjdFdsCR55QxtTMSmRy_I7QmKBYyCUvyal8l-gEq8yMiiNTFXjSdJyUf0epf7VRsISo-RPGhIMvouS-AWNBYIZXgp-fLr2dCr2dAKTXYqy2wN1FdLB3URrWWOCFGfJULajSvFlLF4NTf1wDPRB_nY6RLn-uOBPlqGsZdJOpzecjtN0WFvFVaFPB2Eo99ArM_Ir-ZpnV92JAp-wadwm5sIhf2OrXBlsWOp3ZeM9ug68qOJe3nnJCIc_mmUf2vr4s7cIHbgL9CRcnlAGXQliiAZ0&#xD;&#xA;Host: localhost&#xD;&#xA;Referer: http://localhost/Disertatie/Anunturi/Anunturi&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:12.0) Gecko/20100101 Firefox/12.0&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/1/ROOT/Disertatie" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="D:\Fac\disertatie\Disertatie\Disertatie\Disertatie\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="Forms" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="catalin.boja" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="catalin.boja" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="catalin.boja" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="1" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/1" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Disertatie/Anunturi" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="D:\Fac\disertatie\Disertatie\Disertatie\Disertatie\Anunturi" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="55320" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Disertatie/Anunturi" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="80" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/7.5" />
+    </item>
+    <item name="URL">
+      <value string="/Disertatie/Anunturi" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="ro-ro,ro;q=0.8,en-us;q=0.6,en-gb;q=0.4,en;q=0.2" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="rating24=6/11/2012 9:16:03 PM; rating1=6/11/2012 11:27:07 PM; rating31=6/19/2012 2:27:49 AM; Disertatie.SessionId=o04bozqv1elfefhcdfhzr2o2; Disertatie.Auth=E5321AEA19BB00D246940E4FC891890084C9AC63FAB824CF4BE203B8F516A0C518B95D07EB1D834D25CEBA0366367D40E4E028662F1EBB9505509685182A2658EDE049AD6450871B83489C587B1326E7C3531A5624331C64792BC98A13729842EDDD0B47AB1CF116566030A0AD7CA6AC0F4FEE9F5253F3CE0C11F06D6504E9D783728CB787952FADE92E289FAAC1B819; Disertatie.Roles=Uoe9rzBW6N8s6vqZXEgE_2s1ky8Zc5suv2dhqgcjV2awnb3xfXY21C4Lx3IYr2Tk60vZ9xDcN54hX2J9uo7-74XdGd9XRYUEUXxqfpGQJrWxJw9QkKq-FpQ-b8YovKevpCgcuSpLMIBCBibKGNOaXYKx2s_KbyZkkENz5lebsYIXfGa6_h__WAC-peLKbjBnV7VCMQTy3eRkZA8s30Qv5-dCCSkOF63tpFu5ijYN-FsJbt__HlElNvxciJCjnokOuRTxrxJlWtgCC464XU8BkJFvV-Jb9AXi4uV9SpxiuiiBjdFdsCR55QxtTMSmRy_I7QmKBYyCUvyal8l-gEq8yMiiNTFXjSdJyUf0epf7VRsISo-RPGhIMvouS-AWNBYIZXgp-fLr2dCr2dAKTXYqy2wN1FdLB3URrWWOCFGfJULajSvFlLF4NTf1wDPRB_nY6RLn-uOBPlqGsZdJOpzecjtN0WFvFVaFPB2Eo99ArM_Ir-ZpnV92JAp-wadwm5sIhf2OrXBlsWOp3ZeM9ug68qOJe3nnJCIc_mmUf2vr4s7cIHbgL9CRcnlAGXQliiAZ0" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost/Disertatie/Anunturi/Anunturi" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.1; rv:12.0) Gecko/20100101 Firefox/12.0" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name="rating24">
+      <value string="6/11/2012 9:16:03 PM" />
+    </item>
+    <item name="rating1">
+      <value string="6/11/2012 11:27:07 PM" />
+    </item>
+    <item name="rating31">
+      <value string="6/19/2012 2:27:49 AM" />
+    </item>
+    <item name="Disertatie.SessionId">
+      <value string="o04bozqv1elfefhcdfhzr2o2" />
+    </item>
+    <item name="Disertatie.Auth">
+      <value string="E5321AEA19BB00D246940E4FC891890084C9AC63FAB824CF4BE203B8F516A0C518B95D07EB1D834D25CEBA0366367D40E4E028662F1EBB9505509685182A2658EDE049AD6450871B83489C587B1326E7C3531A5624331C64792BC98A13729842EDDD0B47AB1CF116566030A0AD7CA6AC0F4FEE9F5253F3CE0C11F06D6504E9D783728CB787952FADE92E289FAAC1B819" />
+    </item>
+    <item name="Disertatie.Roles">
+      <value string="Uoe9rzBW6N8s6vqZXEgE_2s1ky8Zc5suv2dhqgcjV2awnb3xfXY21C4Lx3IYr2Tk60vZ9xDcN54hX2J9uo7-74XdGd9XRYUEUXxqfpGQJrWxJw9QkKq-FpQ-b8YovKevpCgcuSpLMIBCBibKGNOaXYKx2s_KbyZkkENz5lebsYIXfGa6_h__WAC-peLKbjBnV7VCMQTy3eRkZA8s30Qv5-dCCSkOF63tpFu5ijYN-FsJbt__HlElNvxciJCjnokOuRTxrxJlWtgCC464XU8BkJFvV-Jb9AXi4uV9SpxiuiiBjdFdsCR55QxtTMSmRy_I7QmKBYyCUvyal8l-gEq8yMiiNTFXjSdJyUf0epf7VRsISo-RPGhIMvouS-AWNBYIZXgp-fLr2dCr2dAKTXYqy2wN1FdLB3URrWWOCFGfJULajSvFlLF4NTf1wDPRB_nY6RLn-uOBPlqGsZdJOpzecjtN0WFvFVaFPB2Eo99ArM_Ir-ZpnV92JAp-wadwm5sIhf2OrXBlsWOp3ZeM9ug68qOJe3nnJCIc_mmUf2vr4s7cIHbgL9CRcnlAGXQliiAZ0" />
+    </item>
+  </cookies>
+</error>

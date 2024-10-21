@@ -1,0 +1,41 @@
+﻿@using Disertatie.Core
+@using Disertatie.Helpers
+@model Disertatie.Models.MembruHomeModel
+           @{
+    ViewBag.Title = "GetMembriiDupaColectivBD";
+    Layout = "~/Views/Shared/_LayoutAnonymousProfilePicture.cshtml";
+}
+
+
+@{
+    ViewBag.Title = "Ordonare";
+}
+<div style="width:100%">
+<div id="app_main">
+@if (Model.MembriiDepartament.Count > 0)
+{ 
+    @Html.Partial("MembriiDepartamentList", Model.MembriiDepartament)
+}
+else
+{ 
+    @Html.WarningBox("Nu exista rezultate", "Nu exista nici o inregistrare dupa criteriile de cautare")
+}
+</div>
+<div id="app_sidebar">
+<div class="contentPad" style="height:100%; display:">
+         <ul class="commands" style="list-style-type: none; ">
+          <li>@Html.ActionLink("Dupa colective", "GetMembriiDupaColectiv", "Home", new { id = Model.Utilizator.Id }, new { @class = "exclude" })</li>
+                     <li>@Html.ActionLink("Programarea calculatoarelor", "GetMembriiDupaColectivBP", "Home", new { id = Model.Utilizator.Id }, new { @class = "publish" })</li>
+                      <li>@Html.ActionLink("Limbaje avansate de programare", "GetMembriiDupaColectivPA", "Home", new { id = Model.Utilizator.Id }, new { @class = "publish" })</li>
+                      <li>@Html.ActionLink("Baze de date si sisteme informationale", "GetMembriiDupaColectivBD", "Home", new { id = Model.Utilizator.Id }, new { @class = "publish" })</li>
+                      <li>@Html.ActionLink("Sisteme de calcul si operare", "GetMembriiDupaColectivSCO", "Home", new { id = Model.Utilizator.Id }, new { @class = "publish" })</li>
+                      <li>@Html.ActionLink("Cibernetica Economica 1", "GetMembriiDupaColectivC1", "Home", new { id = Model.Utilizator.Id }, new { @class = "publish" })</li>
+                      <li>@Html.ActionLink("Cibernetica Economica 2", "GetMembriiDupaColectivC2", "Home", new { id = Model.Utilizator.Id }, new { @class = "publish" })</li>
+                       <li>@Html.ActionLink("Informatica", "GetMembriiDupaColectivBazeleTIC", "Home", new { id = Model.Utilizator.Id }, new { @class = "publish" })</li>
+                    </ul>
+        <ul class="commands" style="list-style-type: none; ">
+        <li>@Html.ActionLink("Dupa nume", "MembriiDepartament", "Home", null, new { @class = "exclude" })</li>
+    </ul>
+    </div>
+</div>
+</div>

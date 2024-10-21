@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Disertatie.Core" namespace="Disertatie.Core.Models">
+  <class name="Utilizator" table="Utilizatori">
+    <cache region="utilizatori" usage="nonstrict-read-write" />
+    <id name="Id" column="id_utilizator" unsaved-value="0">
+      <generator class="native" />
+    </id>
+
+    <natural-id mutable="false">
+      <property name="Username" column="username" unique="true" />
+    </natural-id>
+
+    <timestamp name="DataModificare" column="data_modificare" />
+    <property name="DataCreare" column="data_creare" update="false" />
+    <property name="Parola" column="parola" />
+    <property name="IntrebareParola" column="intrebare_parola" />
+    <property name="RaspunsParola" column="raspuns_parola"/>
+    <property name="Nume" column="nume"/>
+    <property name="Prenume" column="prenume"/>
+    <property name="DataNasterii" column="data_nasterii"/>
+    <property name="Telefon" column="telefon"/>
+    <property name="Email" column="email" />
+  
+    <property name="Comentariu" column="comentariu" />
+    <property name="NumeAplicatie" column="nume_aplicatie" update="false" />
+    <property name="Aprobat" column="aprobat" />
+    <property name="DataUltimeiActivitati" column="data_ultimei_activitati" />
+    <property name="DataUltimeiAutentificari" column="data_ultimei_autentificari" />
+    <property name="DataUltimeiModificariParola" column="data_ultimei_modicari_parola" />
+    <property name="Online" column="online" />
+    <property name="Blocat" column="blocat" />
+    <property name="DataUltimeiBlocari" column="data_ultimei_blocari" />
+    <property name="NrAutentificariEsuate" column="nr_autentificari_esuate"  />
+    <property name="DataIncepereFereastraAutentificareEsuata" column="data_incepere_fereastra_autentificare_esuata" />
+    <property name="NrRaspunsuriEsuate" column="nr_raspunsuri_esuate" />
+    <property name="DataIncepereFereastraRaspunsEsuat" column="data_incepere_fereastra_raspuns_esuat" />
+    <property name="DataAutentificariiAnterioare" column="data_autentificarii_anterioare" />
+    <property name="PozaProfil" column="poza_profil" />
+    <set name="Roluri" table="UtilizatoriRoluri" lazy="false" >
+      <cache region="utilizatori" usage="nonstrict-read-write" />
+      <key column="id_utilizator" not-null="true" />
+      <many-to-many column="id_rol" class="Rol" lazy="false" fetch="join" />
+    </set>
+
+
+    <many-to-one column="id_colectiv" name="Colectiv" lazy="false" ></many-to-one>
+    <property name="Titlu" column="titlu" />
+  </class>
+
+
+  <query name="GetNrMesajeNoi">
+    <query-param name="username" type="string"/>
+    <![CDATA[
+      select count(*)
+      from Mesaj  m
+      join m.Destinatar as d
+      where d.Username = :username and m.Citit=0 and m.Activ=1
+    ]]>
+  </query>
+</hibernate-mapping>

@@ -1,0 +1,33 @@
+﻿@model Disertatie.Models.MembruHomeModel
+
+@if (string.IsNullOrEmpty(Model.Utilizator.PozaProfil))
+{
+   
+        <div id="profile_holder" >
+        <div style="text-align: center">
+            <img src="@Url.Content("~/Content/Images/NoPhoto.jpeg")" alt="" width="170" />
+            </div>
+            <div id="profile_menu">
+            <img align="left" src="@Url.Content("~/Content/Images/picture_edit.png")" alt="" />
+            <a href="@Url.Action("ModificaMembru", "Home", new { id = Model.Utilizator.Id })" >
+                Editeaza profil</a>
+                </div>
+        
+    </div>
+}
+else
+{
+     <div id="profile_holder" >
+        <div style="text-align: center;">
+            <img src="@Url.Content(Model.Utilizator.PozaProfil)" alt="" width="170" /> 
+            </div>
+            <div id="profile_menu">
+            <img align="left" src="@Url.Content("~/Content/Images/picture_edit.png")" alt="" />
+            <a href="@Url.Action("ModificaMembru", "Home", new { id = Model.Utilizator.Id })" >
+                Editeaza profil</a>
+                </div>
+        
+    </div>
+    
+  
+}

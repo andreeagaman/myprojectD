@@ -1,0 +1,34 @@
+﻿<span id="userbox">
+@if (ViewBag.NrMesajePtUtilizator != null)
+{
+    var count = (long)ViewBag.NrMesajePtUtilizator;
+    if (count > 0) {
+        <a class="notice_expand" href="@Url.Action("Mesaje","Home")">
+            <b><img style="margin-bottom: -2px;" width="16" height="16" src="@Url.Content("~/content/images/warning.gif")" alt="Notificare" />@count</b>
+        </a><text>|</text>
+    }
+}
+
+  @if (Session["Name"] != null)
+  {
+   
+      <a href="#">Salut, [@Session["Name"]]</a> 
+    
+  }
+  else
+  {
+   <a href="#">Salut, [@User.Identity.Name]</a> 
+  }
+| @Html.ActionLink("Deconectare", "LogOff", "Account", new { area = "" }, null)
+
+@*|<a href="#">Setari</a> | <a href="#">Ajutor</a> *@
+ @*@Html.ActionLink("Setari", "Settings", "Account", new { area = "" }, null) *@
+ @*@Html.ActionLink("Ajutor", "Help", "Account", new { area = "" }, null)*@
+
+ @Html.ActionLink("| Schimba parola", "ChangePassword", "Account", new { area = "" }, null)
+
+@if (Session["LastAuthentication"] != null) 
+{
+    <br /><small class="right-italic">Ultima autentificare la <strong></strong>@Session["LastAuthentication"]</small>
+}
+</span>

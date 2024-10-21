@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Disertatie.Core" namespace="Disertatie.Core.Models">
+  <class name="MembriiProiect" table="Membrii">
+    <id name="Id" column="id_colaborare" unsaved-value="0">
+      <generator class="native" />
+    </id>
+    <many-to-one class="Disertatie.Core.Models.Proiect" name="Proiect" column="id_proiect"/>
+    <many-to-one class="Disertatie.Core.Models.Utilizator" name="Utilizator" column="id_utilizator"/>
+    <property name="Activ" column="activ" />
+  </class>
+</hibernate-mapping>

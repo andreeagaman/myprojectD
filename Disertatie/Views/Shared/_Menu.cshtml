@@ -1,0 +1,22 @@
+﻿@using Disertatie.Core
+<ul id="navmenu">
+    @if (User.EsteMembru() || User.EsteCoordonatorColectiv() || User.EsteSefDepartament())
+    {
+        <li>@Html.RouteLink("Acasa", "Membru_Home")</li>
+        <li>@Html.ActionLink("Profilul meu", "ProfilulMeu", "Home")</li>
+       <li>@Html.ActionLink("Membrii departament", "MembriiDepartament", "Home")</li>
+         <li>@Html.ActionLink("Organigrama", "Organigrama", "Home")</li>
+        <li>@Html.ActionLink("Proiecte", "Proiecte", "Proiecte")</li> 
+        <li>@Html.ActionLink("Anunturi", "Anunturi", "Anunturi")</li>
+       
+       
+              
+    }
+    else if (User.EsteAdministrator())
+    { 
+        <li>@Html.ActionLink("Acasa", "Index", "../admin/Users")</li>
+        
+        
+    }
+   
+</ul>

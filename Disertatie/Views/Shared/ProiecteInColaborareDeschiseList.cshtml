@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Disertatie.Core.Models.Proiect>
+@using Disertatie.Helpers
+
+
+<table id="services">
+	
+    <thead>
+		<tr>
+			<th>
+				
+			</th>
+          
+			<th>
+				Creat la
+			</th>
+			<th>
+				Titlu
+			</th>
+			
+			<th>
+			    Director
+			</th>
+            
+           
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model) {
+	
+         <tr>
+				<td style="background-color: #E4E6CC;">
+					@Html.ActionLink("Detalii", "DetaliiProiecteInColaborare", "Proiecte", new { id = item.Id }, null)
+                </td>
+              
+				<td>
+					@item.DataCreare.ToString("dd-MM-yyyy HH:mm")
+				</td>
+				<td>
+					@item.Titlu
+				</td>
+				<td>
+					@item.Initiator.Nume @item.Initiator.Prenume
+				</td>                
+				
+				
+			</tr>
+      
+  }
+	</tbody>
+     <tfoot>
+        <tr>
+            <td colspan="4">
+                @Html.Partial("PaginationProiecteInColaborarePropuse", Model)
+            </td>
+        </tr>
+    </tfoot>
+</table>

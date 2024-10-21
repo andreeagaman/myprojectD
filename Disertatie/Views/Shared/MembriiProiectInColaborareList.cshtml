@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Disertatie.Core.Models.Utilizator>
+@using Disertatie.Helpers
+<table>
+ <thead>
+ <tr>
+ <th> Nume</th>
+
+ </tr>
+ </thead>
+ <tbody>
+ @foreach (var item in Model)
+ {
+	
+ <tr>
+ <td>
+ @item.Nume @item.Prenume
+ </td>
+ 
+ </tr>
+ }
+ </tbody>
+ </table>

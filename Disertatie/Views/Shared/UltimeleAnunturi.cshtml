@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Disertatie.Core.Models.Anunt>
+@using Disertatie.Helpers
+
+
+@foreach (var item in Model)
+{
+ <a href="@Url.Action("DetaliiAnunt", "Anunturi", new { id = @item.Id })">
+<img width="16" height="16" align="left" src="content/images/bullet_feed.png" />
+@item.Nume
+</a>
+    <br />
+<span class="textLinks">@item.DataCreare</span>
+    <br />
+}
